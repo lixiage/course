@@ -1,6 +1,6 @@
 <?php
-namespace App\Http\Controller\Frontend;
-use Illuminate\Routing\Controllers as BaseController;
+namespace App\Http\Controllers\Frontend;
+use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     public function index()
