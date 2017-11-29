@@ -45,13 +45,9 @@ var _cart_num = 0;
 <body id="index">
 <div id="header">
     <div class="page-container addZ-index" id="nav" style="background-color: #fff !important;">
-<<<<<<< HEAD
-            <div id="logo" class="logo"><a href="https://www.imooc.com/" target="_self" title="首页"><img title="慕课网" src=".frontend/images/index/logo_new.png"></a></div>
-=======
-            <div id="logo" class="logo"><a href="https://www.imooc.com/" target="_self" title="首页"><img title="慕课网" src="./frontend/images/index/logo_new.png"></a></div>
-      
 
->>>>>>> 1b32f33833a7faafde6bc36adb03e0551c0ccfc2
+            <div id="logo" class="logo"><a href="https://www.imooc.com/" target="_self" title="首页"><img title="慕课网" src=".frontend/images/index/logo_new.png"></a></div>
+
         <button type="button" class="navbar-toggle visible-xs-block js-show-menu">
             <i class="icon-menu"></i>
         </button>
