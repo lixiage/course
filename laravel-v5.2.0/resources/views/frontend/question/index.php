@@ -58,8 +58,9 @@ var _cart_num = 0;
 
 <div id="header">
     <div class="page-container" id="nav">
-         <div id="logo" class="logo"><a href="http://www.imooc.com/" target="_self" class="hide-text" title="首页">慕课网</a></div>
-      
+         <div id="logo" class="logo">
+             <a href="index" target="_self" class="hide-text" title="首页" style="background-image: url('./frontend/images/index/logo.jpg')">慕课网</a>
+         </div>
 
         <button type="button" class="navbar-toggle visible-xs-block js-show-menu">
             <i class="icon-menu"></i>
