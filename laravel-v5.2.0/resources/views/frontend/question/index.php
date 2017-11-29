@@ -21,19 +21,11 @@
 <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 
 
-
-
-
-
-
 <link rel="stylesheet" href="./frontend/css/yuanwen/moco.css" type="text/css">
 
 <script src="./frontend/js/yuanwen/push.js"></script><script src="./frontend/js/yuanwen/rt.js" async="" type="text/javascript"></script><script src="./frontend/js/yuanwen/hm.js"></script><script type="text/javascript">
 
-// eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('!4(){3 a={};3 c=0;3 5=[{d:\'//o.q.g/o/p/K/J.r\',6:0},{d:\'//p.q.g/I/L-O.r\',6:0}];3 w=4(){3 j,s=e N("(^| )"+"k=([^;]*)(;|$)");8(j=u.l.M(s)){m H(j[2])}E{m z}};3 y=4(t){3 n=w();3 b=e F();b.G(b.D()+13*v*v*10);u.l="k="+t+";14="+b.R()+";S=/;P=Q.g";8(t&&t!=n){X.U.V()}};3 C=4(i){3 7=e W();7.T=4(){12(a[i]);a[i]=z;9(i,0)};7.Z=4(){9(i,1)};a[i]=11(4(){7.B="";9(i,1)},Y);7.B=5[i].d};3 9=4(x,6){c++;5[x].6=6;8(c==5.f){3 h=0;A(3 i=0;i<5.f;i++){8(5[i].6==1){h=1}}y(h)}};A(3 i=0;i<5.f;i++){C(i)}}()',62,67,'|||var|function|urls|flag|imgobj|if|callback|timer|exp|count|url|new|length|com|error||arr|IMCDNS|cookie|return|_0|static|img|mukewang|png|reg||document|60|getcookie|index|setcookie|null|for|src|checkCdn|getTime|else|Date|setTime|unescape|images|logo|common|unknow|match|RegExp|80|domain|imooc|toGMTString|path|onload|location|reload|Image|window|3000|onerror|1000|setTimeout|clearTimeout|24|expires'.split('|'),0,{}))
-
 </script>
-
 
 <script type="text/javascript">
 
@@ -48,12 +40,30 @@ var _cart_num = 0;
 
 
 
-
-
-
-
 <link rel="stylesheet" href="./frontend/css/yuanwen/a.css" type="text/css">
-<script src="./frontend/js/yuanwen/jquery.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/seajs-text.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/common.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/string.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/userinfo.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/cart.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/cookie.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/suggest.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/store.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/moco.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/json.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/im.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/index.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/socket.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/layer.js" async="" charset="utf-8"></script><link href="./frontend/js/yuanwen/layer.css" rel="stylesheet" charset="utf-8"><script src="./frontend/js/yuanwen/wendalist.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/ueditor.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/wendaGuide.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/verify-code.js" async="" charset="utf-8"></script><script src="./frontend/js/yuanwen/share.js"></script><link href="./frontend/js/yuanwen/share_style0_16.css" rel="stylesheet"></head>
+<script src="./frontend/js/yuanwen/jquery.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/seajs-text.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/common.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/string.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/userinfo.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/cart.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/cookie.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/suggest.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/store.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/moco.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/json.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/im.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/index.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/socket.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/layer.js" async="" charset="utf-8"></script>
+    <link href="./frontend/js/yuanwen/layer.css" rel="stylesheet" charset="utf-8">
+    <script src="./frontend/js/yuanwen/wendalist.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/ueditor.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/wendaGuide.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/verify-code.js" async="" charset="utf-8"></script>
+    <script src="./frontend/js/yuanwen/share.js"></script>
+    <link href="./frontend/js/yuanwen/share_style0_16.css" rel="stylesheet">
+</head>
 <body>
 
 <div id="header">
@@ -75,25 +85,16 @@ var _cart_num = 0;
             <li>
                 <a href="http://coding.imooc.com/" target="_self">实战</a>
             </li>
-            <li><a href="http://www.imooc.com/wenda" class="active" target="_self">猿问</a></li>
+            <li><a href="question_index" class="active" target="_self">猿问</a></li>
             <li><a href="http://www.imooc.com/article" target="_self">手记</a></li>
-                                            <li class="visible-xs-block"><a href="http://www.imooc.com/user/setprofile" target="_self">我的设置</a></li>
-                <li class="visible-xs-block"><a href="http://www.imooc.com/passport/user/logout?referer=//www.imooc.com" target="_self">退出</a></li>
+            <li class="visible-xs-block"><a href="http://www.imooc.com/user/setprofile" target="_self">我的设置</a></li>
+            <li class="visible-xs-block">
+                <a href="http://www.imooc.com/passport/user/logout?referer=//www.imooc.com" target="_self">退出</a>
+            </li>
             
         </ul>
                 <div id="login-area">
             <ul class="clearfix logined">
-                <li class="app-load" id="js-app-load">
-                    <a href="http://www.imooc.com/mobile/app" target="_blank" style="width:60px;">下载APP</a>
-                    <div style="display: none;" class="app-load-box clearfix js-load-box">
-                        <img src="./frontend/js/yuanwen/appload.png" class="l">
-                        <div class="r">
-                            <p>扫描下载慕课网APP</p>
-                            <a href="https://itunes.apple.com/cn/app/mu-ke-wang/id722179140?mt=8"><i class="icon-apple"></i>App Store下载</a>
-                            <a href="http://www.imooc.com/mobile/mukewang.apk"><i class="icon-android"></i>Android下载</a>
-                        </div>
-                    </div>
-                </li>
                 
                 <li class="shop-cart" id="shop-cart">
                     <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
@@ -101,14 +102,7 @@ var _cart_num = 0;
                     </a>
                     <div class="my-cart" id="js-my-cart"><div class="cart-title-box clearfix">                                        <h2 class="l">我的购物车</h2>                                        <h5 class="r">已加入<span class="js-incart-num">0</span>门课程</h5>                                    </div>                                    <div class="cart-wrap">                                        <div class="clear-cart">                                            <span class="cartIcon icon-shopping-cart"></span>                                            <h3>购物车里空空如也</h3>                                            <div class="text">快去这里选购你中意的课程</div>                                            <p><a class="go-link" href="http://coding.imooc.com/" target="_blank">实战课程</a></p>                                            <p><a class="go-link" href="http://class.imooc.com/" target="_blank">职业路径</a></p>                                        </div>                                    </div>                                    <div class="more-box clearfix">                                        <div class="l show-box">                                            <span class="text"><a href="http://order.imooc.com/myorder" target="_blank">我的订单中心</a></span>                                        </div>                                        <a href="http://order.imooc.com/pay/cart" target="_blank" class="r moco-btn moco-btn-red go-cart">去购物车</a>                                    </div></div>
                 </li>
-                
-                <li class="remind_warp">
-                    <i style="display: inline;" class="msg_remind"></i>
-                    <a target="_blank" href="http://www.imooc.com/u/5767042/notices">
-                        <i class="icon-notifi"></i>
-                        <!-- <span class="msg_icon" style="display: none;"></span> -->
-                    </a>
-                </li>
+
                
                 <li class="set_btn user-card-box" id="header-user-card">
                     <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu" href="http://www.imooc.com/u/5767042" target="_self">
@@ -116,31 +110,66 @@ var _cart_num = 0;
                         <i class="myspace_remind" style="display: none;"></i>
                         <span style="display: none;">动态提醒</span>
                     </a>
-                    <div class="g-user-card"><div class="card-inner">                        <div class="card-top clearfix">                            <a href="http://www.imooc.com/u/5767042" class="l"><img src="./frontend/images/yuanwen/59a902890001f04901000100-100-100.jpg" alt="qq_夜的寂静_0"></a>                            <div class="card-top-right-box l">                                <a href="http://www.imooc.com/u/5767042"><span class="name text-ellipsis">qq_夜的寂静_0</span></a>                                <div class="meta">                                    <a href="http://www.imooc.com/u/5767042/experience">经验<b id="js-user-mp">220</b></a>                                    <a href="http://www.imooc.com/u/5767042/credit">积分<b id="js-user-credit">0</b></a>                                </div>                            </div>                        </div>                        <div class="user-center-box">                            <ul class="clearfix">                                <li class="l"><a href="http://www.imooc.com/u/5767042/courses" target="_blank"><span class="user-center-icon icon-tick"></span>我的课程</a></li>                                <li class="l">                                    <a href="http://order.imooc.com/myorder" target="_blank"><span class="user-center-icon icon-receipt"></span>订单中心</a>                                                                    </li>                                <li class="l"><a href="http://www.imooc.com/mall/index" target="_blank"><span class="user-center-icon icon-score_shop"></span>积分商城</a></li>                                <li class="l"><a href="http://www.imooc.com/user/setbindsns" target="_blank"><span class="user-center-icon icon-set"></span>个人设置</a></li>                            </ul>                        </div><div class="card-history">                            <span class="history-item">                                <span class="tit text-ellipsis">轻松学会Laravel-基础篇</span>                                <span class="media-name text-ellipsis">6-3 Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用</span>                                <i class="icon-clock"></i>                                <a href="http://www.imooc.com/video/12507" class="continue" title="轻松学会Laravel-基础篇
-6-3  Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用">继续</a>                            </span>                    </div><div class="card-sets clearfix"><a href="http://www.imooc.com/passport/user/logout?referer=//www.imooc.com" class="l">安全退出</a></div>                    </div></div>
+                    <div class="g-user-card"><div class="card-inner">
+                            <div class="card-top clearfix">
+                                <a href="http://www.imooc.com/u/5767042" class="l"><img src="./frontend/images/yuanwen/59a902890001f04901000100-100-100.jpg" alt="qq_夜的寂静_0"></a>
+                                <div class="card-top-right-box l">
+                                    <a href="http://www.imooc.com/u/5767042">
+                                        <span class="name text-ellipsis">qq_夜的寂静_0</span>
+                                    </a>                                <div class="meta">
+                                        <a href="http://www.imooc.com/u/5767042/experience">经验<b id="js-user-mp">220</b></a>
+                                        <a href="http://www.imooc.com/u/5767042/credit">积分<b id="js-user-credit">0</b></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-center-box">
+                                <ul class="clearfix">
+                                    <li class="l">
+                                        <a href="http://www.imooc.com/u/5767042/courses" target="_blank">
+                                            <span class="user-center-icon icon-tick"></span>我的课程
+                                        </a>
+                                    </li>
+                                    <li class="l">
+                                        <a href="http://order.imooc.com/myorder" target="_blank">
+                                            <span class="user-center-icon icon-receipt"></span>
+                                            订单中心
+                                        </a>
+                                    </li>
+                                    <li class="l">
+                                        <a href="http://www.imooc.com/mall/index" target="_blank">
+                                            <span class="user-center-icon icon-score_shop"></span>积分商城
+                                        </a>
+                                    </li>
+                                    <li class="l"><a href="http://www.imooc.com/user/setbindsns" target="_blank">
+                                            <span class="user-center-icon icon-set"></span>个人设置</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-history">
+                                <span class="history-item">
+                                    <span class="tit text-ellipsis">轻松学会Laravel-基础篇</span>
+                                    <span class="media-name text-ellipsis">6-3 Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用</span>
+                                    <i class="icon-clock"></i>
+                                    <a href="http://www.imooc.com/video/12507" class="continue" title="轻松学会Laravel-基础篇
+6-3  Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用">继续</a>
+                                </span>
+                            </div>
+                            <div class="card-sets clearfix">
+                                <a href="http://www.imooc.com/passport/user/logout?referer=//www.imooc.com" class="l">安全退出</a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
-                <div class="search-warp clearfix" style="min-width: 32px; height: 72px;">
-                            <div class="pa searchTags">
-                                    <a href="http://class.imooc.com/sc/20" target="_blank">前端入门</a>
-                                    <a href="http://class.imooc.com/sc/18" target="_blank">Java入门</a>
-                                </div>
-            
-            <div class="search-area" data-search="top-banner">
-                <input class="search-input" data-suggest-trigger="suggest-trigger" autocomplete="off" type="text">
-                <input class="btn_search" data-search-btn="search-btn" type="hidden">
-                <ul class="search-area-result" data-suggest-result="suggest-result">
-                </ul>
-            </div>
-            <div class="showhide-search" data-show="no"><i class="icon-search"></i></div>
-        </div>
+
     </div>
 </div>
 
 <div class="bindHintBox js-bindHintBox hide">
     <div class="pr">
-        为了账号安全，请及时绑定邮箱和手机<a href="http://www.imooc.com/user/setbindsns" class="ml20 color-red" target="_blank">立即绑定</a>
+        为了账号安全，请及时绑定邮箱和手机
+        <a href="http://www.imooc.com/user/setbindsns" class="ml20 color-red" target="_blank">立即绑定</a>
         <button class="closeBindHint js-closeBindHint" type="button"></button>
         <div class="arrow"> </div>
     </div>
@@ -156,7 +185,7 @@ var _cart_num = 0;
         <div class="l wenda-main">
             <div class="wd-top-slogan">
                 <span>程序员自己的问答社区</span>
-                <a class="js-quiz" href="javascript:void(0);">我要提问</a>
+                <a class="js-quiz" href="question_insert">我要提问</a>
             </div>
             <div class="nav">
                 <a href="http://www.imooc.com/wenda" class="active">推荐</a>
@@ -174,16 +203,16 @@ var _cart_num = 0;
                     </div>   
                 </div>
 
-                            </div><!--.nav end-->
+            </div><!--.nav end-->
 
             
-                                    <!--推荐位-->
+            <!--推荐位-->
             <ul class="recommend">
-                                <li>
-                                        <span class="recommend-tag">推荐</span>
-                                        <a href="http://www.imooc.com/wenda/detail/383123" class="recommend-link" data-ast="yuanwenindex_1_1461" target="_blank" title="【有奖问答】与技术大咖探讨前端JavaScript开发">【有奖问答】与技术大咖探讨前端JavaScript开发</a>
+                <li>
+                    <span class="recommend-tag">推荐</span>
+                    <a href="http://www.imooc.com/wenda/detail/383123" class="recommend-link" data-ast="yuanwenindex_1_1461" target="_blank" title="【有奖问答】与技术大咖探讨前端JavaScript开发">【有奖问答】与技术大咖探讨前端JavaScript开发</a>
                 </li>
-                            </ul>
+            </ul>
             <!--recommend end-->
                                    
 
