@@ -45,13 +45,7 @@ var _cart_num = 0;
 <body id="index">
 <div id="header">
     <div class="page-container addZ-index" id="nav" style="background-color: #fff !important;">
-<<<<<<< HEAD
-            <div id="logo" class="logo"><a href="https://www.imooc.com/" target="_self" title="首页"><img title="慕课网" src=".frontend/images/index/logo_new.png"></a></div>
-=======
             <div id="logo" class="logo"><a href="https://www.imooc.com/" target="_self" title="首页"><img title="慕课网" src="./frontend/images/index/logo_new.png"></a></div>
-      
-
->>>>>>> 1b32f33833a7faafde6bc36adb03e0551c0ccfc2
         <button type="button" class="navbar-toggle visible-xs-block js-show-menu">
             <i class="icon-menu"></i>
         </button>
@@ -88,7 +82,26 @@ var _cart_num = 0;
                     <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
                         <span class="icon-shopping-cart js-endcart"></span><span>购物车</span><span class="shopping_icon js-cart-num" data-ordernum="0" data-cartnum="0" style="display: none">0</span>
                     </a>
-                    <div class="my-cart" id="js-my-cart"><div class="cart-title-box clearfix">                                        <h2 class="l">我的购物车</h2>                                        <h5 class="r">已加入<span class="js-incart-num">0</span>门课程</h5>                                    </div>                                    <div class="cart-wrap">                                        <div class="clear-cart">                                            <span class="cartIcon icon-shopping-cart"></span>                                            <h3>购物车里空空如也</h3>                                            <div class="text">快去这里选购你中意的课程</div>                                            <p><a class="go-link" href="http://coding.imooc.com/" target="_blank">实战课程</a></p>                                            <p><a class="go-link" href="http://class.imooc.com/" target="_blank">职业路径</a></p>                                        </div>                                    </div>                                    <div class="more-box clearfix">                                        <div class="l show-box">                                            <span class="text"><a href="http://order.imooc.com/myorder" target="_blank">我的订单中心</a></span>                                        </div>                                        <a href="http://order.imooc.com/pay/cart" target="_blank" class="r moco-btn moco-btn-red go-cart">去购物车</a>                                    </div></div>
+                    <div class="my-cart" id="js-my-cart"><div class="cart-title-box clearfix">
+                            <h2 class="l">我的购物车</h2>
+                            <h5 class="r">已加入<span class="js-incart-num">0</span>门课程</h5>
+                        </div>
+                        <div class="cart-wrap">
+                            <div class="clear-cart">
+                                <span class="cartIcon icon-shopping-cart"></span>
+                                <h3>购物车里空空如也</h3>
+                                <div class="text">快去这里选购你中意的课程</div>
+                                <p><a class="go-link" href="http://coding.imooc.com/" target="_blank">实战课程</a></p>
+                                <p><a class="go-link" href="http://class.imooc.com/" target="_blank">职业路径</a></p>
+                            </div>
+                        </div>
+                        <div class="more-box clearfix">
+                            <div class="l show-box">
+                                <span class="text"><a href="http://order.imooc.com/myorder" target="_blank">我的订单中心</a></span>
+                            </div>
+                            <a href="http://order.imooc.com/pay/cart" target="_blank" class="r moco-btn moco-btn-red go-cart">去购物车</a>
+                        </div>
+                    </div>
                 </li>
                 <li class="header-signin">
                     <a href="#" id="js-signin-btn">登录</a> / <a href="#" id="js-signup-btn">注册</a>
