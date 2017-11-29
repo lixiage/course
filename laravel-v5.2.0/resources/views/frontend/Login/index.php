@@ -2,16 +2,16 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>慕课网-程序员的梦工厂</title>
+<title>慕课点播-程序员的梦工厂</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="renderer" content="webkit">
 <meta property="qc:admins" content="77103107776157736375">
 <meta property="wb:webmaster" content="c4f857219bfae3cb">
 <meta http-equiv="Access-Control-Allow-Origin" content="*">
 <meta http-equiv="Cache-Control" content="no-transform ">
-<link rel="dns-prefetch" href="https://www.imooc.com/">
+<!-- <link rel="dns-prefetch" href="https://www.imooc.com/">
 <link rel="dns-prefetch" href="https://img.imooc.com/">
-<link rel="dns-prefetch" href="https://img.mukewang.com/">
+<link rel="dns-prefetch" href="https://img.mukewang.com/"> -->
 <link rel="apple-touch-icon" sizes="76x76" href="https://www.imooc.com/static/img/common/touch-icon-ipad.png">
 <link rel="apple-touch-icon" sizes="120x120" href="https://www.imooc.com/static/img/common/touch-icon-iphone-retina.png">
 <link rel="apple-touch-icon" sizes="152x152" href="https://www.imooc.com/static/img/common/touch-icon-ipad-retina.png">
