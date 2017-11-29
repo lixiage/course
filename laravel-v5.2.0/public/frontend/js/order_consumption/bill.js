@@ -1,0 +1,1 @@
+define("bill/js/bill",["require"],function(){var l=["你的付出终有回报的一天","投资自己等于投资未来","一份付出将有十分回报"],n=parseInt(Math.floor(Math.random()*l.length));$(".js-info").html(l[n])});

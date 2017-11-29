@@ -7,6 +7,6 @@ class Controller extends BaseController
 {
     public function index()
     {
-        var_dump($_SERVER['HTTP_HOST']);
+        return view('index.index');
     }
 }
