@@ -1,5 +1,6 @@
 <?php
 Route::get('/','Controller@index');
+<<<<<<< HEAD
 Route::get('index','LoginController@index');
 
 //购物车
@@ -7,3 +8,11 @@ Route::any('whdindex','ShopcarController@index');
 
 //订单
 Route::any('whdorder_list','OrderController@whdorder_list');
+=======
+Route::get('index','LoginController@index');   //这是主页面  进入首页
+
+//猿问
+Route::any('question_index','QuestionController@index');
+
+
+>>>>>>> ff75a3f15352fd2ab77ff48a7fc514f79aa7de8d
