@@ -2136,5 +2136,10 @@ var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
 </script>
 </div>
 
-
 <script src="./frontend/js/index/user.htm" type="text/javascript"></script><script src="./frontend/js/index/iplookup.php" type="text/javascript"></script></body></html>
+<script src="./frontend/js.js"></script>
+<script>
+    $(function(){
+        alert("123";)
+    })
+</script>
