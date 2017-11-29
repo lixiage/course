@@ -5,6 +5,7 @@ class LoginController extends BaseController
 {
     public function index()
     {
+//        phpinfo();die;
         return view('frontend/Login/index');
     }
 }
