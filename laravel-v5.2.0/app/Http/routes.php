@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::any("ttt","LoginController@index");
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
