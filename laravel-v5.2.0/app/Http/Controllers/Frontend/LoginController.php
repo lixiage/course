@@ -3,7 +3,6 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Http\Response;
 use App\Login;
 
 class LoginController extends BaseController
@@ -29,10 +28,12 @@ class LoginController extends BaseController
     public function index()
     {
         $url = $this->weiboUrl();
+       // echo $url;die;
         return view('frontend/Login/index',['url'=>$url]);
     }
     /**
      * 微博登录
+     * $param 获取 authorize
      * wen
      */
     public function weiboUrl(){
@@ -40,6 +41,28 @@ class LoginController extends BaseController
         $url = $model->weiboUrl();
         return $url;
     }
+
+    /**
+     *微博回调 获取 access_token
+    */
+    public function weibo(){
+         $code = isset($_REQUEST['code'])?$_REQUEST['code']:"";
+         if(!empty($code)){
+             $model = new Login();
+             $res =$model->WeiboAccessToken($code);
+             $res = json_decode($res,true);
+             if($res['code']==1){
+                  $info = $model->weiboUserMessage();
+                   $res = json_decode($info,true);
+                    $_SESSION['username']=  $res['name'];
+                    $_SESSION['profile_image_url'] = $res['profile_image_url'];
+                   return redirect("index");
+             }else{
+                 echo "<script>alert('授权失败');location.href='index'</script>";
+             }
+         }
+    }
+
     /**
      * 用户登录
      * @author wen

@@ -21,4 +21,14 @@ class Login extends Commom
       $url   = $this->LoginWeiboUrl();
       return $url;
     }
+
+    /**
+     * 微博
+     * @param $code
+     * 获取accessToken
+     */
+    public function WeiboAccessToken($code=""){
+       $res  = $this->AccessToken($code);
+       return $res;
+    }
 }
