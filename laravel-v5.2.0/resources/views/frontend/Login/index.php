@@ -72,17 +72,6 @@ var _cart_num = 0;
         </ul>
                 <div id="login-area">
             <ul class="clearfix logined">
-                <li class="app-load" id="js-app-load">
-                    <a href="https://www.imooc.com/mobile/app" target="_blank" style="width:60px;">下载APP</a>
-                    <div style="display: none;" class="app-load-box clearfix js-load-box">
-                        <img src="./frontend/images/index/appload.png" class="l">
-                        <div class="r">
-                            <p>扫描下载慕课网APP</p>
-                            <a href="https://itunes.apple.com/cn/app/mu-ke-wang/id722179140?mt=8"><i class="icon-apple"></i>App Store下载</a>
-                            <a href="https://www.imooc.com/mobile/mukewang.apk"><i class="icon-android"></i>Android下载</a>
-                        </div>
-                    </div>
-                </li>
                 <li class="shop-cart" id="shop-cart">
                     <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
                         <span class="icon-shopping-cart js-endcart"></span><span>购物车</span><span class="shopping_icon js-cart-num" data-ordernum="0" data-cartnum="0" style="display: none">0</span>
@@ -108,17 +97,14 @@ var _cart_num = 0;
                         </div>
                     </div>
                 </li>
-                <li class="header-signin">
-                    <a href="#" id="js-signin-btn">登录</a> / <a href="#" id="js-signup-btn">注册</a>
+                <li class="header-signin ttttt" >
+                    <?php $username = isset($_SESSION['username'])?$_SESSION['username']:"";if($username){?>
+                             <a href="#" class="outs" style="width: 100px">欢迎<?php echo $username?>退出</a>
+                    <?php }else{?>
+                             <a href="#" class="js-signin-btn heelows">登录</a>
+                    <?php }?>
                 </li>
-                <li class="remind_warp">
-                    <i style="display: inline;" class="msg_remind"></i>
-                    <a target="_blank" href="https://www.imooc.com/u/5767042/notices">
-                        <i class="icon-notifi"></i>
-                        <!-- <span class="msg_icon" style="display: none;"></span> -->
-                    </a>
-                </li>
-                <li class="set_btn user-card-box" id="header-user-card">
+                <li class="set_btn user-card-box" id="header-user-card" >
                     <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu" href="https://www.imooc.com/u/5767042" target="_self">
                         <img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" height="40" width="40">
                         <i class="myspace_remind" style="display: none;"></i>
@@ -158,27 +144,28 @@ var _cart_num = 0;
     </div>
 </div>
 
-<div id="signin" class="rl-modal in" aria-hidden="false" style="position: absolute; z-index: 100;background-color: #ffffff;width: 320px;;margin-left: 550px;margin-top: 100px;">
+<div id="signin" class="rl-modal in" aria-hidden="false" style="display: none;position: absolute; z-index: 100;background-color: #ffffff;width: 320px;;margin-left: 550px;margin-top: 100px;">
     <div class="rl-modal-header" style="padding-left: 20px; padding-bottom: 10px;">
-        <h2>登录 注册</h2>
+        <h2>登录</h2>
         <div></div>
         <div></div>
     </div>
     <div class="rl-modal-body js-loginWrap">
         <div class="clearfix">
             <div class="l-left-wrap l">
-                <form id="signup-form" autocomplete="off">
+                <form id="signup-form" autocomplete="off"
                     <p class="rlf-tip-globle color-red" id="signin-globle-error"></p>
                     <div class="rlf-group pr" style="padding-left: 50px;">
-                        <input type="text" value="" maxlength="37" name="email" data-validate="require-mobile-phone" autocomplete="off" class="xa-emailOrPhone ipt ipt-email js-own-name" placeholder="请输入登录邮箱/手机号">							<p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确的邮箱或手机号"></p>						</div>
+                        <input type="text" value="" maxlength="37" name="email" data-validate="require-mobile-phone" autocomplete="off" class="xa-emailOrPhone ipt ipt-email js-own-name usernamess" placeholder="请输入登录邮箱/手机号">							<p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确的邮箱或手机号"></p>						</div>
                     <div class="rlf-group  pr" style="padding-left: 50px;">
-                        <input type="password" name="password" data-validate="require-password" class="ipt ipt-pwd js-loginPassword js-pass-pwd" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="16" autocomplete="off">					        <p class="rlf-tip-wrap errorHint color-red " data-error-hint="请输入6-16位密码，区分大小写，不能使用空格！"></p>						</div>
-                    <div class="rlf-group clearfix form-control js-verify-row" style="display: none;">						    <input type="text" name="verify" class="ipt ipt-verify l" data-validate="require-string" data-callback="checkverity" maxlength="4" data-minlength="4" placeholder="请输入验证码"><a href="javascript:void(0)" hidefocus="true" class="verify-img-wrap js-verify-refresh"></a><a href="javascript:void(0)" hidefocus="true" class="icon-refresh js-verify-refresh"></a><p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>
+                        <input type="password" name="password" data-validate="require-password" class="ipt ipt-pwd js-loginPassword js-pass-pwd passwordss" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="16" autocomplete="off">					        <p class="rlf-tip-wrap errorHint color-red " data-error-hint="请输入6-16位密码，区分大小写，不能使用空格！"></p>						</div>
+                    <div class="rlf-group clearfix form-control js-verify-row" style="display: none;">
+                        <input type="text" name="verify" class="ipt ipt-verify l" data-validate="require-string" data-callback="checkverity" maxlength="4" data-minlength="4" placeholder="请输入验证码"><a href="javascript:void(0)" hidefocus="true" class="verify-img-wrap js-verify-refresh"></a><a href="javascript:void(0)" hidefocus="true" class="icon-refresh js-verify-refresh"></a><p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>
                     </div>
                     <div class="rlf-group rlf-appendix form-control  clearfix" style="padding-left: 26px;">
                         <label for="auto-signin" style="padding-left: 20px;" class="rlf-autoin l" hidefocus="true"><input type="checkbox" checked="checked" class="auto-cbx" id="auto-signin">7天内自动登录</label>							<a href="/user/newforgot" class="rlf-forget r" target="_blank" hidefocus="true">忘记密码 </a>						</div>
                     <div class="rlf-group clearfix" style="padding-left: 35px; padding-top: 10px;">
-                        <input type="button" value="登录" hidefocus="true" class="btn-red btn-full xa-login" style="margin-left: 30px;">
+                        <input type="button" value="登录" hidefocus="true" class="btn-red btn-full xa-login denglu" style="margin-left: 30px;">
                     </div>
                 </form>
             </div>
@@ -188,12 +175,59 @@ var _cart_num = 0;
             <span class="l " style="color:#666">其他方式登录</span>	
             <a href="javascript:void(0)" hidefocus="true" data-login-sns="/passport/user/tplogin?tp=weixin" class="pop-sns-weixin r"><img
                     src="./frontend/images/qq.png" style="height: 30px;width: 30px;" alt=""/></a>
-            <a href="javascript:void(0)" hidefocus="true" data-login-sns="/passport/user/tplogin?tp=qq" class="pop-sns-qq r"><img
+            <a href="<?php echo $url ?>"  hidefocus="true" data-login-sns="/passport/user/tplogin?tp=qq" class="pop-sns-qq r"><img
                     src="./frontend/images/weobo.png" style="height: 30px;width: 30px;" alt=""/></a>
             </div>
     </div>
 </div>
-
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="./layer-v3.1.0/layer/layer.js"></script>
+<script>
+    $(function(){
+        $(document).on("click",".heelows",function(){
+            $("#signin").toggle();
+        });
+          $(".denglu").click(function(){
+              var ii = layer.load();
+              //此处用setTimeout演示ajax的回调
+              setTimeout(function(){
+                  layer.close(ii);
+              }, 1000);
+                var username = $(".usernamess").val();
+                var password = $(".passwordss").val();
+              $.ajax({
+                  type : "post",
+                  url : "login",
+                  data : {username:username,password:password},
+                  dataType : "json",
+                  success:function(msg){
+                      $("#signin").hide();
+                      if(msg.code==1){
+                          $(".ttttt").load(location.href+" .ttttt");
+                          layer.msg('登录成功');
+                      }else{
+                          layer.msg('登录失败，请重新登录');
+                      }
+                  }
+              })
+          });
+        $(".outs").click(function(){
+            var ii = layer.load();
+            //此处用setTimeout演示ajax的回调
+            setTimeout(function(){
+                layer.close(ii);
+            }, 1000);
+            $.ajax({
+                type : "post",
+                url : "loginout",
+                success:function(msg){
+                    $(".ttttt").load(location.href+" .ttttt");
+                    layer.msg('退出成功');
+                }
+            })
+        })
+    })
+</script>
 <div id="main">
 <div style="background-image: url(&quot;//img.mukewang.com/5a1bea3100010c0809360316.jpg&quot;);" class="bk"></div>
 <div class="bgfff banner-box">
@@ -231,12 +265,6 @@ var _cart_num = 0;
                             <a target="_blank" href="https://www.imooc.com/course/list?c=webapp">WebApp</a>
                         </div>
                     </div>
-                    <!-- <div class="fe-other-box clearfix">
-                        <div class="banner-line">
-                            <span class="bold mr10 l small-title">其它</span>
-                        </div>
-                        <div class="tag-box l"><a target="_blank" href="/course/list?c=fetool">前端工具</a></div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -249,12 +277,10 @@ var _cart_num = 0;
 			        						<div class="course-card-info">
 							<span>职业路径</span><span>5步／30课</span><span><i class="icon-set_sns"></i>399</span>
 						</div>
-								        																				
-							<div class="course-card-price">￥599.00</div>
-																					    </div>
+							<div class="course-card-price">￥599.00</div></div>
 			</a>
 		</div>
-	                            			<div class="l banner-course-card">
+	    <div class="l banner-course-card">
 			<a href="http://coding.imooc.com/class/129.html?mc_marking=dce36388dbfc942a1d01880e63a59e4c&amp;mc_channel=qianduankaifa2" target="_blank" title="前端跳槽面试必备技巧" class="clearfix">
 			    <img src="./frontend/images/index/59897b1600011ec805400300.jpg" class="l">
 			    <div class="l course-card">
@@ -2159,9 +2185,3 @@ var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
 </div>
 
 <script src="./frontend/js/index/user.htm" type="text/javascript"></script><script src="./frontend/js/index/iplookup.php" type="text/javascript"></script></body></html>
-<script src="./frontend/js.js"></script>
-<script>
-    $(function(){
-        alert("123";)
-    })
-</script>
