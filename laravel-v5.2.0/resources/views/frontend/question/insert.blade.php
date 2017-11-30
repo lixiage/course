@@ -153,8 +153,7 @@ var _cart_num = 0;
                                     <li class="l">
                                         <a href="http://www.imooc.com/mall/index" target="_blank"><span class="user-center-icon icon-score_shop"></span>积分商城</a></li>                                <li class="l"><a href="http://www.imooc.com/user/setbindsns" target="_blank"><span class="user-center-icon icon-set"></span>个人设置</a></li>                            </ul>                        </div><div class="card-history">                            <span class="history-item">                                <span class="tit text-ellipsis">Java入门第一季</span>                                <span class="media-name text-ellipsis">1-1 Java简介</span>
                                     <i class="icon-clock"></i>
-                                    <a href="http://www.imooc.com/video/1430" class="continue" title="Java入门第一季
-1-1  Java简介">继续</a>
+                                    <a href="http://www.imooc.com/video/1430" class="continue" title="Java入门第一季1-1  Java简介">继续</a>
                                 </span>
                             </div><div class="card-sets clearfix">
                                 <a href="http://www.imooc.com/passport/user/logout?referer=//www.imooc.com" class="l">安全退出</a></div>                    </div></div>
@@ -182,11 +181,12 @@ var _cart_num = 0;
     <div class="l wenda-main" style="">
       <div class="sucesspage" style="">
         <h2 class="new-save-title">提问</h2>
+          <form action="question_insert" method="post">
         <div id="js-inputques" class="inputques" style="">
                <div class="quesdetail clearfix">
                   <span class="ques-label first-label">*</span>
                   <div class="question-area">
-                    <input type="text" id="ques-title" class="ipt autocomplete ipt-error" maxlength="255" name="title" placeholder="请一句话说明你的问题，以问号结尾">
+                    <input type="text" id="ques-title" class="ipt autocomplete ipt-error" maxlength="255" name="question_title" placeholder="请一句话说明你的问题，以问号结尾">
                     <p class="errortip" style="display: none">标题不能少于5个汉字！</p>
                     <dl class="send-area-result" style="display: none;"></dl>
                   </div>
@@ -195,7 +195,7 @@ var _cart_num = 0;
                   <span class="ques-label">&nbsp;</span>
                   <div id="editor-wrap" class="editor clearfix" style="">
 <!--                      百度编辑器-->
-                      <script id="editor" type="text/plain" style="width:746px;height:321px;"></script>
+                      <script id="editor" name="question_content" type="text/plain" style="width:746px;height:200px;"></script>
 
                   </div>
                 </div>
@@ -206,16 +206,17 @@ var _cart_num = 0;
                     <!-- <p class="tag-tip">您最多可以从以下选择3个标签哟！</p> -->
                     <div id="js-tags" class="taglist clearfix">
                         @foreach ($classes as $class)
-                            <a href="javascript:void(0);" class="save-list-tag classify" data-id="{{$class->class_id}}" name="{{$class->class_name}}">{{$class->class_name}}</a>
+                            <input type="text" readonly style="overflow: visible;text-align: center;" size="{{$class->len}}px" class="save-list-tag classify" data-id="{{$class->class_id}}" name="classify[]" value="{{$class->class_name}}"/>
+                            <!--<a href="javascript:void(0);" class="save-list-tag classify" data-id="{{$class->class_id}}" name="{{$class->class_name}}">{{$class->class_name}}</a>-->
                         @endforeach
                     </div>
                     <p class="errortip firse"></p>
                   </div>
                </div>
         </div>
-`
-        <div class="saveques-bottom">
-          <a href="javascript:;" id="ques-submit-btn" class="btn btn-red link-btn publishbtn">发布</a>
+        </form>
+        <div class="saveques-bottom" style="bottom: auto">
+          <a href="javascript:void(0);" id="ques-submit-btn" class="btn btn-red link-btn publishbtn">发布</a>
           <p class="global-errortip js-global-error"></p>
         </div>
       </div>
@@ -308,6 +309,15 @@ var _cart_num = 0;
 <script type="text/javascript">seajs.use("/static/page/"+OP_CONFIG.module+"/"+OP_CONFIG.page);</script>
 <script>
     $(function(){
+        $('ques-submit-btn').click(function(){
+            var title = $('#ques-title').val();
+            var content = ue.getContent();
+            if(title==''||content==''){
+                alert('有内容没有填写');
+                return false;
+            }
+
+        });
         var num=0;
         $('.classify').click(function(){
             var str = $(this).attr('class');
@@ -332,11 +342,9 @@ var _cart_num = 0;
                 num--;
             }
         });
-    })
+    });
+
 </script>
-
-
-
 
 
 <div style="display: none">
