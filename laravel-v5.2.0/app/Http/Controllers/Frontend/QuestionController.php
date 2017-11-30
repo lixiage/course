@@ -16,5 +16,8 @@ class QuestionController extends BaseController{
     public function index(){
         return view('frontend/question/index');
     }
-
+    public  function  qusetion(){
+        $arr = array("css","php","java","hrml","nginx","mysql","laraval","tp");
+        return view("frontend/question/tiwen",['info'=>$arr]);
+    }
 }
