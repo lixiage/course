@@ -1,5 +1,10 @@
 <?php
 Route::get('/','Controller@index');
+Route::get('index','LoginController@index');
+//免费课程的那个页面
+Route::get('Freeindex','FreeController@Freeindex');
+Route::any('Freeindex/{id}',['uses'=>'FreeController@Freeindex']);
+Route::any('sclass/{id}',['uses'=>'FreeController@sclass']);
 
 Route::get('index','LoginController@index');
 
@@ -17,7 +22,6 @@ Route::any('password','PasswordsController@index');
 Route::any('savePassword',"PasswordsController@savePassword");
 Route::any('password_url',"PasswordsController@SaveUrl");
 Route::any('passwordSuccsee',"PasswordsController@passwordSuccsee");
-
 
 
 
