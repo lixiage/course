@@ -44,7 +44,7 @@ var _cart_num = 0;
 <script src="./frontend/js/index/jquery.js" async="" charset="utf-8"></script><script src="./frontend/js/index/seajs-text.js" async="" charset="utf-8"></script><script src="./frontend/js/index/common.js" async="" charset="utf-8"></script><script src="./frontend/js/index/string.js" async="" charset="utf-8"></script><script src="./frontend/js/index/userinfo.js" async="" charset="utf-8"></script><script src="./frontend/js/index/cart.js" async="" charset="utf-8"></script><script src="./frontend/js/index/cookie.js" async="" charset="utf-8"></script><script src="./frontend/js/index/suggest.js" async="" charset="utf-8"></script><script src="./frontend/js/index/store.js" async="" charset="utf-8"></script><script src="./frontend/js/index/moco.js" async="" charset="utf-8"></script><script src="./frontend/js/index/json.js" async="" charset="utf-8"></script><script src="./frontend/js/index/im.js" async="" charset="utf-8"></script><script src="./frontend/js/index/index.js" async="" charset="utf-8"></script><script src="./frontend/js/index/socket.js" async="" charset="utf-8"></script><script src="./frontend/js/index/stackblur.js" async="" charset="utf-8"></script><script src="./frontend/js/index/mouse-move-angle.js" async="" charset="utf-8"></script></head>
 <body id="index">
 <div id="header">
-    <div class="page-container addZ-index" id="nav" style="background-color: #fff !important;">
+    <div class="page-container addZ-index divdiv" id="nav" style="background-color: #fff !important;">
             <div id="logo" class="logo">
                 <a href="https://www.imooc.com/" target="_self" title="首页">
                     <img title="慕课网" src="./frontend/images/index/logo_new.png">
@@ -55,7 +55,9 @@ var _cart_num = 0;
             <i class="icon-menu"></i>
         </button>
         <ul class="nav-item">
-                        <li class="set-btn visible-xs-block js-header-avator"><a href="https://www.imooc.com/u/5767042" target="_self"><img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" height="40" width="40"></a></li>
+                    <li class="set-btn visible-xs-block js-header-avator"><a href="https://www.imooc.com/u/5767042" target="_self">
+                    <img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" height="40" width="40"></a>
+                    </li>
                         
             <li>
                 <a href="https://www.imooc.com/course/list" target="_self">免费课程</a>
@@ -99,14 +101,24 @@ var _cart_num = 0;
                 </li>
                 <li class="header-signin ttttt" >
                     <?php $username = isset($_SESSION['username'])?$_SESSION['username']:"";if($username){?>
-                             <a href="#" class="outs" style="width: 100px">欢迎<?php echo $username?>退出</a>
+                             <a href="#" class="outs" style="width: 200px">欢迎<font style="color: #ff0000"><?php echo $username?></font>退出</a>
                     <?php }else{?>
                              <a href="#" class="js-signin-btn heelows">登录</a>
                     <?php }?>
                 </li>
-                <li class="set_btn user-card-box" id="header-user-card" >
+                <li class="set_btn user-card-box images_users" id="header-user-card" >
+
                     <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu" href="https://www.imooc.com/u/5767042" target="_self">
-                        <img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" height="40" width="40">
+                        <?php
+                            $image= isset($_SESSION['profile_image_url'])?$_SESSION['profile_image_url']:"";
+                            if(!empty($image)){
+                        ?>
+                                <img src="<?php echo $image?>" height="40" width="40">
+
+                        <?php }else{?>
+                                <img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" height="40" width="40">
+                        <?php }?>
+
                         <i class="myspace_remind" style="display: none;"></i>
                         <span style="display: none;">动态提醒</span>
                     </a>
@@ -163,7 +175,7 @@ var _cart_num = 0;
                         <input type="text" name="verify" class="ipt ipt-verify l" data-validate="require-string" data-callback="checkverity" maxlength="4" data-minlength="4" placeholder="请输入验证码"><a href="javascript:void(0)" hidefocus="true" class="verify-img-wrap js-verify-refresh"></a><a href="javascript:void(0)" hidefocus="true" class="icon-refresh js-verify-refresh"></a><p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>
                     </div>
                     <div class="rlf-group rlf-appendix form-control  clearfix" style="padding-left: 26px;">
-                        <label for="auto-signin" style="padding-left: 20px;" class="rlf-autoin l" hidefocus="true"><input type="checkbox" checked="checked" class="auto-cbx" id="auto-signin">7天内自动登录</label>							<a href="/user/newforgot" class="rlf-forget r" target="_blank" hidefocus="true">忘记密码 </a>						</div>
+                        <label for="auto-signin" style="padding-left: 20px;" class="rlf-autoin l" hidefocus="true"><input type="checkbox" checked="checked" class="auto-cbx" id="auto-signin">7天内自动登录</label>							<a href="password" class="rlf-forget r" target="_blank" hidefocus="true">忘记密码 </a>						</div>
                     <div class="rlf-group clearfix" style="padding-left: 35px; padding-top: 10px;">
                         <input type="button" value="登录" hidefocus="true" class="btn-red btn-full xa-login denglu" style="margin-left: 30px;">
                     </div>
@@ -203,7 +215,7 @@ var _cart_num = 0;
                   success:function(msg){
                       $("#signin").hide();
                       if(msg.code==1){
-                          $(".ttttt").load(location.href+" .ttttt");
+                          $(".divdiv").load(location.href+" .divdiv");
                           layer.msg('登录成功');
                       }else{
                           layer.msg('登录失败，请重新登录');
@@ -211,7 +223,7 @@ var _cart_num = 0;
                   }
               })
           });
-        $(".outs").click(function(){
+        $(document).on("click",".outs",function(){
             var ii = layer.load();
             //此处用setTimeout演示ajax的回调
             setTimeout(function(){
@@ -221,7 +233,7 @@ var _cart_num = 0;
                 type : "post",
                 url : "loginout",
                 success:function(msg){
-                    $(".ttttt").load(location.href+" .ttttt");
+                    $(".divdiv").load(location.href+" .divdiv");
                     layer.msg('退出成功');
                 }
             })

@@ -44,4 +44,14 @@ class Login extends Commom
         }
     }
 
+    /**
+     * 微博
+     * @param string $code
+     * @return string
+     * 获取accessToken
+     */
+    public function WeiboAccessToken($code=""){
+       $res  = $this->AccessToken($code);
+       return $res;
+    }
 }
