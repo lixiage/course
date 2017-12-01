@@ -42,22 +42,10 @@ var _cart_num = 0;
 
 
 <link rel="stylesheet" href="./frontend/question_files/saved_resource" type="text/css">
-<script charset="utf-8" async="" src="./frontend/question_files/jquery.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/seajs-text.js.下载"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script charset="utf-8" async="" src="./frontend/question_files/jquery.js.下载"></script>
     <script charset="utf-8" async="" src="./frontend/question_files/common.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/string.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/userinfo.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/cart.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/cookie.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/suggest.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/store.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/moco.min.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/json.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/im.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/save.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/socket.io.min.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/autocomplete.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/question_files/verify-code.js.下载"></script>
+    <script src="./layer-v3.1.0/layer/layer.js"></script>
 <!--    <link href="./frontend/question_files/ueditor.css" type="text/css" rel="stylesheet">-->
     <script src="./frontend/question_files/ZeroClipboard.js.下载" type="text/javascript" defer="defer"></script>
 </head>
@@ -206,7 +194,7 @@ var _cart_num = 0;
                     <!-- <p class="tag-tip">您最多可以从以下选择3个标签哟！</p> -->
                     <div id="js-tags" class="taglist clearfix">
                         @foreach ($classes as $class)
-                            <input type="text" readonly style="overflow: visible;text-align: center;" size="{{$class->len}}px" class="save-list-tag classify" data-id="{{$class->class_id}}" name="classify[]" value="{{$class->class_name}}"/>
+                            <input data-id="{{$class->class_id}}" value="{{$class->class_name}}" type="text" readonly style="overflow: visible;text-align: center;" size="{{$class->len}}px" class="save-list-tag classify"/>
                             <!--<a href="javascript:void(0);" class="save-list-tag classify" data-id="{{$class->class_id}}" name="{{$class->class_name}}">{{$class->class_name}}</a>-->
                         @endforeach
                     </div>
@@ -214,6 +202,9 @@ var _cart_num = 0;
                   </div>
                </div>
         </div>
+              <input type="hidden" id="classifyid" name="classifyid" value=""/>
+              <input type="hidden" id="point" name="point" value="0"/>
+              <input type="submit" id="sub-btn" style="display: none;"/>
         </form>
         <div class="saveques-bottom" style="bottom: auto">
           <a href="javascript:void(0);" id="ques-submit-btn" class="btn btn-red link-btn publishbtn">发布</a>
@@ -302,43 +293,68 @@ var _cart_num = 0;
     </div>
 </div>
 
-<script type="text/javascript" src="./frontend/question_files/sea.js.下载"></script>
-<script type="text/javascript" src="./frontend/question_files/sea_config.js.下载"></script>
 <script type="text/javascript" charset="utf-8" src="./frontend/question_files/ueditor.final.min.js.下载"></script>
 
 <script type="text/javascript">seajs.use("/static/page/"+OP_CONFIG.module+"/"+OP_CONFIG.page);</script>
 <script>
     $(function(){
-        $('ques-submit-btn').click(function(){
-            var title = $('#ques-title').val();
-            var content = ue.getContent();
-            if(title==''||content==''){
-                alert('有内容没有填写');
-                return false;
+        $('.saveques-bottom').click(function(){
+            var point = 0;
+            var str = '';
+            for(v in arr){
+                str += ','+v;
             }
-
+            $('#classifyid').val(str.substr(1));
+            //询问框
+            var info = confirm('你确定提交问题吗？');
+            if(info){
+                $.ajax({
+                    url:'question_verify',
+                    dataType:'json',
+                    type:'get',
+                    success:function(msg){
+                        console.log(msg);
+                        if(msg.code==1){
+                            alert(msg.msg);
+                            return false;
+                        }else if(msg.code==0){
+                            point = 0;
+                        }else if(msg.code==2){
+                            point = -2;
+                        }
+                        $('#point').val(point);
+                        $('#sub-btn').click();
+                    }
+                });
+            }
         });
         var num=0;
+        var arr = [];
         $('.classify').click(function(){
             var str = $(this).attr('class');
+            var id = $(this).data('id');
             var state = 0;
             str = str.split(' ');
-            console.log(str);
             for(var i=0;i<str.length;i++){
                 if(str[i]=='onactive'){
                     state = 1;
                 }
             }
+            //判断class中是否已经有classify
             if(state==0){
+                //没有
                 if(num>=3){
 //                    alert('您当前已经选了三个');
                 }else{
                     $(this).addClass('onactive');
+                    arr[id] = id;
                     num++;
                 }
             }
             if(state==1){
+                //有
                 $(this).removeClass('onactive');
+                arr.splice(id,1);
                 num--;
             }
         });
@@ -387,7 +403,7 @@ var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
     var ue = UE.getEditor('editor',{
         toolbars:[
             [
-                'insertcode','source', '|', 'undo', 'redo','bold', 'italic', 'underline', 'link'
+                'insertcode','source', 'insertimage', 'emotion', 'undo', 'redo','bold', 'italic', 'underline', 'link'
             ]
         ]
     });
