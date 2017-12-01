@@ -5,6 +5,12 @@ Route::get('index','LoginController@index');
 Route::get('Freeindex','FreeController@Freeindex');
 Route::any('Freeindex/{id}',['uses'=>'FreeController@Freeindex']);
 Route::any('sclass/{id}',['uses'=>'FreeController@sclass']);
+//职业课程视频
+Route::any('Elastic','ElasticController@Elaindex');
+Route::any('Elastic/{id}',['uses'=>'ElasticController@Elaindex']);
+//实战的分类和视频
+Route::any('Fight','FightController@Findex');
+
 
 Route::get('index','LoginController@index');
 
