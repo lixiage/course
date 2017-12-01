@@ -8,22 +8,49 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Login;
+use App\Question;
 use DB;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller as BaseController;
 
-class QuestionController extends BaseController
+
+class QuestionController extends CommonController
 {
 
-    public function index()
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|\think\response\View
+     * 问题首页
+     */
+    public function show(Request $request)
     {
-        return view('frontend/question/index');
+        $param = $request->input('type');
+        $type = !empty($param)?$param:'recommend';
+        $data = (new Question())->getClassify($type);
+
+//        print_r($data);die;
+        return view('frontend/question/show',['data'=>$data]);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|\think\response\View|void
+     * 提出问题
+     */
     public function question(Request $request)
     {
         if ($request->isMethod('post')) {
-            var_dump($request->input());
+            $data = $this->getData($request->input());
+            if(empty($data['question_title'])||empty($data['classifyid'])||empty($data['question_content'])){
+                $this->goBack();
+            }
+            $point = $data['point'];
+            unset($data['point']);
+            $id = (new Question())->insert($data,$point);
+            if($id){
+                return redirect('question_index');
+            }else{
+                $this->goBack();
+            }
         } else {
             $classes = DB::table('course_classify')->get();
             foreach ($classes as $class) {
@@ -32,6 +59,35 @@ class QuestionController extends BaseController
             return view('frontend/question/insert', ['classes' => $classes]);
         }
     }
-    
+
+    /**
+     * @param $data
+     * @return mixed
+     * 处理提交数据
+     */
+    public function getData($data){
+        $data['uid'] = isset($_SESSION['user_id'])?$_SESSION['user_id']:1;
+        $data['is_new'] = 1;
+        $data['addtime'] = date('Y-m-d H:i:s',time());
+
+        return $data;
+    }
+
+    /**
+     * @return \Illuminate\Http\JsonResponse|\Symfony\Component\HttpFoundation\Response
+     * 验证是否免费以及积分是否够
+     */
+    public function verify(){
+        session_start();
+        $uid = isset($_SESSION['user_id'])?$_SESSION['user_id']:1;
+        $data = (new Login())->verify($uid);
+        return response()->json($data);
+    }
+
+    public function answer(Request $request){
+        $question_id = $request->input('q_id');
+
+        return view('frontend/question/answer');
+    }
 
 }

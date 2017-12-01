@@ -18,6 +18,12 @@ class Commom extends Model
     protected  $accessToken = "https://api.weibo.com/oauth2/access_token";
    //获取用户信息
     protected  $UserMessage = "https://api.weibo.com/2/users/show.json";
+    //发送的内容
+    protected $content;
+    //发送给谁
+    protected $cliendName="369367988@qq.com";
+    //邮件的标题
+    protected $subject = "你的名字我的心";
     /**
      * 查询友情链接
      */
@@ -121,7 +127,6 @@ class Commom extends Model
         return http_build_query($arr);
     }
 
-
     public  function actionUrll(){
         $arr = array();
         $url  = $this->UserMessage;
@@ -141,4 +146,36 @@ class Commom extends Model
         return $str;
     }
 
+    /**
+     * 发送邮件
+     */
+    public  function SendMail(){
+        require("./Mail/class.smtp.php");
+        require("./Mail/class.phpmailer.php");
+        $mail = new \PHPMailer(true); //实例化PHPMailer类,true表示出现错误时抛出异常
+        $mail->IsSMTP(); // 使用SMTP
+        try {
+            $mail->CharSet ="UTF-8";//设定邮件编码
+            $mail->Host       = "smtp.163.com"; // SMTP server
+            $mail->SMTPDebug  = 1;                     // 启用SMTP调试 1 = errors  2 =  messages
+            $mail->SMTPAuth   = true;                  // 服务器需要验证
+            $mail->Port       = 25;					//默认端口
+            $mail->Username   = "18410178071"; //SMTP服务器的用户帐号
+            $mail->Password   = "Wen5223488";        //SMTP服务器的用户密码
+            $mail->AddReplyTo('18410178071@163.com', '回复'); //收件人回复时回复到此邮箱,可以多次执行该方法
+            $mail->AddAddress($this->cliendName, ''); //收件人如果多人发送循环执行AddAddress()方法即可 还有一个方法时清除收件人邮箱ClearAddresses()
+            $mail->SetFrom('18410178071@163.com', '发件人');//发件人的邮箱
+            //$mail->AddAttachment('./img/bloglogo.png');      // 添加附件,如果有多个附件则重复执行该方法
+            $mail->Subject = $this->subject . date('Y-m-d H:i:s');
+            //以下是邮件内容
+            $mail->Body = $this->content;
+            $mail->IsHTML(true);
+            $mail->Send();
+            return json_encode(['code'=>6,'content'=>"发送成功"]);
+        } catch (\phpmailerException $e) {
+            return json_encode(['code'=>4,'content'=>$e->errorMessage()]);
+        } catch (\Exception $e) {
+            return json_encode(['code'=>5,'content'=>$e->getMessage()]);
+        }
+    }
 }
