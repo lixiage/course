@@ -28,7 +28,6 @@ class LoginController extends BaseController
     public function index()
     {
         $url = $this->weiboUrl();
-       // echo $url;die;
         return view('frontend/Login/index',['url'=>$url]);
     }
     /**

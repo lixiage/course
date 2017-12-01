@@ -14,5 +14,12 @@ Route::any("weibo","LoginController@weibo");                            //这是
 Route::any('question_index','QuestionController@index');                //猿问
 Route::any('question_insert','QuestionController@question');
 Route::any('password','PasswordsController@index');
+Route::any('savePassword',"PasswordsController@savePassword");
+Route::any('password_url',"PasswordsController@SaveUrl");
+Route::any('passwordSuccsee',"PasswordsController@passwordSuccsee");
+
+
+
+
 
 
