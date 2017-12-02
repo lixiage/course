@@ -1,17 +1,23 @@
 <?php
 Route::get('/','Controller@index');
-Route::get('index','LoginController@index');
+
+Route::get('index','IndexController@index');//首页
+
+Route::any('zindex','CommentController@zindex');//评论
+Route::any('zadd','CommentController@zadd');//添加评论
+Route::any('zhits','CommentController@zhits');//点赞
+Route::any('zreply','CommentController@zreply');//回复
+
 //免费课程的那个页面
 Route::get('Freeindex','FreeController@Freeindex');
 Route::any('Freeindex/{id}',['uses'=>'FreeController@Freeindex']);
 Route::any('sclass/{id}',['uses'=>'FreeController@sclass']);
+//职业课程视频
+Route::any('Elastic','ElasticController@Elaindex');
+Route::any('Elastic/{id}',['uses'=>'ElasticController@Elaindex']);
+//实战的分类和视频
+Route::any('Fight','FightController@Findex');
 
-Route::get('index','LoginController@index');
-
-
-Route::get('index','LoginController@index');   //这是主页面  进入首页
-Route::any('login',"LoginController@login");//这是主页面  登录
-Route::any('loginout',"LoginController@loginOut");//这是主页面  退出
 
 Route::any('whdindex','ShopcarController@index');                       //购物车
 Route::any('whdorder_list','OrderController@whdorder_list');            //订单
