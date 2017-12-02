@@ -14,10 +14,13 @@ use DB;
 
 class Question extends Model{
 
+    //strip_tags   去除HTML标签  第二个参数可以指定不去除的标签
+
     protected $table = 'question';
-    protected $two_table = 'course_classify';
-    protected $three_table = 'answer';
-    protected $four_table = 'admin_user';
+    protected $class_table = 'course_classify';
+    protected $answer_table = 'answer';
+    protected $admin_table = 'admin_user';
+    protected $limit = 6;
 
     /**
      * @param $data
@@ -26,6 +29,11 @@ class Question extends Model{
      * 添加提问
      */
     public function insert($data,$point){
+        $data['question_title'] = strip_tags($data['question_title']);
+        $data['question_content'] = strip_tags($data['question_content'],'<img>');
+        $data['uid'] = isset($_SESSION['user_id'])?$_SESSION['user_id']:1;
+        $data['is_new'] = 1;
+        $data['addtime'] = date('Y-m-d H:i:s',time());
         try{
             $id = DB::table($this->table)->insertGetId($data);
             //提问成功加减分
@@ -43,13 +51,13 @@ class Question extends Model{
     public function allData($type){
         switch($type){
             case 'recommend':
-                $data = DB::table($this->table)->get();
+                $data = DB::table($this->table)->paginate($this->limit);
                 break;
             case 'new':
-                $data = DB::table($this->table)->where(['is_new'=>1])->get();
+                $data = DB::table($this->table)->where(['is_new'=>1])->paginate($this->limit);
                 break;
             case 'wait':
-                $data = DB::table($this->table)->where(['useid'=>0])->get();
+                $data = DB::table($this->table)->where(['useid'=>0])->paginate($this->limit);
                 break;
         }
 
@@ -62,8 +70,10 @@ class Question extends Model{
      */
     public function getClassify($type){
         $data = $this->allData($type);
-        $class_info = DB::table($this->two_table)->select('class_id','class_name')->get();
-        $answers = $this->getAnswers();
+        $class_info = DB::table($this->class_table)->select('class_id','class_name')->get();
+
+        $list = DB::table($this->answer_table)->get();
+        $answers = $this->getAnswers($list);
         foreach($data as $val){
             $ids = explode(',',$val->classifyid);
             $val->answer_num = 0;
@@ -84,17 +94,86 @@ class Question extends Model{
         return $data;
     }
 
-    public function getAnswers(){
-        $list = DB::table($this->three_table)->get();
-        $users = DB::table($this->four_table)->select('admin_id','username')->get();
+    /**
+     * @return mixed
+     * 获取问题回复
+     */
+    public function getAnswers($list){
+        $users = DB::table($this->admin_table)->select('admin_id','username','head_ico')->get();
         foreach($list as $answer){
             foreach($users as $user){
                 if($answer->uid == $user->admin_id){
                     $answer->username = $user->username;
+                    $answer->head = $user->head_ico;
                 }
             }
         }
         return $list;
+    }
+
+    /**
+     * @param $uid
+     * @return mixed
+     * 获取单个用户的所有信息
+     */
+    public function getOneUser($uid){
+        return DB::table($this->admin_table)->where(['admin_id'=>$uid])->first();
+    }
+
+    /**
+     * @param $q_id
+     * @return mixed
+     * 获取问题详细
+     */
+    public function getOneQuestion($q_id){
+        $data = DB::table($this->table)->where(['question_id'=>$q_id])->first();
+        $user = $this->getOneUser($data->uid);
+        return ['data'=>$data,'user'=>$user];
+    }
+
+    /**
+     * @param $q_id
+     * @return array
+     * 获取所有的回复（包括回答的回复）
+     */
+    public function getBothAnswer($q_id){
+        $data = DB::table($this->answer_table)->where(['q_id'=>$q_id])->get();
+        $data = $this->getAnswers($data);
+        //还差一个回答的回复
+
+        return ['data'=>$data,'num'=>count($data)];
+    }
+
+    /**
+     * @param $where
+     * @param $data
+     * @param string $table
+     * @return mixed
+     * 修改提问表
+     */
+    public function updateData($where,$data,$table='question'){
+        return DB::table($table)->where($where)->update($data);
+    }
+
+    /**
+     * @param $data
+     * @return mixed
+     * 添加回复
+     */
+    public function addAnswer($data){
+        $data['addtime'] = date('Y-m-d H:i:s',time());
+        $data['answer_content'] = strip_tags($data['answer_content'],'<img>');
+        return DB::table($this->answer_table)->insertGetId($data);
+    }
+
+    /**
+     * @param $id
+     * @param $integral
+     * @return mixed
+     * 如果采纳  加积分
+     */
+    public function addIntegral($id,$integral){
+        return DB::table($this->admin_table)->where(['admin_id'=>$id])->increment('integral',$integral);
     }
 
 }

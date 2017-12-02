@@ -64,17 +64,9 @@
                 
                 <li class="shop-cart" id="shop-cart">
                     <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
-                        <span class="icon-shopping-cart js-endcart"></span><span>购物车</span><span class="shopping_icon js-cart-num" data-ordernum="0" data-cartnum="0" style="display: none">0</span>
+                        <span>购物车</span><span class="shopping_icon js-cart-num" data-ordernum="0" data-cartnum="0" style="display: none">0</span>
                     </a>
                     <div class="my-cart" id="js-my-cart"><div class="cart-title-box clearfix">                                        <h2 class="l">我的购物车</h2>                                        <h5 class="r">已加入<span class="js-incart-num">0</span>门课程</h5>                                    </div>                                    <div class="cart-wrap">                                        <div class="clear-cart">                                            <span class="cartIcon icon-shopping-cart"></span>                                            <h3>购物车里空空如也</h3>                                            <div class="text">快去这里选购你中意的课程</div>                                            <p><a class="go-link" href="http://coding.imooc.com/" target="_blank">实战课程</a></p>                                            <p><a class="go-link" href="http://class.imooc.com/" target="_blank">职业路径</a></p>                                        </div>                                    </div>                                    <div class="more-box clearfix">                                        <div class="l show-box">                                            <span class="text"><a href="http://order.imooc.com/myorder" target="_blank">我的订单中心</a></span>                                        </div>                                        <a href="http://order.imooc.com/pay/cart" target="_blank" class="r moco-btn moco-btn-red go-cart">去购物车</a>                                    </div></div>
-                </li>
-                
-                <li class="remind_warp">
-                    <i class="msg_remind" style="display: inline;"></i>
-                    <a target="_blank" href="http://www.imooc.com/u/6197642/notices">
-                        <i class="icon-notifi"></i>
-                        <!-- <span class="msg_icon" style="display: none;"></span> -->
-                    </a>
                 </li>
                
                 <li class="set_btn user-card-box" id="header-user-card">
@@ -146,380 +138,140 @@
                     <div id="js-content-main">
                         <div class="detail-q-title clearfix">
                             <!-- 话题 -->
-                                                        <h1 class="js-qa-wenda-title detail-wenda-title">JS中，变量+=的一个小问题，请高手解答</h1>
-
-
+                            <h1 class="js-qa-wenda-title detail-wenda-title">{{$info['data']->question_title}}</h1>
                             <!-- 问答信息 -->
                             <div class="wenda-intro-box clearfix">
                                 <div class="detail-user l">
                                     <a href="http://www.imooc.com/u/5225212/bbs" class="author l">
-                                        <img src="./frontend/answer_files/545868ff0001bfbb02200220-100-100.jpg" alt="假假爱看书的人">
-
-                                        假假爱看书的人                                        
-                                                                                                                    </a>
-                                    
-                                                                    </div>
-
+                                        <img src="{{$info['user']->head_ico}}">{{$info['user']->username}}
+                                    </a>
+                                </div>
                                 <!-- 编辑 -->
                                 <div class="wenda-edit-box r">
-                                                                    <a href="javascript:;" data-id="383279" data-type="1" data-uid="5225212" class="js-tip-off detail-edit l">举报</a>
-                                                                    <span class="count-item l">回答<i>3</i></span>
-                                    <span class="count-item l">浏览<i>56</i></span>
-                                    
+                                    <span class="count-item l">回答<i>{{$data['num']}}</i></span>
                                 </div>
                                 <!-- 编辑 end -->
                             </div>
                         </div>
-                        
-                        <div id="js-qa-wenda" class="detail-wenda aimgPreview rich-text"><p><img src="./frontend/answer_files/5a20c1040001aa9503560155.jpg" style="cursor: pointer;"><br><img src="./frontend/answer_files/5a20c1040001b00f15010454.jpg" style="cursor: pointer;"><br>如果在for循环中var box +=就会出错，为什么，只不过重新赋值了，怎么会错呢？</p></div>
-                    </div>
-                    
-                    <!-- 编辑问答 -->
-                                        <!-- 编辑问答 end -->
-
-                    <!-- 源自 & 分享 & 关注 -->
-                    <div class="qa-header detail-user-tips clearfix">
-                                                <div class="qa-header-right r">
-                            <!-- credit -->
-                            
-                            <!-- share -->
-                            <div class="small-share l wd-share">
-                                <ul class="share-wrap">
-                                    <li class="weichat-posi js-top-share">
-                                        <div class="bdsharebuttonbox weichat-style bdshare-button-style0-16" data-tag="share_1" data-quesid="383279" data-bd-bind="1512111067069">
-                                            <a href="http://www.imooc.com/wenda/detail/383279#" class="bds_weixin icon-nav icon-share-weichat" data-cmd="weixin" title="分享到微信"></a>
-                                            <a href="http://www.imooc.com/wenda/detail/383279#" class="bds_qzone icon-nav icon-share-qq" data-cmd="qzone" title="分享到QQ空间"></a>
-                                            <a href="http://www.imooc.com/wenda/detail/383279#" class="bds_tsina icon-nav icon-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <em class="split l"></em>
-                            <!-- follow -->
-                                                            <a href="javascript:void(0)" data-id="383279" title="关注" class="l wenda-add-collection js-collection-btn">
-                                    <i class="icon-heart"></i>
-                                    <span class="detail-hearts js-detail-follow"></span>
-                                </a>
-                                                    </div>
-                        
-                    </div>
-                    <!-- 源自 & 分享 & 关注 end-->
-                </div>
-
+                        <div id="js-qa-wenda" class="detail-wenda aimgPreview rich-text">
+                            {{--这里是问题内容--}}
+                            <p>
+                                {!! $info['data']->question_content !!}
+                            </p>
                         </div>
+                    </div>
+                </div>
+            </div>
 
             <div id="js-qa-comment-input" class="detail-comment-input js-msg-context clearfix" style="">
                 <h3 class="answer-add-tip">添加回答</h3>
                 <div id="add-answer" class="detail-ci-avator">
                     <button id="answer-frame" class="answer-btn"></button>
                 </div>
-                
+                {{-- answer-hidden --}}
                 <div id="avator-wrap" class="detail-ci-avator answer-hidden l">
-                                        <img src="./frontend/answer_files/5a1d5c790001797701000100-80-80.jpg" alt="">
-                    
-                                    </div>
+                    {{--用户--}}
+                    <img src="{{$info['user']->head_ico}}">
+                </div>
                 <div id="js-reply-wrap" class="answer-hidden l" style="">
-                    <div id="js-reply-editor-box" class="wd-comment-box js-ci-inner  edui-imooc" style="">
-                    <div id="edui1" class="edui-editor  edui-imooc" style="width: 660px; z-index: 9999;"><div id="edui1_toolbarbox" class="edui-editor-toolbarbox edui-imooc" style=""><div id="edui1_toolbarboxouter" class="edui-editor-toolbarboxouter edui-imooc"><div class="edui-editor-toolbarboxinner edui-imooc"><div id="edui2" class="edui-toolbar   edui-imooc" onselectstart="return false;" onmousedown="return $EDITORUI[&quot;edui2&quot;]._onMouseDown(event, this);" style="user-select: none;"><div id="edui3" class="edui-box edui-combox edui-for-insertcode edui-imooc"><div title="代码语言" id="edui3_state" onmousedown="$EDITORUI[&quot;edui3&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui3&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui3&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui3&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-combox-body edui-imooc"><div id="edui3_button_body" class="edui-box edui-button-body edui-imooc" onclick="$EDITORUI[&quot;edui3&quot;]._onButtonClick(event, this);">代码语言</div><div class="edui-box edui-splitborder edui-imooc"></div><div class="edui-box edui-arrow edui-imooc" onclick="$EDITORUI[&quot;edui3&quot;]._onArrowClick();"></div></div></div></div><div id="edui17" class="edui-box edui-button edui-for-bold edui-imooc"><div id="edui17_state" onmousedown="$EDITORUI[&quot;edui17&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui17&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui17&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui17&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui17_body" unselectable="on" title="加粗" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui17&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui17&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div></div></div></div></div><div id="edui18" class="edui-box edui-button edui-for-italic edui-imooc"><div id="edui18_state" onmousedown="$EDITORUI[&quot;edui18&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui18&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui18&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui18&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui18_body" unselectable="on" title="斜体" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui18&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui18&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div></div></div></div></div><div id="edui19" class="edui-box edui-button edui-for-underline edui-imooc"><div id="edui19_state" onmousedown="$EDITORUI[&quot;edui19&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui19&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui19&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui19&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui19_body" unselectable="on" title="下划线" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui19&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui19&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div></div></div></div></div><div id="edui26" class="edui-box edui-button edui-for-insertimage edui-imooc"><div id="edui26_state" onmousedown="$EDITORUI[&quot;edui26&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui26&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui26&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui26&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui26_body" unselectable="on" title="多图上传" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui26&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui26&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div><div class="edui-box edui-label edui-imooc"></div></div></div></div></div><div id="edui31" class="edui-box edui-button edui-for-link edui-imooc"><div id="edui31_state" onmousedown="$EDITORUI[&quot;edui31&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui31&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui31&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui31&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui31_body" unselectable="on" title="超链接" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui31&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui31&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div><div class="edui-box edui-label edui-imooc"></div></div></div></div></div><div id="edui32" class="edui-box edui-button edui-for-unlink edui-imooc"><div id="edui32_state" onmousedown="$EDITORUI[&quot;edui32&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui32&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui32&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui32&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui32_body" unselectable="on" title="取消链接" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui32&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui32&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div></div></div></div></div><div id="edui33" class="edui-box edui-button edui-for-insertunorderedlist edui-imooc"><div id="edui33_state" onmousedown="$EDITORUI[&quot;edui33&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui33&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui33&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui33&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui33_body" unselectable="on" title="无序列表" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui33&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui33&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div><div class="edui-box edui-label edui-imooc"></div></div></div></div></div><div id="edui34" class="edui-box edui-button edui-for-insertorderedlist edui-imooc"><div id="edui34_state" onmousedown="$EDITORUI[&quot;edui34&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui34&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui34&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui34&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui34_body" unselectable="on" title="有序列表" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui34&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui34&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div><div class="edui-box edui-label edui-imooc"></div></div></div></div></div><div id="edui35" class="edui-box edui-button edui-for-blockquote edui-imooc"><div id="edui35_state" onmousedown="$EDITORUI[&quot;edui35&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui35&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui35&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui35&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui35_body" unselectable="on" title="引用" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui35&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui35&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div></div></div></div></div><div id="edui36" class="edui-box edui-button edui-for-redo edui-imooc"><div id="edui36_state" onmousedown="$EDITORUI[&quot;edui36&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui36&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui36&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui36&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui36_body" unselectable="on" title="重做" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui36&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui36&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div></div></div></div></div><div id="edui37" class="edui-box edui-button edui-for-undo edui-imooc"><div id="edui37_state" onmousedown="$EDITORUI[&quot;edui37&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui37&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui37&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui37&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui37_body" unselectable="on" title="撤销" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui37&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui37&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div></div></div></div></div><div id="edui40" class="edui-box edui-button edui-for-preview edui-imooc"><div id="edui40_state" onmousedown="$EDITORUI[&quot;edui40&quot;].Stateful_onMouseDown(event, this);" onmouseup="$EDITORUI[&quot;edui40&quot;].Stateful_onMouseUp(event, this);" onmouseover="$EDITORUI[&quot;edui40&quot;].Stateful_onMouseOver(event, this);" onmouseout="$EDITORUI[&quot;edui40&quot;].Stateful_onMouseOut(event, this);" class="edui-imooc"><div class="edui-button-wrap edui-imooc"><div id="edui40_body" unselectable="on" title="预览" class="edui-button-body edui-imooc" onmousedown="return $EDITORUI[&quot;edui40&quot;]._onMouseDown(event, this);" onclick="return $EDITORUI[&quot;edui40&quot;]._onClick(event, this);"><div class="edui-box edui-icon edui-imooc"></div><div class="edui-box edui-label edui-imooc"></div></div></div></div></div></div></div></div><div id="edui1_toolbarmsg" class="edui-editor-toolbarmsg edui-imooc" style="display:none;"><div id="edui1_upload_dialog" class="edui-editor-toolbarmsg-upload edui-imooc" onclick="$EDITORUI[&quot;edui1&quot;].showWordImageDialog();">点击上传</div><div class="edui-editor-toolbarmsg-close edui-imooc" onclick="$EDITORUI[&quot;edui1&quot;].hideToolbarMsg();">x</div><div id="edui1_toolbarmsg_label" class="edui-editor-toolbarmsg-label edui-imooc"></div><div style="height:0;overflow:hidden;clear:both;" class="edui-imooc"></div></div><div id="edui1_message_holder" class="edui-editor-messageholder edui-imooc" style="top: 3px; z-index: 10000;"></div></div><div id="edui1_iframeholder" class="edui-editor-iframeholder edui-imooc" style="width: 660px; height: 100px; z-index: 9999; overflow: hidden;"><iframe id="ueditor_0" width="100%" height="100%" frameborder="0" src="javascript:void(function(){document.open();document.write(&quot;&lt;!DOCTYPE html&gt;&lt;html xmlns=&#39;http://www.w3.org/1999/xhtml&#39; class=&#39;view&#39; &gt;&lt;head&gt;&lt;style type=&#39;text/css&#39;&gt;.view{padding:0;word-wrap:break-word;cursor:text;height:90%;}
-body{margin:8px;font-family:sans-serif;font-size:16px;}p{margin:5px 0;}&lt;/style&gt;&lt;link rel=&#39;stylesheet&#39; type=&#39;text/css&#39; href=&#39;http://www.imooc.com/static/lib/ueditor/themes/iframe.css&#39;/&gt;&lt;/head&gt;&lt;body class=&#39;view&#39; &gt;&lt;/body&gt;&lt;script type=&#39;text/javascript&#39;  id=&#39;_initialScript&#39;&gt;setTimeout(function(){editor = window.parent.UE.instants[&#39;ueditorInstant0&#39;];editor._setup(document);},0);var _tmpScript = document.getElementById(&#39;_initialScript&#39;);_tmpScript.parentNode.removeChild(_tmpScript);&lt;/script&gt;&lt;/html&gt;&quot;);document.close();}())" src="./frontend/answer_files/saved_resource.html"></iframe></div><div id="edui1_bottombar" class="edui-editor-bottomContainer edui-imooc"><table class="edui-imooc"><tbody class="edui-imooc"><tr class="edui-imooc"><td id="edui1_elementpath" class="edui-editor-bottombar edui-imooc" style="display: none;"></td><td id="edui1_wordcount" class="edui-editor-wordcount edui-imooc" style="display: none;"></td><td id="edui1_scale" class="edui-editor-scale edui-imooc" style="display: none;"><div class="edui-editor-icon edui-imooc"></div></td></tr></tbody></table></div><div id="edui1_scalelayer" class="edui-imooc"></div></div></div>
+                    <!--  百度编辑器-->
+                    <script id="editor" name="question_content" type="text/plain" style="width:663px;height:100px;"></script>
+
                     <div id="js-qa-ci-footer" class="qa-ci-footer clearfix">
                         <span class="qa-tips l"></span>
                         <div class="qa-ci-footright">
-                            <button id="js-wenda-ci-submit" class="btn btn-red detail-ans " data-qid="383279">回答</button>
+                            <button id="js-wenda-ci-submit" class="btn btn-red detail-ans " data-qid="{{$info['data']->question_id}}" data-id="{{$info['user']->admin_id}}">回答</button>
                         </div>
                     </div>
                 </div>
-                
+
 
             </div>
             <!-- 回答数 -->
-                                                <div class="ans_num">3回答</div>
+        <div class="ans_num">{{$data['num']}}回答</div>
                                         <!-- 回答回复 start -->
-                            <div class="ques-answer ques-new-answer clearfix">
-                    <!-- 已采纳标志 -->
-                                    
-                    <div class="edit-title">编辑回答</div>
-                    <div class="answer-con first" id="id_270181">
-                        <div class="user-pic l">
-                            <a href="http://www.imooc.com/u/2698756/bbs" target="_blank">
-                                <img src="./frontend/answer_files/5a1187c40001429807410719-100-100.jpg" width="40" height="40" alt="?">
+        @foreach($data['data'] as $answer)
+            <div class="ques-answer ques-new-answer clearfix">
+                <!-- 已采纳标志 -->
+                {{--@if($answer->is_use==1)--}}
+                    <span class="had-solved" id="{{$answer->answer_id}}" data-quesid="383254" @if($answer->is_use==0)style="display:none;"@endif  data-replyid="270153">已采纳</span>
+                {{--@endif--}}
+                <div class="edit-title">编辑回答</div>
+                <div class="answer-con first" id="id_270181">
+                    <div class="user-pic l">
+                        <a href="http://www.imooc.com/u/2698756/bbs" target="_blank">
+                            <img src="{{$answer->head}}" width="40" height="40">
+                        </a>
+                    </div><!--.user end-->
+                    <div class="detail-r">
+                        <a class="detail-name" href="http://www.imooc.com/u/2698756/bbs" target="_blank">{{$answer->username}}</a>
+                    </div>
+                    <div class="answer-content rich-text aimgPreview">
+                        <p>
+                            {{--回复内容--}}
+                            {!! $answer->answer_content !!}
+                        </p>
+                    </div>
+                    <div class="ctrl-bar js-msg-context clearfix js-reply-tool hide">
+                        <div class="detail-editor-btns r">
+                            <span class="qa-tips"></span>
+                            <button class="btn btn-normal js-reply-cancel">取消</button>
+                            <button class="btn btn-red js-reply-submit" data-id="270181">保存</button>
+                        </div>
+                    </div>
+
+                    <div class="ctrl-bar clearfix js-wenda-tool">
+                        <span class="reply" data-replynum="0" data-reply-id="270181" data-ques-uid="5225212">
+                            <em>0</em>个回复
+                        </span>
+                        @if($info['data']->useid==0)
+                            <span class="solved js-solved adopt" data-quesid="383313" data-replyid="270209" data-q="{{$answer->q_id}}" data-id="{{$answer->answer_id}}">采纳此回答</span>
+                        @endif
+                        <span class="time r">{{$answer->addtime}}</span>
+                    </div><!--.ctrl-bar end-->
+
+                </div><!--.answer-con end-->
+                <div class="reply-con">
+                    <ul class="reply-list">
+
+                    </ul><!--.reply-list end-->
+                    <div class="release-reply-con clearfix">
+                        <div class="user-pic ">
+                            <a href="http://www.imooc.com/u/6197642/bbs" target="_blank">
+                                <img src="./frontend/answer_files/5a1d5c790001797701000100-100-100(1).jpg" width="40" height="40" alt="?">
                             </a>
-                        </div><!--.user end-->
-                        <div class="detail-r">    
-                                                        <a class="detail-name" href="http://www.imooc.com/u/2698756/bbs" target="_blank">夢想的星辰</a>
-                                                                                    
-                                                        
-                            
                         </div>
+                        <!--.user-pic end-->
 
-                        
-                        <div class="answer-content rich-text aimgPreview"><p>使用了var 声明变量，只有var x；和var x = 1；没有var box +=这种方式</p></div>
-                                                <div class="ctrl-bar js-msg-context clearfix js-reply-tool hide">
-                            <div class="detail-editor-btns r">
-                                <span class="qa-tips"></span>
-                                <button class="btn btn-normal js-reply-cancel">取消</button>
-                                <button class="btn btn-red js-reply-submit" data-id="270181">保存</button>
-                            </div>
+
+                        <div class="textarea-con">
+                            <textarea name="release-reply" id="release-reply" placeholder="写下你的回复"></textarea>
                         </div>
-                        
-                        <div class="ctrl-bar clearfix js-wenda-tool">
-                        
-                            <span class="agree-with " data-ques-id="383279" data-answer-id="270181" data-hasop=""><i class="icon-thumb-revert"></i></span>
-
-                            <span class="oppose " data-ques-id="383279" data-answer-id="270181" data-hasop=""><i class="imv2-thumb_down"></i><em>反对</em></span>
-                            
-                            
-                                                                                        
-                            <span class="reply" data-replynum="0" data-reply-id="270181" data-ques-uid="5225212"><em>0</em>个回复</span>
-
-                                                        <a href="javascript:;" data-id="270181" data-quesid="383279" data-answerid="270181" data-type="2" data-uid="2698756" class="reply-del js-tip-off">举报</a>
-                            
-                                                        
-                             <span class="time r">1小时前</span>
-
-                        </div><!--.ctrl-bar end-->
-
-                        
-                    </div><!--.answer-con end-->
-                    <div class="reply-con">
-                        <ul class="reply-list">
-                            
-                        </ul><!--.reply-list end-->
-                        <div class="release-reply-con clearfix">
-                                                        <div class="user-pic ">
-                                <a href="http://www.imooc.com/u/6197642/bbs" target="_blank">
-                                    <img src="./frontend/answer_files/5a1d5c790001797701000100-100-100(1).jpg" width="40" height="40" alt="?">
-                                </a>
-                            </div>
-                                                        <!--.user-pic end-->
-                            
-
-                            <div class="textarea-con">
-                                                                <textarea name="release-reply" id="release-reply" placeholder="写下你的回复"></textarea>
-                                                            </div>
-                            <p class="err-tip"></p>
-                            <div class="userCtrl clearfix">
-                                <div class="verify-code"></div>
-                                <div class="do-reply-btn" data-answer-id="270181" data-ques-uid="5225212">回复</div>
-                            </div>
-                        </div><!--.release-reply-con end-->
-                    </div><!--.reply-con end-->
-                    
-                </div>
-                            <div class="ques-answer ques-new-answer clearfix">
-                    <!-- 已采纳标志 -->
-                                    
-                    <div class="edit-title">编辑回答</div>
-                    <div class="answer-con first" id="id_270178">
-                        <div class="user-pic l">
-                            <a href="http://www.imooc.com/u/479481/bbs" target="_blank">
-                                <img src="./frontend/answer_files/57f3cfe40001091204000400-100-100.jpg" width="40" height="40" alt="?">
-                            </a>
-                        </div><!--.user end-->
-                        <div class="detail-r">    
-                                                        <a class="detail-name" href="http://www.imooc.com/u/479481/bbs" target="_blank">秋名山车神</a>
-                                                        <i class="imv2-imooc" title="慕课网讲师"></i>
-                                                                                    
-                                                        
-                            
+                        <p class="err-tip"></p>
+                        <div class="userCtrl clearfix">
+                            <div class="verify-code"></div>
+                            <div class="do-reply-btn" data-answer-id="270181" data-ques-uid="5225212">回复</div>
                         </div>
+                    </div><!--.release-reply-con end-->
+                </div><!--.reply-con end-->
 
-                        
-                        <div class="answer-content rich-text aimgPreview"><p>box += 1 实际上就等于 var box = box + 1，你写了 var 以后就相当于 var var box = box + 1 不存在这种语法</p></div>
-                                                <div class="ctrl-bar js-msg-context clearfix js-reply-tool hide">
-                            <div class="detail-editor-btns r">
-                                <span class="qa-tips"></span>
-                                <button class="btn btn-normal js-reply-cancel">取消</button>
-                                <button class="btn btn-red js-reply-submit" data-id="270178">保存</button>
-                            </div>
-                        </div>
-                        
-                        <div class="ctrl-bar clearfix js-wenda-tool">
-                        
-                            <span class="agree-with " data-ques-id="383279" data-answer-id="270178" data-hasop=""><i class="icon-thumb-revert"></i></span>
+            </div>
+        @endforeach
 
-                            <span class="oppose " data-ques-id="383279" data-answer-id="270178" data-hasop=""><i class="imv2-thumb_down"></i><em>反对</em></span>
-                            
-                            
-                                                                                        
-                            <span class="reply" data-replynum="0" data-reply-id="270178" data-ques-uid="5225212"><em>0</em>个回复</span>
 
-                            <a href="javascript:;" data-id="270178" data-quesid="383279" data-answerid="270178" data-type="2" data-uid="479481" class="reply-del js-tip-off">举报</a>
-                            
-                                                        
-                             <span class="time r">2小时前</span>
 
-                        </div><!--.ctrl-bar end-->
-
-                        
-                    </div><!--.answer-con end-->
-                    <div class="reply-con">
-                        <ul class="reply-list">
-                            
-                        </ul><!--.reply-list end-->
-                        <div class="release-reply-con clearfix">
-                            <div class="user-pic ">
-                                <a href="http://www.imooc.com/u/6197642/bbs" target="_blank">
-                                    <img src="./frontend/answer_files/5a1d5c790001797701000100-100-100(1).jpg" width="40" height="40" alt="?">
-                                </a>
-                            </div>
-                                                        <!--.user-pic end-->
-                            
-
-                            <div class="textarea-con">
-                                <textarea name="release-reply" id="release-reply" placeholder="写下你的回复"></textarea>
-                            </div>
-                            <p class="err-tip"></p>
-                            <div class="userCtrl clearfix">
-                                <div class="verify-code"></div>
-                                <div class="do-reply-btn" data-answer-id="270178" data-ques-uid="5225212">回复</div>
-                            </div>
-                        </div><!--.release-reply-con end-->
-                    </div><!--.reply-con end-->
-                    
-                </div>
-                            <div class="ques-answer ques-new-answer clearfix">
-                    <!-- 已采纳标志 -->
-                                    
-                    <div class="edit-title">编辑回答</div>
-                    <div class="answer-con first" id="id_270170">
-                        <div class="user-pic l">
-                            <a href="http://www.imooc.com/u/6208153/bbs" target="_blank">
-                                <img src="./frontend/answer_files/5458472300015f4702200220-100-100.jpg" width="40" height="40" alt="?">
-                            </a>
-                        </div><!--.user end-->
-                        <div class="detail-r">    
-                            <a class="detail-name" href="http://www.imooc.com/u/6208153/bbs" target="_blank">慕慕0098458</a>
-                                                                                    
-                                                        
-                            
-                        </div>
-
-                        
-                        <div class="answer-content rich-text aimgPreview"><p>看你那两个变量的位置</p></div>
-                        <div class="ctrl-bar js-msg-context clearfix js-reply-tool hide">
-                            <div class="detail-editor-btns r">
-                                <span class="qa-tips"></span>
-                                <button class="btn btn-normal js-reply-cancel">取消</button>
-                                <button class="btn btn-red js-reply-submit" data-id="270170">保存</button>
-                            </div>
-                        </div>
-                        
-                        <div class="ctrl-bar clearfix js-wenda-tool">
-                        
-                            <span class="agree-with " data-ques-id="383279" data-answer-id="270170" data-hasop=""><i class="icon-thumb-revert"></i></span>
-
-                            <span class="oppose " data-ques-id="383279" data-answer-id="270170" data-hasop=""><i class="imv2-thumb_down"></i><em>反对</em></span>
-                            
-                            
-                                                                                        
-                            <span class="reply" data-replynum="0" data-reply-id="270170" data-ques-uid="5225212"><em>0</em>个回复</span>
-
-                            <a href="javascript:;" data-id="270170" data-quesid="383279" data-answerid="270170" data-type="2" data-uid="6208153" class="reply-del js-tip-off">举报</a>
-                            
-                                                        
-                             <span class="time r">3小时前</span>
-
-                        </div><!--.ctrl-bar end-->
-
-                        
-                    </div><!--.answer-con end-->
-                    <div class="reply-con">
-                        <ul class="reply-list">
-                            
-                        </ul><!--.reply-list end-->
-                        <div class="release-reply-con clearfix">
-                            <div class="user-pic ">
-                                <a href="http://www.imooc.com/u/6197642/bbs" target="_blank">
-                                    <img src="./frontend/answer_files/5a1d5c790001797701000100-100-100(1).jpg" width="40" height="40" alt="?">
-                                </a>
-                            </div>
-                                                        <!--.user-pic end-->
-                            
-
-                            <div class="textarea-con">
-                                <textarea name="release-reply" id="release-reply" placeholder="写下你的回复"></textarea>
-                            </div>
-                            <p class="err-tip"></p>
-                            <div class="userCtrl clearfix">
-                                <div class="verify-code"></div>
-                                <div class="do-reply-btn" data-answer-id="270170" data-ques-uid="5225212">回复</div>
-                            </div>
-                        </div><!--.release-reply-con end-->
-                    </div><!--.reply-con end-->
-                    
-                </div>
-            
             <!-- 回答回复 end -->
-            <div class="qa-comment-page">
-                        </div>
+            <div class="qa-comment-page"></div>
+
 
     </div>
-
-        <div class="wenda-slider r">
-            <div class="quiz"><a href="question_insert" class="js-quiz">我要提问</a></div>
-            <!-- 相关问题 -->
-                          <div class="panel about-ques">
-                <div class="panel-heading">
-                  <h2 class="panel-title">相关问题</h2>
-                </div>
-                <div class="panel-body clearfix">
-                                            <div class="mkhotlist padtop">
-                            <a class="relwenda" href="http://www.imooc.com/wenda/detail/383279" target="_blank">JS中，变量+=的一个小问题，请高手解答</a><i class="answer-num">3 回答</i>
-                        </div>
-                                            <div class="mkhotlist ">
-                            <a class="relwenda" href="http://www.imooc.com/wenda/detail/383264" target="_blank">这段JS代码里为啥不能这样写</a><i class="answer-num">2 回答</i>
-                        </div>
-                                            <div class="mkhotlist ">
-                            <a class="relwenda" href="http://www.imooc.com/wenda/detail/383185" target="_blank">怎么用div做一个迷宫</a><i class="answer-num">4 回答</i>
-                        </div>
-                                            <div class="mkhotlist ">
-                            <a class="relwenda" href="http://www.imooc.com/wenda/detail/383156" target="_blank">JS的for循环</a><i class="answer-num">3 回答</i>
-                        </div>
-                                            <div class="mkhotlist bordbottom">
-                            <a class="relwenda" href="http://www.imooc.com/wenda/detail/383155" target="_blank">eclipse不能运行debug</a><i class="answer-num">2 回答</i>
-                        </div>
-                                    </div>
-              </div>
-                        <!-- 广告 -->
-            <div class="advertisement">
-                <a href="http://www.imooc.com/wenda/issuedetail/15" data-ast="yuanwendetailright_1_1055" target="_blank">
-                    <img src="./frontend/answer_files/5a0a50b80001929602800100.jpg" title="花17">
-                </a>
-            </div><!--.advertisement end-->
-            <div class="recommend-class">
-                <div class="title clearfix">
-                    <h3>相关分类</h3>
-                </div><!--title end-->
-                    <ul class="cls-list">
-                        <li>
-                            <div class="class-info">
-                                <div class="class-icon">
-                                    <a href="http://www.imooc.com/wenda/17" target="_blank">
-                                        <img src="./frontend/answer_files/59e96f340001faac02400240.jpg" alt="JavaScript">
-                                    </a>
-                                </div><!--.class-icon end-->
-                                <h4>
-                                    <a href="http://www.imooc.com/wenda/17" target="_blank">JavaScript</a>
-                                </h4>
-                                <p class="follow-person">56515人关注</p>
-                                <a href="javascript:void(0)" data-tag-id="17" class="follow ">关注</a>
-                                
-                            </div><!--.class-info end-->
-                                                                                    <div class="desc">
-                                <a class="desc-link" href="http://www.imooc.com/wenda/detail/383123" taget="_blank">【有奖问答】与大咖交流前端JS与框架开发，免费赢取前端图书（11.2...</a>
-                                <i class="answer-num">53 回答</i>
-                            </div>
-                                                        <div class="desc">
-                                <a class="desc-link" href="http://www.imooc.com/wenda/detail/352349" taget="_blank">Chrome59到底支不支持forEach函数？</a>
-                                <i class="answer-num">9 回答</i>
-                            </div>
-                                                                                </li><!--li end-->
-                                            </ul><!--.cls-list end-->
-                </div><!--.recommend-class end-->
-                            
+    <div class="wenda-slider r">
+        <div class="quiz">
+            <a href="question_insert" class="js-quiz">
+                我要提问
+            </a>
         </div>
-
+    </div>
 </div>
 
 <div id="reply-box" style="display:none;">
@@ -543,10 +295,6 @@ body{margin:8px;font-family:sans-serif;font-size:16px;}p{margin:5px 0;}&lt;/styl
         </div>
     </div>
 </div>
-<div class="pop-tips-layer"></div>
-<div class="tipoff-block js-tipoff-block"></div>
-
-
 </div>
 
 <div id="footer">
@@ -581,8 +329,67 @@ body{margin:8px;font-family:sans-serif;font-size:16px;}p{margin:5px 0;}&lt;/styl
     </div>
 </div>
 
-
-
-
 </body>
 </html>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="./frontend/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="./frontend/ueditor/ueditor.all.min.js"> </script>
+<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+<script type="text/javascript" charset="utf-8" src="./frontend/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+    //实例化编辑器
+    var ue = UE.getEditor('editor',{
+        toolbars:[
+            [
+                'insertcode','source', 'insertimage', 'emotion', 'undo', 'redo','bold', 'italic', 'underline', 'link'
+            ]
+        ]
+    });
+</script>
+<script>
+    $(function(){
+        $('.adopt').click(function(){
+            $('.adopt').css('display','none');
+            var id = $(this).data('id');
+            var q_id = $(this).data('q');
+
+            $.ajax({
+                url:'question_adopt',
+                data:{id:id,q_id:q_id},
+                type:'get',
+                dataType:'json',
+                success:function(msg){
+                    $('#'+id).show();
+                }
+            });
+        });
+        $('.answer-btn').click(function(){
+            $(this).parent().css('display','none');
+            $(this).parent().next().removeClass('answer-hidden');
+            $(this).parent().next().next().removeClass('answer-hidden');
+        });
+        $('.detail-ans').click(function(){
+            var content = ue.getContent();
+            var qid = $(this).data('qid');
+            var uid = $(this).data('id');
+
+            $.ajax({
+                url:'question_answer',
+                data:{q_id:qid,uid:uid,answer_content:content},
+                dataType:'json',
+                type:'get',
+                success:function(msg){
+                    $('.add-answer').show();
+                    $('.add-answer').next().addClass('answer-hidden');
+                    $('.add-answer').next().next().addClass('answer-hidden');
+                    if(msg.id==''){
+                        alert('回复失败');
+                    }else if(msg.id){
+                        location.href = 'question_info?q_id='+qid;
+                    }
+                }
+            });
+        });
+    })
+</script>

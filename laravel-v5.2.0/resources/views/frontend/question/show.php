@@ -23,7 +23,7 @@
 
 <link rel="stylesheet" href="./frontend/css/yuanwen/moco.css" type="text/css">
 <link rel="stylesheet" href="./frontend/css/yuanwen/a.css" type="text/css">
-    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -216,9 +216,9 @@
             </a>
         </div><!--.tag-img end-->
         <div class="from-tag">        来自
-            <?php foreach($val->class as $v){ ?>
+            <?php if(isset($val->class)){foreach($val->class as $v){ ?>
                 <a href="http://www.imooc.com/wenda/5" target="_blank"><?= $v->class_name ?></a>
-            <?php } ?>
+            <?php }} ?>
         </div><!--.from-tag end-->
         <div class="ques-con">
             <a href="question_info?q_id=<?= $val->question_id ?>" class="ques-con-content" target="_blank">
@@ -272,17 +272,15 @@
 
 
 <div class="page">
-    <span class="disabled_page">首页</span>
-    <span class="disabled_page">上一页</span>
-    <a href="javascript:void(0)" class="active text-page-tag">1</a>
-    <a class="text-page-tag" href="http://www.imooc.com/wenda/recommend/2">2</a>
-    <a class="text-page-tag" href="http://www.imooc.com/wenda/recommend/3">3</a>
-    <a class="text-page-tag" href="http://www.imooc.com/wenda/recommend/4">4</a>
-    <a class="text-page-tag" href="http://www.imooc.com/wenda/recommend/5">5</a>
-    <a class="text-page-tag" href="http://www.imooc.com/wenda/recommend/6">6</a>
-    <a class="text-page-tag" href="http://www.imooc.com/wenda/recommend/7">7</a>
-    <a href="http://www.imooc.com/wenda/recommend/2">下一页</a>
-    <a href="http://www.imooc.com/wenda/recommend/1987">尾页</a>
+    <a href="<?= $data->Url(1) ?>">首页</a>
+    <a href="<?= $data->previousPageUrl() ?>">上一页</a>
+    <?php for ($i = 1; $i <= $data->lastPage(); $i++){ ?>
+    <a href="<?= $data->Url($i) ?>" class="text-page-tag <?= ($data->CurrentPage() == $i) ? ' active' : '' ?>">
+        <?= $i ?>
+    </a>
+    <?php } ?>
+    <a href="<?= $data->nextPageUrl() ?>">下一页</a>
+    <a href="<?= $data->Url($data->lastPage()) ?>">尾页</a>
 </div>
             </div>
         </div>

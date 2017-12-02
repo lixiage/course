@@ -35,5 +35,7 @@ Route::any('question_index','QuestionController@show');//猿问展示
 Route::any('question_insert','QuestionController@question');//提问
 Route::get('question_verify','QuestionController@verify');//验证是否有足够的积分或是否免费
 Route::get('question_info','QuestionController@answer');//问题详细信息
+Route::get('question_adopt','QuestionController@adopt');//采纳回复
+Route::get('question_answer','QuestionController@q_answer');//回复
 
 

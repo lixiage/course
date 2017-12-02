@@ -14,10 +14,13 @@ header("content-type:text/html;charset=utf-8");
 class CommonController extends Controller{
 
     /**
+     * @param string $msg
+     * @return string
      * 返回上一页面
      */
-    public function goBack(){
-        return header("url=".$_SERVER['HTTP_REFERER']);
+    public function goBack($msg = ''){
+        header("refresh:2;url=".$_SERVER['HTTP_REFERER']);
+        return '<font color="red">'.$msg.'</font>,三秒后进行跳转···';
     }
 
     /**

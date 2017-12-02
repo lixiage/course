@@ -182,7 +182,7 @@ var _cart_num = 0;
                 <div class="quesdetail mbottom" style="">
                   <span class="ques-label">&nbsp;</span>
                   <div id="editor-wrap" class="editor clearfix" style="">
-<!--                      百度编辑器-->
+                        <!--  百度编辑器-->
                       <script id="editor" name="question_content" type="text/plain" style="width:746px;height:200px;"></script>
 
                   </div>
