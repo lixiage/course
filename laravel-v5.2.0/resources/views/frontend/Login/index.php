@@ -2,16 +2,16 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>慕课网-程序员的梦工厂</title>
+<title>慕课点播-程序员的梦工厂</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="renderer" content="webkit">
 <meta property="qc:admins" content="77103107776157736375">
 <meta property="wb:webmaster" content="c4f857219bfae3cb">
 <meta http-equiv="Access-Control-Allow-Origin" content="*">
 <meta http-equiv="Cache-Control" content="no-transform ">
-<link rel="dns-prefetch" href="https://www.imooc.com/">
+<!-- <link rel="dns-prefetch" href="https://www.imooc.com/">
 <link rel="dns-prefetch" href="https://img.imooc.com/">
-<link rel="dns-prefetch" href="https://img.mukewang.com/">
+<link rel="dns-prefetch" href="https://img.mukewang.com/"> -->
 <link rel="apple-touch-icon" sizes="76x76" href="https://www.imooc.com/static/img/common/touch-icon-ipad.png">
 <link rel="apple-touch-icon" sizes="120x120" href="https://www.imooc.com/static/img/common/touch-icon-iphone-retina.png">
 <link rel="apple-touch-icon" sizes="152x152" href="https://www.imooc.com/static/img/common/touch-icon-ipad-retina.png">
@@ -40,23 +40,24 @@ var _msg_unread = 0;
 var _not_unread = 0; 
 var _cart_num = 0;
 </script>
-
-
-
 <script>var _hmt = _hmt || [];	OP_CONFIG.page = 'index';</script>
 <script src="./frontend/js/index/jquery.js" async="" charset="utf-8"></script><script src="./frontend/js/index/seajs-text.js" async="" charset="utf-8"></script><script src="./frontend/js/index/common.js" async="" charset="utf-8"></script><script src="./frontend/js/index/string.js" async="" charset="utf-8"></script><script src="./frontend/js/index/userinfo.js" async="" charset="utf-8"></script><script src="./frontend/js/index/cart.js" async="" charset="utf-8"></script><script src="./frontend/js/index/cookie.js" async="" charset="utf-8"></script><script src="./frontend/js/index/suggest.js" async="" charset="utf-8"></script><script src="./frontend/js/index/store.js" async="" charset="utf-8"></script><script src="./frontend/js/index/moco.js" async="" charset="utf-8"></script><script src="./frontend/js/index/json.js" async="" charset="utf-8"></script><script src="./frontend/js/index/im.js" async="" charset="utf-8"></script><script src="./frontend/js/index/index.js" async="" charset="utf-8"></script><script src="./frontend/js/index/socket.js" async="" charset="utf-8"></script><script src="./frontend/js/index/stackblur.js" async="" charset="utf-8"></script><script src="./frontend/js/index/mouse-move-angle.js" async="" charset="utf-8"></script></head>
 <body id="index">
-
 <div id="header">
-    <div class="page-container addZ-index" id="nav" style="background-color: #fff !important;">
-            <div id="logo" class="logo"><a href="https://www.imooc.com/" target="_self" title="首页"><img title="慕课网" src="./frontend/images/index/logo_new.png"></a></div>
-      
+    <div class="page-container addZ-index divdiv" id="nav" style="background-color: #fff !important;">
+            <div id="logo" class="logo">
+                <a href="https://www.imooc.com/" target="_self" title="首页">
+                    <img title="慕课网" src="./frontend/images/index/logo_new.png">
+                </a>
+            </div>
 
         <button type="button" class="navbar-toggle visible-xs-block js-show-menu">
             <i class="icon-menu"></i>
         </button>
         <ul class="nav-item">
-                        <li class="set-btn visible-xs-block js-header-avator"><a href="https://www.imooc.com/u/5767042" target="_self"><img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" height="40" width="40"></a></li>
+                    <li class="set-btn visible-xs-block js-header-avator"><a href="https://www.imooc.com/u/5767042" target="_self">
+                    <img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" height="40" width="40"></a>
+                    </li>
                         
             <li>
                 <a href="https://www.imooc.com/course/list" target="_self">免费课程</a>
@@ -65,7 +66,7 @@ var _cart_num = 0;
             <li>
                 <a href="http://coding.imooc.com/" target="_self">实战</a>
             </li>
-            <li><a href="https://www.imooc.com/wenda" target="_self">猿问</a></li>
+            <li><a href="question_index" target="_self">猿问</a></li>
             <li><a href="https://www.imooc.com/article" target="_self">手记</a></li>
                                             <li class="visible-xs-block"><a href="https://www.imooc.com/user/setprofile" target="_self">我的设置</a></li>
                 <li class="visible-xs-block"><a href="https://www.imooc.com/passport/user/logout?referer=//www.imooc.com" target="_self">退出</a></li>
@@ -73,41 +74,60 @@ var _cart_num = 0;
         </ul>
                 <div id="login-area">
             <ul class="clearfix logined">
-                <li class="app-load" id="js-app-load">
-                    <a href="https://www.imooc.com/mobile/app" target="_blank" style="width:60px;">下载APP</a>
-                    <div style="display: none;" class="app-load-box clearfix js-load-box">
-                        <img src="./frontend/images/index/appload.png" class="l">
-                        <div class="r">
-                            <p>扫描下载慕课网APP</p>
-                            <a href="https://itunes.apple.com/cn/app/mu-ke-wang/id722179140?mt=8"><i class="icon-apple"></i>App Store下载</a>
-                            <a href="https://www.imooc.com/mobile/mukewang.apk"><i class="icon-android"></i>Android下载</a>
-                        </div>
-                    </div>
-                </li>
-                
                 <li class="shop-cart" id="shop-cart">
                     <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
                         <span class="icon-shopping-cart js-endcart"></span><span>购物车</span><span class="shopping_icon js-cart-num" data-ordernum="0" data-cartnum="0" style="display: none">0</span>
                     </a>
-                    <div class="my-cart" id="js-my-cart"><div class="cart-title-box clearfix">                                        <h2 class="l">我的购物车</h2>                                        <h5 class="r">已加入<span class="js-incart-num">0</span>门课程</h5>                                    </div>                                    <div class="cart-wrap">                                        <div class="clear-cart">                                            <span class="cartIcon icon-shopping-cart"></span>                                            <h3>购物车里空空如也</h3>                                            <div class="text">快去这里选购你中意的课程</div>                                            <p><a class="go-link" href="http://coding.imooc.com/" target="_blank">实战课程</a></p>                                            <p><a class="go-link" href="http://class.imooc.com/" target="_blank">职业路径</a></p>                                        </div>                                    </div>                                    <div class="more-box clearfix">                                        <div class="l show-box">                                            <span class="text"><a href="http://order.imooc.com/myorder" target="_blank">我的订单中心</a></span>                                        </div>                                        <a href="http://order.imooc.com/pay/cart" target="_blank" class="r moco-btn moco-btn-red go-cart">去购物车</a>                                    </div></div>
+                    <div class="my-cart" id="js-my-cart"><div class="cart-title-box clearfix">
+                            <h2 class="l">我的购物车</h2>
+                            <h5 class="r">已加入<span class="js-incart-num">0</span>门课程</h5>
+                        </div>
+                        <div class="cart-wrap">
+                            <div class="clear-cart">
+                                <span class="cartIcon icon-shopping-cart"></span>
+                                <h3>购物车里空空如也</h3>
+                                <div class="text">快去这里选购你中意的课程</div>
+                                <p><a class="go-link" href="http://coding.imooc.com/" target="_blank">实战课程</a></p>
+                                <p><a class="go-link" href="http://class.imooc.com/" target="_blank">职业路径</a></p>
+                            </div>
+                        </div>
+                        <div class="more-box clearfix">
+                            <div class="l show-box">
+                                <span class="text"><a href="http://order.imooc.com/myorder" target="_blank">我的订单中心</a></span>
+                            </div>
+                            <a href="http://order.imooc.com/pay/cart" target="_blank" class="r moco-btn moco-btn-red go-cart">去购物车</a>
+                        </div>
+                    </div>
                 </li>
-                
-                <li class="remind_warp">
-                    <i style="display: inline;" class="msg_remind"></i>
-                    <a target="_blank" href="https://www.imooc.com/u/5767042/notices">
-                        <i class="icon-notifi"></i>
-                        <!-- <span class="msg_icon" style="display: none;"></span> -->
-                    </a>
+                <li class="header-signin ttttt" >
+                    <?php $username = isset($_SESSION['username'])?$_SESSION['username']:"";if($username){?>
+                             <a href="#" class="outs" style="width: 200px">欢迎<font style="color: #ff0000"><?php echo $username?></font>退出</a>
+                    <?php }else{?>
+                             <a href="#" class="js-signin-btn heelows">登录</a>
+                    <?php }?>
                 </li>
-               
-                <li class="set_btn user-card-box" id="header-user-card">
+                <li class="set_btn user-card-box images_users" id="header-user-card" >
+
                     <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu" href="https://www.imooc.com/u/5767042" target="_self">
-                        <img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" height="40" width="40">
+                        <?php
+                            $image= isset($_SESSION['profile_image_url'])?$_SESSION['profile_image_url']:"";
+                            if(!empty($image)){
+                        ?>
+                                <img src="<?php echo $image?>" height="40" width="40">
+
+                        <?php }else{?>
+                                <img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" height="40" width="40">
+                        <?php }?>
+
                         <i class="myspace_remind" style="display: none;"></i>
                         <span style="display: none;">动态提醒</span>
                     </a>
-                    <div class="g-user-card"><div class="card-inner">                        <div class="card-top clearfix">                            <a href="https://www.imooc.com/u/5767042" class="l"><img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" alt="qq_夜的寂静_0"></a>                            <div class="card-top-right-box l">                                <a href="https://www.imooc.com/u/5767042"><span class="name text-ellipsis">qq_夜的寂静_0</span></a>                                <div class="meta">                                    <a href="https://www.imooc.com/u/5767042/experience">经验<b id="js-user-mp">220</b></a>                                    <a href="https://www.imooc.com/u/5767042/credit">积分<b id="js-user-credit">0</b></a>                                </div>                            </div>                        </div>                        <div class="user-center-box">                            <ul class="clearfix">                                <li class="l"><a href="https://www.imooc.com/u/5767042/courses" target="_blank"><span class="user-center-icon icon-tick"></span>我的课程</a></li>                                <li class="l">                                    <a href="http://order.imooc.com/myorder" target="_blank"><span class="user-center-icon icon-receipt"></span>订单中心</a>                                                                    </li>                                <li class="l"><a href="https://www.imooc.com/mall/index" target="_blank"><span class="user-center-icon icon-score_shop"></span>积分商城</a></li>                                <li class="l"><a href="https://www.imooc.com/user/setbindsns" target="_blank"><span class="user-center-icon icon-set"></span>个人设置</a></li>                            </ul>                        </div><div class="card-history">                            <span class="history-item">                                <span class="tit text-ellipsis">轻松学会Laravel-基础篇</span>                                <span class="media-name text-ellipsis">6-3 Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用</span>                                <i class="icon-clock"></i>                                <a href="https://www.imooc.com/video/12507" class="continue" title="轻松学会Laravel-基础篇
-6-3  Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用">继续</a>                            </span>                    </div><div class="card-sets clearfix"><a href="https://www.imooc.com/passport/user/logout?referer=//www.imooc.com" class="l">安全退出</a></div>                    </div></div>
+                    <div class="g-user-card"><div class="card-inner">
+                            <div class="card-top clearfix">
+                                <a href="https://www.imooc.com/u/5767042" class="l"><img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" alt="qq_夜的寂静_0"></a>                            <div class="card-top-right-box l">                                <a href="https://www.imooc.com/u/5767042"><span class="name text-ellipsis">qq_夜的寂静_0</span></a>                                <div class="meta">                                    <a href="https://www.imooc.com/u/5767042/experience">经验<b id="js-user-mp">220</b></a>                                    <a href="https://www.imooc.com/u/5767042/credit">积分<b id="js-user-credit">0</b></a>                                </div>                            </div>                        </div>                        <div class="user-center-box">                            <ul class="clearfix">                                <li class="l"><a href="https://www.imooc.com/u/5767042/courses" target="_blank"><span class="user-center-icon icon-tick"></span>我的课程</a></li>                                <li class="l">                                    <a href="http://order.imooc.com/myorder" target="_blank"><span class="user-center-icon icon-receipt"></span>订单中心</a>                                                                    </li>                                <li class="l"><a href="https://www.imooc.com/mall/index" target="_blank"><span class="user-center-icon icon-score_shop"></span>积分商城</a></li>                                <li class="l"><a href="https://www.imooc.com/user/setbindsns" target="_blank"><span class="user-center-icon icon-set"></span>个人设置</a></li>                            </ul>                        </div><div class="card-history">                            <span class="history-item">                                <span class="tit text-ellipsis">轻松学会Laravel-基础篇</span>                                <span class="media-name text-ellipsis">6-3 Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用</span>                                <i class="icon-clock"></i>                                <a href="https://www.imooc.com/video/12507" class="continue" title="轻松学会Laravel-基础篇
+6-3  Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用">继续</a>
+                                </span>
+                            </div><div class="card-sets clearfix"><a href="https://www.imooc.com/passport/user/logout?referer=//www.imooc.com" class="l">安全退出</a></div>                    </div></div>
                 </li>
             </ul>
         </div>
@@ -136,7 +156,90 @@ var _cart_num = 0;
     </div>
 </div>
 
-
+<div id="signin" class="rl-modal in" aria-hidden="false" style="display: none;position: absolute; z-index: 100;background-color: #ffffff;width: 320px;;margin-left: 550px;margin-top: 100px;">
+    <div class="rl-modal-header" style="padding-left: 20px; padding-bottom: 10px;">
+        <h2>登录</h2>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="rl-modal-body js-loginWrap">
+        <div class="clearfix">
+            <div class="l-left-wrap l">
+                <form id="signup-form" autocomplete="off"
+                    <p class="rlf-tip-globle color-red" id="signin-globle-error"></p>
+                    <div class="rlf-group pr" style="padding-left: 50px;">
+                        <input type="text" value="" maxlength="37" name="email" data-validate="require-mobile-phone" autocomplete="off" class="xa-emailOrPhone ipt ipt-email js-own-name usernamess" placeholder="请输入登录邮箱/手机号">							<p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确的邮箱或手机号"></p>						</div>
+                    <div class="rlf-group  pr" style="padding-left: 50px;">
+                        <input type="password" name="password" data-validate="require-password" class="ipt ipt-pwd js-loginPassword js-pass-pwd passwordss" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="16" autocomplete="off">					        <p class="rlf-tip-wrap errorHint color-red " data-error-hint="请输入6-16位密码，区分大小写，不能使用空格！"></p>						</div>
+                    <div class="rlf-group clearfix form-control js-verify-row" style="display: none;">
+                        <input type="text" name="verify" class="ipt ipt-verify l" data-validate="require-string" data-callback="checkverity" maxlength="4" data-minlength="4" placeholder="请输入验证码"><a href="javascript:void(0)" hidefocus="true" class="verify-img-wrap js-verify-refresh"></a><a href="javascript:void(0)" hidefocus="true" class="icon-refresh js-verify-refresh"></a><p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>
+                    </div>
+                    <div class="rlf-group rlf-appendix form-control  clearfix" style="padding-left: 26px;">
+                        <label for="auto-signin" style="padding-left: 20px;" class="rlf-autoin l" hidefocus="true"><input type="checkbox" checked="checked" class="auto-cbx" id="auto-signin">7天内自动登录</label>							<a href="password" class="rlf-forget r" target="_blank" hidefocus="true">忘记密码 </a>						</div>
+                    <div class="rlf-group clearfix" style="padding-left: 35px; padding-top: 10px;">
+                        <input type="button" value="登录" hidefocus="true" class="btn-red btn-full xa-login denglu" style="margin-left: 30px;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="rl-model-footer"><div class="pop-login-sns clearfix" style="margin-top: 12px;">
+            <span class="l " style="color:#666">其他方式登录</span>	
+            <a href="javascript:void(0)" hidefocus="true" data-login-sns="/passport/user/tplogin?tp=weixin" class="pop-sns-weixin r"><img
+                    src="./frontend/images/qq.png" style="height: 30px;width: 30px;" alt=""/></a>
+            <a href="<?php echo $url ?>"  hidefocus="true" data-login-sns="/passport/user/tplogin?tp=qq" class="pop-sns-qq r"><img
+                    src="./frontend/images/weobo.png" style="height: 30px;width: 30px;" alt=""/></a>
+            </div>
+    </div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="./layer-v3.1.0/layer/layer.js"></script>
+<script>
+    $(function(){
+        $(document).on("click",".heelows",function(){
+            $("#signin").toggle();
+        });
+          $(".denglu").click(function(){
+              var ii = layer.load();
+              //此处用setTimeout演示ajax的回调
+              setTimeout(function(){
+                  layer.close(ii);
+              }, 1000);
+                var username = $(".usernamess").val();
+                var password = $(".passwordss").val();
+              $.ajax({
+                  type : "post",
+                  url : "login",
+                  data : {username:username,password:password},
+                  dataType : "json",
+                  success:function(msg){
+                      $("#signin").hide();
+                      if(msg.code==1){
+                          $(".divdiv").load(location.href+" .divdiv");
+                          layer.msg('登录成功');
+                      }else{
+                          layer.msg('登录失败，请重新登录');
+                      }
+                  }
+              })
+          });
+        $(document).on("click",".outs",function(){
+            var ii = layer.load();
+            //此处用setTimeout演示ajax的回调
+            setTimeout(function(){
+                layer.close(ii);
+            }, 1000);
+            $.ajax({
+                type : "post",
+                url : "loginout",
+                success:function(msg){
+                    $(".divdiv").load(location.href+" .divdiv");
+                    layer.msg('退出成功');
+                }
+            })
+        })
+    })
+</script>
 <div id="main">
 <div style="background-image: url(&quot;//img.mukewang.com/5a1bea3100010c0809360316.jpg&quot;);" class="bk"></div>
 <div class="bgfff banner-box">
@@ -174,12 +277,6 @@ var _cart_num = 0;
                             <a target="_blank" href="https://www.imooc.com/course/list?c=webapp">WebApp</a>
                         </div>
                     </div>
-                    <!-- <div class="fe-other-box clearfix">
-                        <div class="banner-line">
-                            <span class="bold mr10 l small-title">其它</span>
-                        </div>
-                        <div class="tag-box l"><a target="_blank" href="/course/list?c=fetool">前端工具</a></div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -192,12 +289,10 @@ var _cart_num = 0;
 			        						<div class="course-card-info">
 							<span>职业路径</span><span>5步／30课</span><span><i class="icon-set_sns"></i>399</span>
 						</div>
-								        																				
-							<div class="course-card-price">￥599.00</div>
-																					    </div>
+							<div class="course-card-price">￥599.00</div></div>
 			</a>
 		</div>
-	                            			<div class="l banner-course-card">
+	    <div class="l banner-course-card">
 			<a href="http://coding.imooc.com/class/129.html?mc_marking=dce36388dbfc942a1d01880e63a59e4c&amp;mc_channel=qianduankaifa2" target="_blank" title="前端跳槽面试必备技巧" class="clearfix">
 			    <img src="./frontend/images/index/59897b1600011ec805400300.jpg" class="l">
 			    <div class="l course-card">
@@ -2071,10 +2166,6 @@ GitHub上维护yabgp等开源项目；在国外知名在线教育平台有过Pyt
 
 
 
-
-
-
-
 <div style="display: none">
 <script type="text/javascript">
 var _hmt = _hmt || [];
@@ -2104,6 +2195,5 @@ var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
 })();
 </script>
 </div>
-
 
 <script src="./frontend/js/index/user.htm" type="text/javascript"></script><script src="./frontend/js/index/iplookup.php" type="text/javascript"></script></body></html>
