@@ -3,10 +3,17 @@ Route::get('/','Controller@index');
 
 Route::get('index','IndexController@index');//首页
 
+//评论  回复   点赞
 Route::any('zindex','CommentController@zindex');//评论
 Route::any('zadd','CommentController@zadd');//添加评论
 Route::any('zhits','CommentController@zhits');//点赞
 Route::any('zreply','CommentController@zreply');//回复
+
+//笔记
+Route::any('noteindex','NotebookController@noteindex');
+Route::any('courindex','CourController@courindex');
+
+
 
 //免费课程的那个页面
 Route::get('Freeindex','FreeController@Freeindex');
