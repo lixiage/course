@@ -24,7 +24,7 @@ class NoteController extends CommonController{
             $data = $request->input();
             $file = $request->file('notes_face');
 
-
+                var_dump($file->isValid());
             var_dump($file);die;
         }else{
             $classes = DB::table('course_classify')->get();

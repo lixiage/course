@@ -198,7 +198,7 @@
                                 <label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
                             </div>
                         </div>
-                        <span class="l">封面为420*260像素的 PNG/JPG/GIF 格式图片</span>
+                        <span class="l himt-msg">封面为420*260像素的 PNG/JPG/GIF 格式图片</span>
                     </div>
                     <div id="js-face-reault" class="face-result">
                     </div>
@@ -282,6 +282,11 @@
 <script>
     $(document).on('click','#js-face-upload',function(){
         $('#upload-face-file').click();
+    });
+    $('#upload-face-file').change(function(){
+        var file = $(this).val();
+        $('.himt-msg').text('');
+        $('.himt-msg').text(file);
     });
     $(function(){
         $('.form-bottom').click(function(){

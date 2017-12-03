@@ -17,11 +17,6 @@ use Illuminate\Http\Request;
 class QuestionController extends CommonController
 {
 
-<<<<<<< HEAD
-    public function index(){
-        echo 111;die;
-        return view('frontend/question/index');
-=======
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|\think\response\View
      * 问题首页
@@ -120,7 +115,6 @@ class QuestionController extends CommonController
         $id = $question->addAnswer($data);
         !empty($id)?$id:'';
         return response()->json(['id'=>$id]);
->>>>>>> 82e076e0537d2992d5d9755ee259006a87b8b181
     }
 
 }
