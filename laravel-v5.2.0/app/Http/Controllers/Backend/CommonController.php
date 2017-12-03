@@ -24,10 +24,10 @@ class CommonController extends BaseController
         $str = explode("@",$sub);
         $this->conteoller = $str['1'];
         $res = $this->getAccess();
-        if(!$res){
-            echo   "<script>alert('你的权限不足，请先联系管理员');location='bandLogin'</script>";
-            die;
-        }
+//        if(!$res){
+//            echo   "<script>alert('你的权限不足，请先联系管理员');location='bandLogin'</script>";
+//            die;
+//        }
     }
      protected function getAccess(){
           $user_id = $_SESSION['user_id'];
@@ -74,8 +74,6 @@ class CommonController extends BaseController
         }
         return $arr;
     }
-
-
     public  function showSon($data,$parentId=0){
         $arr =array();
         foreach($data as $key=>$val)

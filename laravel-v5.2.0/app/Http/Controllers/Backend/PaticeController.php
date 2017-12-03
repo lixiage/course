@@ -39,6 +39,10 @@ class PaticeController extends CommonController
         $infoooo = $_SESSION['userInfo'];
         return view("backend/Managemen/gallery",['infoo'=>$infoooo]);
     }
+    public function  loginOut(){
+        session_destroy();
+        return redirect("bandLogin");
+    }
     /**
      * 用户赋权
      */
@@ -94,6 +98,7 @@ class PaticeController extends CommonController
                 $res = DB::select("select uid from ci_user where uname = '$code'");
                 $res = (array)$res[0];
                 $uid= $res['uid'];
+                DB::delete("delete from ci_u_r where uid = '$uid'");
                 foreach($post['checkbox'] as $key=>$val){
                     $res = DB::insert("replace into ci_u_r(`uid`,`rid`) VALUES('$uid','$val')");
                 }
@@ -165,14 +170,14 @@ class PaticeController extends CommonController
             DB::transaction(function () {
                 $pid =$_POST['pid'];
                 $rid = $_POST['rid'];
-
+                DB::delete("delete from ci_r_p where rid = '$rid'");
                 foreach($pid as $key=>$val){
                     $ress = DB::select("select * from ci_r_p where pid='$val' and rid = '$rid' ");
                     if(!$ress){
                         $res = DB::insert("replace into ci_r_p(`pid`,`rid`) VALUES('$val','$rid')");
                     }
                 }
-                echo "<script>alert('赋权成功');window.location.href='powerList'</script>";
+                echo "<script>alert('赋权成功,请重新登录');window.location.href='loginOut'</script>";
             });
 
         }else{

@@ -98,3 +98,5 @@ Route::any('givePrivilege','PaticeController@givePrivilege');  //为角色赋权
 Route::any('orderList','OrderController@orderList');  //订单列表
 Route::any('orderCount','OrderController@orderList');  //订单统计
 
+Route::any('loginOut','PaticeController@loginOut');  //为角色赋权
+
