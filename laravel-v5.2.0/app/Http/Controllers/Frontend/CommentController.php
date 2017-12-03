@@ -6,16 +6,33 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class CommentController extends Controller
 {
+
+
+
+	
+
     public function zindex(Request $request)
     {
+    	$page = $request->input('page')?$request->input('page'):1;
     	$cour_id = 1;
-		$comment = DB::table('comment')
+    	$offset = ($page - 1) * 3;
+    	// var_dump($offset);die;
+    	$comment = DB::select("select * from comment inner join admin_user on admin_user.admin_id=comment.admin_id where cour_id = $cour_id order by addtime desc limit $offset,3");
+    	// var_dump($comment);die;
+		// $comment = DB::table('comment')
+		// 			->where('cour_id',$cour_id)
+		// 			->join('admin_user', 'admin_user.admin_id', '=', 'comment.admin_id')
+		// 			->limit(3,$offset)
+		// 			->orderBy('addtime','desc')
+		// 			->get();
+		$data = DB::table('comment')
 					->where('cour_id',$cour_id)
-					->join('admin_user', 'admin_user.admin_id', '=', 'comment.admin_id')
-					->select()
 					->orderBy('addtime','desc')
-					->get();
+					->paginate(3);
 					//回复
+		
+		// var_dump($data);
+		// var_dump($comment);die;
 		//强制转换为数组
 		$carr =[];
 		foreach ($comment as $key => $value) {
@@ -31,7 +48,7 @@ class CommentController extends Controller
 		 }
 
 		// print_r($carrs);die;
-	    $reply = DB::table('reply')->whereIn('comment_id',$comment_ids)->select()->get();
+	    $reply = DB::table('reply')->whereIn('comment_id',$comment_ids)->get();
 		$rarr =[];
 		foreach ($reply as $key => $value) {
 		 	$rarr[] = (array)$value;
@@ -43,11 +60,11 @@ class CommentController extends Controller
 	    		}
 	    	}
 	    }
-
+	   
 		// print_r($carrs);die;
 	 	
 
-        return view('frontend/comment/zindex',['comment'=>$carrs]);
+        return view('frontend/comment/zindex',['comment'=>$carrs,'data'=>$data]);
     }
 
 	//评论

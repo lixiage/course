@@ -135,49 +135,21 @@
 	</div>
 		<!-- 顶部广告banner end -->
 </div>
-
-
 <!--课程列表-->
 <div class="w index-main">
 		<!-- 类别 -->
 	<div></div>
 	<div class="cato-wrap-box clearfix">
 				<div class="cato-nav-box">
-	                            <a href="http://coding.imooc.com/" id="cato" class="cur">全部</a>
-	            		</div>
+                            @foreach($fight as $k=>$v)
+	                            <a href="{{url('Fight',['id'=>$v->f_id])}}" id="cato" class="cur">{{ $v->f_name }}</a>
+                                @endforeach
+                </div>
 				<div class="skill-nav-box">
-																																																									<a href="http://coding.imooc.com/" class="on">不限</a>
-			            <a href="http://coding.imooc.com/?c=html" data-ct="html" class="">HTML/CSS</a>
-                        <a href="http://coding.imooc.com/?c=javascript" data-ct="javascript" class="">JavaScript</a>
-                        <a href="http://coding.imooc.com/?c=html5" data-ct="html5" class="">Html5</a>
-                        <a href="http://coding.imooc.com/?c=css3" data-ct="css3" class="">CSS3</a>
-                        <a href="http://coding.imooc.com/?c=jquery" data-ct="jquery" class="">jQuery</a>
-                        <a href="http://coding.imooc.com/?c=nodejs" data-ct="nodejs" class="">Node.js</a>
-                        <a href="http://coding.imooc.com/?c=angularjs" data-ct="angularjs" class="">AngularJS</a>
-                        <a href="http://coding.imooc.com/?c=reactjs" data-ct="reactjs" class="">React.JS</a>
-                        <a href="http://coding.imooc.com/?c=vuejs" data-ct="vuejs" class="">Vue.js</a>
-                        <a href="http://coding.imooc.com/?c=webapp" data-ct="webapp" class="">WebApp</a>
-                        <a href="http://coding.imooc.com/?c=fetool" data-ct="fetool" class="">前端工具</a>
-                        <a href="http://coding.imooc.com/?c=thinkphp" data-ct="thinkphp" class="">ThinkPHP</a>
-                        <a href="http://coding.imooc.com/?c=php" data-ct="php" class="">PHP</a>
-                        <a href="http://coding.imooc.com/?c=yii" data-ct="yii" class="">Yii</a>
-                        <a href="http://coding.imooc.com/?c=java" data-ct="java" class="">Java</a>
-                        <a href="http://coding.imooc.com/?c=springboot" data-ct="springboot" class="">SpringBoot</a>
-                        <a href="http://coding.imooc.com/?c=python" data-ct="python" class="">Python</a>
-                        <a href="http://coding.imooc.com/?c=cplusplus" data-ct="cplusplus" class="">C++</a>
-                        <a href="http://coding.imooc.com/?c=algorithm" data-ct="algorithm" class="">算法</a>
-                        <a href="http://coding.imooc.com/?c=android" data-ct="android" class="">Android</a>
-                        <a href="http://coding.imooc.com/?c=ios" data-ct="ios" class="">iOS</a>
-                        <a href="http://coding.imooc.com/?c=mysql" data-ct="mysql" class="">MySQL</a>
-                        <a href="http://coding.imooc.com/?c=mongodb" data-ct="mongodb" class="">MongoDB</a>
-                        <a href="http://coding.imooc.com/?c=machine" data-ct="machine" class="">机器学习</a>
-                        <a href="http://coding.imooc.com/?c=deep" data-ct="deep" class="">深度学习</a>
-                        <a href="http://coding.imooc.com/?c=bigdata" data-ct="bigdata" class="">大数据</a>
-                        <a href="http://coding.imooc.com/?c=test" data-ct="test" class="">测试</a>
-                        <a href="http://coding.imooc.com/?c=linux" data-ct="linux" class="">Linux</a>
-                        <a href="http://coding.imooc.com/?c=uiapp" data-ct="uiapp" class="">APPUI设计</a>
-                        <a href="http://coding.imooc.com/?c=uijc" data-ct="uijc" class="">设计基础</a>
-            		</div>
+                    @foreach($class as $k=>$v)
+                        <a href="{{url('Fightc',['id'=>$v->class_id])}}" data-ct="uijc" class="">{{$v->class_name}}</a>
+            		@endforeach
+                </div>
 	</div>
 	<!-- 类别 end -->
 	
@@ -195,39 +167,39 @@
 	<div class="index-list-wrap">
 				<div class="shizhan-course-list clearfix">
 														<!-- 前4个课程追加渠道统计链接 -->
-				  				
-
+                    @foreach($courses as $k=>$v)
 				<div class="shizhan-course-wrap l ">
+
 					<a href="http://coding.imooc.com/class/161.html">
 						
 	                    <div class="shizhan-course-box">
 	                    	<!-- 学习进度 -->
-	                    					            					            		<div class="course-stat new">
+	                    		<div class="course-stat new">
 										NEW
 									</div>
-				            					            				            <div class="box">
+				            	<div class="box">
 				            	<div class="img-box">
-					            	<img class="shizhan-course-img" alt="Webpack + React全栈工程架构项目实战精讲" src="images/shizhan/5a17ef670001292c05400300-360-202.jpg">
+					            	<img class="shizhan-course-img" alt="{{$v->cour_name}}" src="{{$v->cour_image}}">
 					            </div>
 		                        <div class="shizhan-intro-box">
-		                            <p class="shizan-name" title="Webpack + React全栈工程架构项目实战精讲">Webpack + React全栈工程架构项目实战精讲</p>
+		                            <p class="shizan-name" title="{{$v->cour_content}}">{{$v->cour_content}}</p>
 		                            <div class="evaluation-box">
 												<div class="shizhan-info">
 																																							<span class="grade">高级</span>
 																																							<span><i class="imv2-set-sns"></i>18</span>
-																										<span class="stars"><i class="sz-star on"></i><i class="sz-star on"></i><i class="sz-star on"></i><i class="sz-star on"></i><i class="sz-star on"></i></span>
-																									</div>
+									<span class="stars"><i class="sz-star on"></i><i class="sz-star on"></i><i class="sz-star on"></i><i class="sz-star on"></i><i class="sz-star on"></i></span>
+									</div>
 												<div class="evaluation-desc-box clearfix">
 													<i class="trangle"></i>
 													<div class="left-box l">
 														<p>综合评分</p>
-																												<p class="big-text">10.00</p>
-																												<p>0人评价</p>
+									<p class="big-text">10.00</p>
+									<p>0人评价</p>
 													</div>
 													<div class="right-box l">
 																																										<p>内容实用<span>10.0</span></p>
-																												<p>通俗易懂<span>10.0</span></p>
-																												<p>逻辑清晰<span>10.0</span></p>
+									<p>通俗易懂<span>10.0</span></p>
+									<p>逻辑清晰<span>10.0</span></p>
 																																									</div>
 												</div>
 												
@@ -242,6 +214,7 @@
 	                    </div>
 					</a>
 				</div>
+                    @endforeach
 		</div>
  			</div>
 </div>

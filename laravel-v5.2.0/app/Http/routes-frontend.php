@@ -3,10 +3,17 @@ Route::get('/','Controller@index');
 
 Route::get('index','IndexController@index');//首页
 
+//评论  回复   点赞
 Route::any('zindex','CommentController@zindex');//评论
 Route::any('zadd','CommentController@zadd');//添加评论
 Route::any('zhits','CommentController@zhits');//点赞
 Route::any('zreply','CommentController@zreply');//回复
+
+//笔记
+Route::any('noteindex','NotebookController@noteindex');
+Route::any('courindex','CourController@courindex');
+
+
 
 //免费课程的那个页面
 Route::get('Freeindex','FreeController@Freeindex');
@@ -17,6 +24,9 @@ Route::any('Elastic','ElasticController@Elaindex');
 Route::any('Elastic/{id}',['uses'=>'ElasticController@Elaindex']);
 //实战的分类和视频
 Route::any('Fight','FightController@Findex');
+Route::any('Fight/{id}',['uses'=>'FightController@Findex']);
+Route::any('Fightc/{id}',['uses'=>'FightController@Findexc']);
+//首页的路由
 
 
 Route::any('whdindex','ShopcarController@index');                       //购物车
@@ -33,6 +43,33 @@ Route::any('password_url',"PasswordsController@SaveUrl");
 Route::any('passwordSuccsee',"PasswordsController@passwordSuccsee");
 
 
+
+
+//订单
+Route::any('whdorder_list','OrderController@whdorder_list');
+//修改订单状态
+Route::any('owhd_saveorder','OrderController@owhd_saveorder');
+//添加订单
+Route::any('owhd_addorder','OrderController@owhd_addorder');
+//购物车首页
+Route::any('swhd_index','ShopcarController@swhd_index');
+//购物车展示
+Route::any('swhd_show','ShopcarController@swhd_show');
+//购物车支付
+Route::any('swhd_order','ShopcarController@swhd_order');
+Route::any('swhd_payment/{order_id}','ShopcarController@swhd_payment');
+//查询cookie
+Route::any('owdh_showcookie','ShopcarController@owdh_showcookie');
+//购物车提交订单
+Route::any('swhd_order','ShopcarController@swhd_order');
+//删除购物车
+Route::any('swhd_del','ShopcarController@swhd_del');
+//购买页面
+Route::any('owhd_shop/{cour_id}','OrderController@owhd_shop');
+//生成订单页面
+Route::any('owhd_order/{cour_id}','OrderController@owhd_order');
+//支付页面
+Route::any('owhd_payment/{order_id}/{cour_name}','OrderController@owhd_payment');
 
 
 

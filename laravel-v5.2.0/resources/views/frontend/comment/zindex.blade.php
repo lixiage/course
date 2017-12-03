@@ -343,7 +343,17 @@ var hasLearn;
 
 @endforeach
  </ul>
-    <div class="page"><span class="disabled_page">首页</span><span class="disabled_page">上一页</span><a href="javascript:void(0)" class="active text-page-tag">1</a><a class="text-page-tag" href="https://www.imooc.com/course/comment/id/827?page=2">2</a><a class="text-page-tag" href="https://www.imooc.com/course/comment/id/827?page=3">3</a><a class="text-page-tag" href="https://www.imooc.com/course/comment/id/827?page=4">4</a><a class="text-page-tag" href="https://www.imooc.com/course/comment/id/827?page=5">5</a><a href="https://www.imooc.com/course/comment/id/827?page=2">下一页</a><a href="https://www.imooc.com/course/comment/id/827?page=5">尾页</a></div>
+    <div class="page">
+    <a href="<?= $data->Url(1) ?>">首页</a>
+    <a href="<?= $data->previousPageUrl() ?>">上一页</a>
+    <?php for ($i = 1; $i <= $data->lastPage(); $i++){ ?>
+    <a href="<?= $data->Url($i) ?>" class="text-page-tag <?= ($data->CurrentPage() == $i) ? ' active' : '' ?>">
+        <?= $i ?>
+    </a>
+    <?php } ?>
+    <a href="<?= $data->nextPageUrl() ?>">下一页</a>
+    <a href="<?= $data->Url($data->lastPage()) ?>">尾页</a>
+    </div>
     </div>
 <div class="tipoff-block js-tipoff-block"></div>
 <div class="tipoff-box js-tipoff-box">
