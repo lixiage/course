@@ -3,10 +3,11 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+//use App\Http\Controllers\Backend\CommonController;
 use App\CourseDYW;
 header("content-type:text/html;charset=utf-8");
 
-class IndexController extends BaseController
+class IndexController extends CommonController
 {
     //后台Index首页
     /**
