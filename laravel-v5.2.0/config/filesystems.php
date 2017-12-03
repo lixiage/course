@@ -43,9 +43,24 @@ return [
 
     'disks' => [
 
+        //本地端的local空间
         'local' => [
             'driver' => 'local',
             'root'   => storage_path('app'),
+        ],
+        'public' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public'),
+            'visibility' => 'public',
+        ],
+
+        'uploads' => [
+            'driver' => 'local',
+            //将文件上传到storage/app/uploads目录下
+            //'root' => storage_path('app/uploads'),
+            //文件将上传到public/uploads目录  如果浏览器直接访问   建议使用这个
+            'root' => public_path('uploads'),
+
         ],
 
         'ftp' => [

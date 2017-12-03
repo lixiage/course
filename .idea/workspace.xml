@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/usePower.blade.php" line="55" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="02eb1089-e576-412a-a392-8ed4da36044c" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-frontend.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-frontend.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/OrderController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/UserMange.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/blog.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/chara.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/empower.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/givePrivilege.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/login.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/usePower.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/userPowerAdd.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Commom.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Commom.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Login.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/LoginController.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/LoginController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Password.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Password.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/PasswordsController.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/PasswordsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\wamp\www\course\laravel-v5.2.0\resources\views\backend\gallery.html" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/gallery.blade.php" />
     </list>
     <ignored path="course.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,12 +51,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes-frontend.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-frontend.php">
+      <file leaf-file-name="PaticeController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.292196" vertical-offset="115" max-vertical-offset="782">
-              <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
-              <folding />
+            <state vertical-scroll-proportion="-0.06476191" vertical-offset="1402" max-vertical-offset="4028">
+              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+              <folding>
+                <element signature="e#47#65#0#PHP" expanded="true" />
+                <marker date="1512282470116" expanded="true" signature="637:658" placeholder="select * fro..ci_user..." />
+                <marker date="1512282470116" expanded="true" signature="907:928" placeholder="select * fro..ci_roel..." />
+                <marker date="1512282470116" expanded="true" signature="1471:1512" placeholder="select * fro..ci_user..." />
+                <marker date="1512282470116" expanded="true" signature="1671:1692" placeholder="select * fro..ci_user..." />
+                <marker date="1512282470116" expanded="true" signature="1734:1755" placeholder="select * fro..ci_roel..." />
+                <marker date="1512282470116" expanded="true" signature="2159:2208" placeholder="select * fro..ci_u_r..." />
+                <marker date="1512282470116" expanded="true" signature="2159:2218" placeholder="select * fro..ci_u_r..." />
+                <marker date="1512282470116" expanded="true" signature="2159:2219" placeholder="select * fro..ci_u_r..." />
+                <marker date="1512282470116" expanded="true" signature="2294:2357" placeholder="insert into ..." />
+                <marker date="1512282470116" expanded="true" signature="2709:2764" placeholder="select uid f..ci_user..." />
+                <marker date="1512282470116" expanded="true" signature="3132:3195" placeholder="insert into ..." />
+                <marker date="1512282470116" expanded="true" signature="3302:3347" placeholder="select uid f..ci_user..." />
+                <marker date="1512282470116" expanded="true" signature="3529:3576" placeholder="insert into ..." />
+                <marker date="1512282470116" expanded="true" signature="4496:4619" placeholder="insert into ..." />
+                <marker date="1512282470116" expanded="true" signature="5219:5281" placeholder="insert into ..." />
+                <marker date="1512282470116" expanded="true" signature="5881:5918" placeholder="select * fro..ci_r_p..." />
+                <marker date="1512282470116" expanded="true" signature="5881:5935" placeholder="select * fro..ci_r_p..." />
+                <marker date="1512282470116" expanded="true" signature="6503:6531" placeholder="select * fro..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,10 +100,28 @@
         <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/frontend/Mima/mima.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/frontend/Mima/saveMIma.blade.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Password.php" />
-        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/PasswordsController.php" />
-        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Commom.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Login.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/LoginController.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/PasswordsController.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/login.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/gallery.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/config/database.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/usePower.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/userPowerAdd.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/UserMange.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/blog.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/chara.blade.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-frontend.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/empower.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Commom.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/givePrivilege.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/OrderController.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php" />
       </list>
     </option>
   </component>
@@ -103,7 +164,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -123,6 +183,158 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="laravel-v5.2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-v5.2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-v5.2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-v5.2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-v5.2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-v5.2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-v5.2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -166,21 +378,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-v5.2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-v5.2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\course\laravel-v5.2.0\resources\views\backend\Managemen" />
       <recent name="D:\wamp\www\course\laravel-v5.2.0\public" />
       <recent name="D:\wamp\www\course\laravel-v5.2.0\app\Http\Mail" />
       <recent name="D:\wamp\www\course\laravel-v5.2.0\public\frontend\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\course\laravel-v5.2.0\resources\views\backend\Managemen" />
       <recent name="D:\wamp\www\course\laravel-v5.2.0\app" />
       <recent name="D:\wamp\www\course\laravel-v5.2.0\resources\views\frontend" />
       <recent name="D:\wamp\www\course\laravel-v5.2.0\app\Http\Controllers\Frontend" />
@@ -217,6 +489,9 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="02eb1089-e576-412a-a392-8ed4da36044c" name="默认的" comment="" />
@@ -227,7 +502,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -238,7 +513,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23600605" sideWeight="0.8786885" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16111952" sideWeight="0.8786885" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19033232" sideWeight="0.12131148" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.039933443" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -260,27 +535,27 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.008320726" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.008320726" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19033232" sideWeight="0.12131148" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.039933443" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.039933443" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3233831" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21092564" sideWeight="0.8786885" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1585736" sideWeight="0.8786885" order="0" side_tool="false" content_ui="combo" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="层次结构" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829046" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="层次结构" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829046" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -305,11 +580,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4199">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/frontend/Login/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="41667">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -324,13 +606,6 @@
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/public/frontend/images/qq.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/QuestionController.php">
@@ -373,9 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03505535" vertical-offset="0" max-vertical-offset="44175">
           <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-          <folding>
-            <element signature="e#6#1982#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -400,63 +672,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.034234233" vertical-offset="171" max-vertical-offset="741">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="36" />
-          <folding>
-            <element signature="e#63#97#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.04664179" vertical-offset="1100" max-vertical-offset="1950">
-          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/frontend/Mima/saveMIma.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.296875" vertical-offset="1168" max-vertical-offset="1980">
-          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/frontend/Mima/mima.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.57749075" vertical-offset="1757" max-vertical-offset="2299">
-          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/PasswordsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.292196" vertical-offset="621" max-vertical-offset="1610">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-          <folding>
-            <element signature="e#48#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8216216" vertical-offset="57" max-vertical-offset="1102">
           <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Commom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7855854" vertical-offset="2960" max-vertical-offset="3515">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -464,25 +683,326 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10147601" vertical-offset="3726" max-vertical-offset="41895">
           <caret line="199" column="34" selection-start-line="199" selection-start-column="34" selection-end-line="199" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/CourseDYW.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7859778" vertical-offset="2052" max-vertical-offset="4484">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/frontend/Mima/mima.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4907749" vertical-offset="1672" max-vertical-offset="2299">
+          <caret line="102" column="35" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/index/addDirection.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="14.928572" vertical-offset="1653" max-vertical-offset="2508">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.027027" vertical-offset="912" max-vertical-offset="1729">
-          <caret line="78" column="65" selection-start-line="78" selection-start-column="65" selection-end-line="78" selection-end-column="65" />
-          <folding>
-            <element signature="e#48#100#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.55495495" vertical-offset="756" max-vertical-offset="1710">
+          <caret line="58" column="44" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/index/classifyList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52583027" vertical-offset="0" max-vertical-offset="4161">
+          <caret line="15" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/index/addClassify.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31549814" vertical-offset="1254" max-vertical-offset="2717">
+          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/PasswordsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9927928" vertical-offset="627" max-vertical-offset="1330">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.5" vertical-offset="57" max-vertical-offset="2527">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30810812" vertical-offset="0" max-vertical-offset="555">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/gallery.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.1027027" vertical-offset="741" max-vertical-offset="1748">
+          <caret line="36" column="135" selection-start-line="36" selection-start-column="135" selection-end-line="36" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3841912" vertical-offset="0" max-vertical-offset="608">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42937854" vertical-offset="0" max-vertical-offset="1539">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33216783" vertical-offset="2204" max-vertical-offset="9747">
+          <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/index/typeList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42937854" vertical-offset="1140" max-vertical-offset="4218">
+          <caret line="72" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/userPowerAdd.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.012867647" vertical-offset="691" max-vertical-offset="1862">
+          <caret line="36" column="119" selection-start-line="36" selection-start-column="119" selection-end-line="36" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/index/addType.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06985294" vertical-offset="969" max-vertical-offset="2888">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="760">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-frontend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.292196" vertical-offset="115" max-vertical-offset="782">
-          <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.24448529" vertical-offset="0" max-vertical-offset="646">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/blog.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30508474" vertical-offset="712" max-vertical-offset="2489">
+          <caret line="46" column="124" selection-start-line="46" selection-start-column="124" selection-end-line="46" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/usePower.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59510356" vertical-offset="767" max-vertical-offset="2812">
+          <caret line="57" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/frontend/Mima/saveMIma.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2843691" vertical-offset="1065" max-vertical-offset="1881">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/empower.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21691176" vertical-offset="547" max-vertical-offset="1786">
+          <caret line="35" column="83" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/chara.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8210923" vertical-offset="533" max-vertical-offset="2280">
+          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.34375" vertical-offset="435" max-vertical-offset="1976">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/UserMange.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48897058" vertical-offset="0" max-vertical-offset="544">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="e#22#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/index/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1567566" vertical-offset="1197" max-vertical-offset="1919">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37657657" vertical-offset="0" max-vertical-offset="555">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#46#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2054054" vertical-offset="0" max-vertical-offset="2071">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+          <folding>
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8387716" vertical-offset="1227" max-vertical-offset="2438">
+          <caret line="95" column="7" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Commom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.3549547" vertical-offset="1725" max-vertical-offset="4275">
+          <caret line="219" column="5" selection-start-line="208" selection-start-column="3" selection-end-line="219" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/givePrivilege.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.105166055" vertical-offset="1026" max-vertical-offset="3306">
+          <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2750455" vertical-offset="900" max-vertical-offset="2600">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="e#46#98#0#PHP" expanded="true" />
+            <marker date="1512267781875" expanded="true" signature="-1:-1" placeholder="select * fro..ci_u_r..." />
+            <marker date="1512267781875" expanded="true" signature="-1:-1" placeholder="select * fro..ci_r_p..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.034234233" vertical-offset="0" max-vertical-offset="4332">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6576577" vertical-offset="205" max-vertical-offset="760">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding>
+            <element signature="e#47#65#0#PHP" expanded="true" />
+            <marker date="1512220674372" expanded="true" signature="-1:-1" placeholder="select * fro..ci_user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.06476191" vertical-offset="1402" max-vertical-offset="4028">
+          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+          <folding>
+            <element signature="e#47#65#0#PHP" expanded="true" />
+            <marker date="1512282470116" expanded="true" signature="637:658" placeholder="select * fro..ci_user..." />
+            <marker date="1512282470116" expanded="true" signature="907:928" placeholder="select * fro..ci_roel..." />
+            <marker date="1512282470116" expanded="true" signature="1471:1512" placeholder="select * fro..ci_user..." />
+            <marker date="1512282470116" expanded="true" signature="1671:1692" placeholder="select * fro..ci_user..." />
+            <marker date="1512282470116" expanded="true" signature="1734:1755" placeholder="select * fro..ci_roel..." />
+            <marker date="1512282470116" expanded="true" signature="2159:2208" placeholder="select * fro..ci_u_r..." />
+            <marker date="1512282470116" expanded="true" signature="2159:2218" placeholder="select * fro..ci_u_r..." />
+            <marker date="1512282470116" expanded="true" signature="2159:2219" placeholder="select * fro..ci_u_r..." />
+            <marker date="1512282470116" expanded="true" signature="2294:2357" placeholder="insert into ..." />
+            <marker date="1512282470116" expanded="true" signature="2709:2764" placeholder="select uid f..ci_user..." />
+            <marker date="1512282470116" expanded="true" signature="3132:3195" placeholder="insert into ..." />
+            <marker date="1512282470116" expanded="true" signature="3302:3347" placeholder="select uid f..ci_user..." />
+            <marker date="1512282470116" expanded="true" signature="3529:3576" placeholder="insert into ..." />
+            <marker date="1512282470116" expanded="true" signature="4496:4619" placeholder="insert into ..." />
+            <marker date="1512282470116" expanded="true" signature="5219:5281" placeholder="insert into ..." />
+            <marker date="1512282470116" expanded="true" signature="5881:5918" placeholder="select * fro..ci_r_p..." />
+            <marker date="1512282470116" expanded="true" signature="5881:5935" placeholder="select * fro..ci_r_p..." />
+            <marker date="1512282470116" expanded="true" signature="6503:6531" placeholder="select * fro..." />
+          </folding>
         </state>
       </provider>
     </entry>
