@@ -54,7 +54,7 @@ class ShopcarController extends BaseController
         if(empty($this->u_id)){
             $data = $this->owdh_showcookie();
         }else{
-            $data = DB::select("select * from shopcar");
+            $data = DB::select("select * from shopcar where shopcar_status = 0");
         }
 
         $num = count($data);
