@@ -28,19 +28,6 @@
 
 
 
-
-<script type="text/javascript">
-
-var OP_CONFIG={"module":"wenda","page":"save","userInfo":{"uid":"6197642","nickname":"qq__11888","head":"\/\/img1.mukewang.com\/user\/5a1d5c790001797701000100-80-80.jpg","usertype":"1","roleid":0}};
-var isLogin = 1;
-var is_choice = "";
-var seajsTimestamp="v=201711281133";
-var _msg_unread = 0;
-var _not_unread = 0;
-var _cart_num = 0;
-</script>
-
-
 <link rel="stylesheet" href="./frontend/question_files/saved_resource" type="text/css">
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
     <script charset="utf-8" async="" src="./frontend/question_files/jquery.js.下载"></script>
@@ -53,14 +40,16 @@ var _cart_num = 0;
 
 <div id="header">
     <div class="page-container" id="nav">
-         <div id="logo" class="logo"><a href="http://www.imooc.com/" target="_self" class="hide-text" title="首页" style="background-image: url('./frontend/images/index/logo.jpg')">慕课网</a></div>
+         <div id="logo" class="logo">
+             <a href="http://www.imooc.com/" target="_self" class="hide-text" title="首页" style="background-image: url('./frontend/images/index/logo.jpg')">慕课网</a>
+         </div>
       
 
         <button type="button" class="navbar-toggle visible-xs-block js-show-menu">
             <i class="icon-menu"></i>
         </button>
         <ul class="nav-item">
-                        <li class="set-btn visible-xs-block js-header-avator"><a href="http://www.imooc.com/u/6197642" target="_self"><img width="40" height="40" src="./frontend/question_files/5a1d5c790001797701000100-100-100.jpg"></a></li>
+            <li class="set-btn visible-xs-block js-header-avator"><a href="http://www.imooc.com/u/6197642" target="_self"><img width="40" height="40" src="./frontend/question_files/5a1d5c790001797701000100-100-100.jpg"></a></li>
                         
             <li>
                 <a href="http://www.imooc.com/course/list" target="_self">免费课程</a>
@@ -70,9 +59,13 @@ var _cart_num = 0;
                 <a href="http://coding.imooc.com/" target="_self">实战</a>
             </li>
             <li><a href="question_index" class="active" target="_self">猿问</a></li>
-            <li><a href="http://www.imooc.com/article" target="_self">手记</a></li>
-                                            <li class="visible-xs-block"><a href="http://www.imooc.com/user/setprofile" target="_self">我的设置</a></li>
-                <li class="visible-xs-block"><a href="http://www.imooc.com/passport/user/logout?referer=//www.imooc.com" target="_self">退出</a></li>
+            <li><a href="note_index" target="_self">手记</a></li>
+            <li class="visible-xs-block">
+                <a href="http://www.imooc.com/user/setprofile" target="_self">我的设置</a>
+            </li>
+            <li class="visible-xs-block">
+                <a href="http://www.imooc.com/passport/user/logout?referer=//www.imooc.com" target="_self">退出</a>
+            </li>
             
         </ul>
                 <div id="login-area">
@@ -293,9 +286,6 @@ var _cart_num = 0;
     </div>
 </div>
 
-<script type="text/javascript" charset="utf-8" src="./frontend/question_files/ueditor.final.min.js.下载"></script>
-
-<script type="text/javascript">seajs.use("/static/page/"+OP_CONFIG.module+"/"+OP_CONFIG.page);</script>
 <script>
     $(function(){
         $('.saveques-bottom').click(function(){
@@ -361,37 +351,6 @@ var _cart_num = 0;
     });
 
 </script>
-
-
-<div style="display: none">
-<script type="text/javascript">
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?f0cfcccd7b1393990c78efdeebff3968";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-(function (d) {
-window.bd_cpro_rtid="rHT4P1c";
-var s = d.createElement("script");s.type = "text/javascript";s.async = true;s.src = location.protocol + "//cpro.baidu.com/cpro/ui/rt.js";
-var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
-})(document);
-</script>
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-</div>
 
 <script type="text/javascript" charset="utf-8" src="./frontend/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="./frontend/ueditor/ueditor.all.min.js"> </script>

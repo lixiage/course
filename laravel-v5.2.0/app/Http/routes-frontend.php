@@ -43,5 +43,8 @@ Route::get('question_verify','QuestionController@verify');//验证是否有足�
 Route::get('question_info','QuestionController@answer');//问题详细信息
 Route::get('question_adopt','QuestionController@adopt');//采纳回复
 Route::get('question_answer','QuestionController@q_answer');//回复
+//手记
+Route::any('note_index','NoteController@index');//手记展示
+Route::get('note_insert','NoteController@insert');//手记添加
 
 
