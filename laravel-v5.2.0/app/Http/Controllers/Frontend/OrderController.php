@@ -25,19 +25,17 @@ class OrderController extends Controller
     public function __construct()
     {
         session_start();
-        $_SESSION['user_id'] = 2;
-        $u_id = $_SESSION['user_id'];
-        $this->u_id = 1;
+        if(isset($_SESSION['user_id'])){
+            $this->u_id = $_SESSION['user_id'];
+        }
+
     }
 
     public function whdorder_list(Request $request)
     {
-//        $list = $_COOKIE[1];
-//        $list = json_decode($list);
-//        print_r($list);die;
         $u_id = $this->u_id;
         if($u_id == ''){
-            return "<script>alert('请先登录');location.href='question_index'</script>";
+            return "<script>alert('请先登录');location.href='index'</script>";
         }
 
         if($request->isMethod('post')){
@@ -69,6 +67,10 @@ class OrderController extends Controller
      */
     public function owhd_saveorder(Request $request)
     {
+        $u_id = $this->u_id;
+        if($u_id == ''){
+            return "<script>alert('请先登录');location.href='index'</script>";
+        }
         $order_id = $request->input('order_id');
 
         $order_updatetime = date('Y-m-d H:i:s');
@@ -89,6 +91,10 @@ class OrderController extends Controller
      */
     public function owhd_order(Request $request,$cour_id)
     {
+        $u_id = $this->u_id;
+        if($u_id == ''){
+            return "<script>alert('请先登录');location.href='index'</script>";
+        }
         $u_id = 1;
         //$u_id = $_SESSION['user_id'];
         //查询课程表
@@ -136,8 +142,7 @@ class OrderController extends Controller
     public function owhd_shop(Request $request,$cour_id)
     {
         $info = DB::select("select * from courses where cour_id = '$cour_id'");
-//        echo "<pre>";
-//        print_r($info);die;
+
         return view('frontend.order.owhd_shop',[
             'info'=>$info,
         ]);
@@ -148,6 +153,10 @@ class OrderController extends Controller
      */
     public function owhd_payment(Request $request,$order_id,$cour_name)
     {
+        $u_id = $this->u_id;
+        if($u_id == ''){
+            return "<script>alert('请先登录');location.href='index'</script>";
+        }
         $data = DB::select("select * from course_order where order_id = '$order_id'");
         return view('frontend.order.owhd_payment',[
             'data'=>$data,
