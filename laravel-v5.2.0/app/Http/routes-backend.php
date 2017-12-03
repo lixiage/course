@@ -5,7 +5,7 @@ Route::get('welcome',function(){
 });
 
 //后台Index首页
- Route::any('index','IndexController@index');
+ Route::any('index','PaticeController@index');
 
 
 //direction--------------------start
@@ -79,3 +79,22 @@ Route::any('editCourseDo','IndexController@editCourseDo');
 //addChapter------------start
 //添加章节页面
 Route::any('addChapter','IndexController@addChapter');
+
+
+Route::any('bandLogin','ManagementController@login');   //用户登录
+Route::any('band-list','PaticeController@UserIndex');//用户管理
+Route::any('empower','PaticeController@empower');  //用户列表
+Route::any('privilege','PaticeController@privilege');  //节点管理
+Route::any('usePower','PaticeController@usePower');  //为用户赋权
+Route::any('addUser','PaticeController@addUser');  //为用户赋权
+Route::any('powerList','PaticeController@powerList');  //权限列表
+Route::any('charar','PaticeController@charar');  //权限列表
+Route::any('givePrivilege','PaticeController@givePrivilege');  //为角色赋权
+
+
+/***
+ * 订单列表
+ */
+Route::any('orderList','OrderController@orderList');  //订单列表
+Route::any('orderCount','OrderController@orderList');  //订单统计
+

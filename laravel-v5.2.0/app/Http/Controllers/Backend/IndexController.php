@@ -6,21 +6,22 @@ use Illuminate\Support\Facades\DB;
 use App\CourseDYW;
 header("content-type:text/html;charset=utf-8");
 
-class IndexController extends BaseController
+class IndexController extends CommonController
 {
     //后台Index首页
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      *
      */
-    public function index(){
-        return view('backend.index.index');
-    }
+//    public function index(){
+//        return view('backend.index.index');
+//    }
 
     //direction--------------------start
     //添加方向页面
     public function addDirection(){
-        return view('backend.index.addDirection');
+        $infoooo = $_SESSION['userInfo'];
+        return view('backend.index.addDirection',['infoo'=>$infoooo]);
     }
     //接收方向数据并添加
     public function addDirectionDo(Request $request){
@@ -30,11 +31,13 @@ class IndexController extends BaseController
     }
     //方向列表展示页面
     public function directionList(){
+        $infoooo = $_SESSION['userInfo'];
         $directionData = (new CourseDYW)->directionList();
-        return view('backend.index.directionList',['directionData'=>$directionData]);
+        return view('backend.index.directionList',['directionData'=>$directionData,'infoo'=>$infoooo]);
     }
     //方向删除
     public function delDirection($dir_id=0){
+
         $res = (new CourseDYW)->delDirection($dir_id);
         if($res) return redirect('directionList');
     }
@@ -71,19 +74,22 @@ class IndexController extends BaseController
     //classify--------------------start
     //添加分类页面
     public function addClassify(){
+        $infoooo = $_SESSION['userInfo'];
         $data = (new CourseDYW)->addClassify();
-        return view('backend.index.addClassify',['data'=>$data]);
+        return view('backend.index.addClassify',['data'=>$data,'infoo'=>$infoooo]);
     }
     //接收分类数据并添加
     public function addClassifyDo(Request $request){
+
         $data = $request->input();
         $res = (new CourseDYW)->addClassifyDo($data);
         if($res) return redirect('index');
     }
     //分类列表展示页面
     public function classifyList(){
+        $infoooo = $_SESSION['userInfo'];
         $classifyData = (new CourseDYW)->classifyList();
-        return view('backend.index.classifyList',['classifyData'=>$classifyData]);
+        return view('backend.index.classifyList',['classifyData'=>$classifyData,'infoo'=>$infoooo]);
     }
     //分类删除
     public function delClassify($class_id=0){
@@ -123,9 +129,10 @@ class IndexController extends BaseController
     //type--------------------start
     //添加类型页面
     public function addType(){
+        $infoooo = $_SESSION['userInfo'];
         $dir_data = (new CourseDYW)->addDirection();
         $class_data = (new CourseDYW)->addClassify();
-        return view('backend.index.addType',['dir_data'=>$dir_data,'class_data'=>$class_data]);
+        return view('backend.index.addType',['dir_data'=>$dir_data,'class_data'=>$class_data,'infoo'=>$infoooo]);
     }
     //接收类型数据并添加
     public function addTypeDo(Request $request){
@@ -135,8 +142,9 @@ class IndexController extends BaseController
     }
     //类型列表展示页面(如何查找类型的父类)
     public function typeList(){
+        $infoooo = $_SESSION['userInfo'];
         $typeData = (new CourseDYW)->typeList();
-        return view('backend.index.typeList',['typeData'=>$typeData]);
+        return view('backend.index.typeList',['typeData'=>$typeData,'infoo'=>$infoooo]);
     }
     //类型删除
     public function delType($type_id=0){
@@ -174,10 +182,11 @@ class IndexController extends BaseController
     //courses-----------------start
     //添加课程页面
     public function addCourse(){
+        $infoooo = $_SESSION['userInfo'];
         $dirData = (new CourseDYW)->addDirection();
         $classData = (new CourseDYW)->addClassify();
         $typeData = (new CourseDYW)->addType();
-        return view('backend.course.addCourse',['dirData'=>$dirData,'classData'=>$classData,'typeData'=>$typeData]);
+        return view('backend.course.addCourse',['dirData'=>$dirData,'classData'=>$classData,'typeData'=>$typeData,'infoo'=>$infoooo]);
     }
 
     //添加课程
@@ -190,8 +199,9 @@ class IndexController extends BaseController
 
     //课程展示页面
     public function courseList(){
+        $infoooo = $_SESSION['userInfo'];
         $data = (new CourseDYW)->courseList();
-        return view('backend.course.courseList',['data'=>$data]);
+        return view('backend.course.courseList',['data'=>$data,'infoo'=>$infoooo]);
     }
 
     //课程删除

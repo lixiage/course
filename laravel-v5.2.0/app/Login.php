@@ -15,6 +15,7 @@ class Login extends Commom
     }
 
     /**
+     *
      * 访问微博登录地址
      */
     public function  weiboUrl(){

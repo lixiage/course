@@ -10,6 +10,7 @@ class LoginController extends BaseController
     /**
      * 开启session
      */
+
     public  function  __construct(){
         session_start();
     }
