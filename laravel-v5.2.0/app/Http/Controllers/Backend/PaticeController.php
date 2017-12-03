@@ -17,7 +17,7 @@ class PaticeController extends CommonController
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      * 首页展示
      */
-    public function  UserIndex(){
+    public function  bandlist(){
         $infoooo = $_SESSION['userInfo'];
         $info = $_SESSION['userInfo'];
         $res = DB::select("select * from ci_user");
@@ -72,7 +72,7 @@ class PaticeController extends CommonController
                     $res = DB::insert("insert into ci_u_r(`uid`,`rid`) VALUES('$post[user_id]','$val')");
                 }
             }
-            echo "<script>alert('添加成功');window.location.href='band-list'</script>";
+            echo "<script>alert('添加成功');window.location.href='bandlist'</script>";
         }else{
             if($post['password']!=$post['repassword']){
                 echo "<script>alert('密码不一致,请重新输入');window.location.href='usePower'</script>";
@@ -97,7 +97,7 @@ class PaticeController extends CommonController
                 foreach($post['checkbox'] as $key=>$val){
                     $res = DB::insert("replace into ci_u_r(`uid`,`rid`) VALUES('$uid','$val')");
                 }
-                echo "<script>alert('添加成功');window.location.href='band-list'</script>";
+                echo "<script>alert('添加成功');window.location.href='bandlist'</script>";
             });
         }
     }

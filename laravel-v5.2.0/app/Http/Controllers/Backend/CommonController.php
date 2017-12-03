@@ -9,6 +9,7 @@ header("content-type:text/html;charset=utf-8");
 //公共控制器
 class CommonController extends BaseController
 {
+    public  $conteoller;
     public  function  __construct(){
         session_start();
        $user_id  = isset($_SESSION['user_id'])?$_SESSION['user_id']:"";
@@ -21,20 +22,13 @@ class CommonController extends BaseController
         $len = strlen($pathUrl);
         $sub = substr($pathUrl,strrpos($pathUrl,"\\")+1,$len-strrpos($pathUrl,"\\"));
         $str = explode("@",$sub);
-        define("_CONTROLLER_",$str['0']);
-        define("_METHOD_",$str['1']);
-
+        $this->conteoller = $str['1'];
         $res = $this->getAccess();
-      //  var_dump($res);die;
-        $_SESSION['userInfo'] = $res;
-      //  var_dump($res);die;
-//        if($res == false){
-//            //window.location.href='index'
-//            echo   "<script>alert('你的权限不足，请先联系管理员');</script>";
-//            die;
-//        }
+        if(!$res){
+            echo   "<script>alert('你的权限不足，请先联系管理员');location='bandLogin'</script>";
+            die;
+        }
     }
-
      protected function getAccess(){
           $user_id = $_SESSION['user_id'];
           $sql = "select * from ci_u_r where uid = '$user_id'";
@@ -52,7 +46,6 @@ class CommonController extends BaseController
          }
          $arr = $this->asArray($arr);
          //数组去重
-      //   print_r($arr);die;
             foreach($arr as $key=>$val){
                 foreach($arr as $k=>$v){
                     if($key != $k && $val['pid'] == $v['pid']){
@@ -60,19 +53,18 @@ class CommonController extends BaseController
                     }
                 }
             }
-
          $res = $this->showSon($arr);
-         return $res;
-//       //  die;
-//         //查看权限
-//         foreach($arr as $key=>$val)
-//         {
-//             if($val['pcontroller']==_CONTROLLER_ && $val['paction']==_METHOD_ ){
-//                 $_SESSION['userInfo'] = $arr;
-//                 return true;
-//             }
-//         }
-//         return false;
+         if(empty($_SESSION['userInfo']) || !isset($_SESSION['userInfo'])){
+             $_SESSION['userInfo'] = $res;
+         }
+            //查看权限
+         foreach($arr as $key=>$val)
+         {
+             if($val['pcontroller']==$this->conteoller ){
+                 return true;
+             }
+         }
+         return false;
      }
     public function asArray($data)
     {
@@ -85,7 +77,6 @@ class CommonController extends BaseController
 
 
     public  function showSon($data,$parentId=0){
-        // print_r($data);die;
         $arr =array();
         foreach($data as $key=>$val)
         {

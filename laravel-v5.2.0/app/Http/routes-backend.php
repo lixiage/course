@@ -81,8 +81,8 @@ Route::any('editCourseDo','IndexController@editCourseDo');
 Route::any('addChapter','IndexController@addChapter');
 
 
-Route::any('bandLogin','ManagementController@login');   //用户登录
-Route::any('band-list','PaticeController@UserIndex');//用户管理
+Route::any('bandLogin','ManagementController@bandLogin');   //用户登录
+Route::any('bandlist','PaticeController@bandlist');//用户管理
 Route::any('empower','PaticeController@empower');  //用户列表
 Route::any('privilege','PaticeController@privilege');  //节点管理
 Route::any('usePower','PaticeController@usePower');  //为用户赋权

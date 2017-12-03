@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02eb1089-e576-412a-a392-8ed4da36044c" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/OrderController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/UserMange.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/blog.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/chara.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/empower.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/givePrivilege.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/login.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/usePower.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/userPowerAdd.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Commom.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Commom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Login.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/LoginController.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/LoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Password.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Password.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/PasswordsController.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/PasswordsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php" afterPath="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\wamp\www\course\laravel-v5.2.0\resources\views\backend\gallery.html" afterPath="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/gallery.blade.php" />
     </list>
     <ignored path="course.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,32 +34,117 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PaticeController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php">
+      <file leaf-file-name="ManagementController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.06476191" vertical-offset="1402" max-vertical-offset="4028">
-              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+            <state vertical-scroll-proportion="-6.551724" vertical-offset="0" max-vertical-offset="741">
+              <caret line="20" column="97" selection-start-line="20" selection-start-column="97" selection-end-line="20" selection-end-column="97" />
               <folding>
                 <element signature="e#47#65#0#PHP" expanded="true" />
-                <marker date="1512282470116" expanded="true" signature="637:658" placeholder="select * fro..ci_user..." />
-                <marker date="1512282470116" expanded="true" signature="907:928" placeholder="select * fro..ci_roel..." />
-                <marker date="1512282470116" expanded="true" signature="1471:1512" placeholder="select * fro..ci_user..." />
-                <marker date="1512282470116" expanded="true" signature="1671:1692" placeholder="select * fro..ci_user..." />
-                <marker date="1512282470116" expanded="true" signature="1734:1755" placeholder="select * fro..ci_roel..." />
-                <marker date="1512282470116" expanded="true" signature="2159:2208" placeholder="select * fro..ci_u_r..." />
-                <marker date="1512282470116" expanded="true" signature="2159:2218" placeholder="select * fro..ci_u_r..." />
-                <marker date="1512282470116" expanded="true" signature="2159:2219" placeholder="select * fro..ci_u_r..." />
-                <marker date="1512282470116" expanded="true" signature="2294:2357" placeholder="insert into ..." />
-                <marker date="1512282470116" expanded="true" signature="2709:2764" placeholder="select uid f..ci_user..." />
-                <marker date="1512282470116" expanded="true" signature="3132:3195" placeholder="insert into ..." />
-                <marker date="1512282470116" expanded="true" signature="3302:3347" placeholder="select uid f..ci_user..." />
-                <marker date="1512282470116" expanded="true" signature="3529:3576" placeholder="insert into ..." />
-                <marker date="1512282470116" expanded="true" signature="4496:4619" placeholder="insert into ..." />
-                <marker date="1512282470116" expanded="true" signature="5219:5281" placeholder="insert into ..." />
-                <marker date="1512282470116" expanded="true" signature="5881:5918" placeholder="select * fro..ci_r_p..." />
-                <marker date="1512282470116" expanded="true" signature="5881:5935" placeholder="select * fro..ci_r_p..." />
-                <marker date="1512282470116" expanded="true" signature="6503:6531" placeholder="select * fro..." />
+                <marker date="1512296007334" expanded="true" signature="516:579" placeholder="select * fro..ci_user..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.9729729" vertical-offset="66" max-vertical-offset="2090">
+              <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+              <folding>
+                <element signature="e#46#98#0#PHP" expanded="true" />
+                <marker date="1512296433834" expanded="true" signature="1121:1164" placeholder="select * fro..ci_u_r..." />
+                <marker date="1512296433834" expanded="true" signature="1340:1383" placeholder="select * fro..ci_r_p..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.6785714" vertical-offset="228" max-vertical-offset="4332">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.75" vertical-offset="461" max-vertical-offset="1881">
+              <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+              <folding>
+                <element signature="e#48#100#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.357143" vertical-offset="66" max-vertical-offset="2398">
+              <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes-frontend.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-frontend.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.928572" vertical-offset="171" max-vertical-offset="1767">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes-backend.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.967742" vertical-offset="1486" max-vertical-offset="2332">
+              <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaticeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-52.785713" vertical-offset="403" max-vertical-offset="4028">
+              <caret line="99" column="75" selection-start-line="99" selection-start-column="75" selection-end-line="99" selection-end-column="75" />
+              <folding>
+                <element signature="e#47#65#0#PHP" expanded="true" />
+                <marker date="1512291552380" expanded="true" signature="636:657" placeholder="select * fro..ci_user..." />
+                <marker date="1512291552380" expanded="true" signature="906:927" placeholder="select * fro..ci_roel..." />
+                <marker date="1512291552380" expanded="true" signature="1470:1511" placeholder="select * fro..ci_user..." />
+                <marker date="1512291552380" expanded="true" signature="1670:1691" placeholder="select * fro..ci_user..." />
+                <marker date="1512291552380" expanded="true" signature="1733:1754" placeholder="select * fro..ci_roel..." />
+                <marker date="1512291552380" expanded="true" signature="2158:2218" placeholder="select * fro..ci_u_r..." />
+                <marker date="1512291552380" expanded="true" signature="2293:2356" placeholder="insert into ..." />
+                <marker date="1512291552380" expanded="true" signature="2707:2762" placeholder="select uid f..ci_user..." />
+                <marker date="1512291552380" expanded="true" signature="3130:3193" placeholder="insert into ..." />
+                <marker date="1512291552380" expanded="true" signature="3300:3345" placeholder="select uid f..ci_user..." />
+                <marker date="1512291552380" expanded="true" signature="4493:4616" placeholder="insert into ..." />
+                <marker date="1512291552380" expanded="true" signature="5216:5278" placeholder="insert into ..." />
+                <marker date="1512291552380" expanded="true" signature="5878:5932" placeholder="select * fro..ci_r_p..." />
+                <marker date="1512291552380" expanded="true" signature="6500:6528" placeholder="select * fro..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="304">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,13 +183,13 @@
         <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/empower.blade.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Commom.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/givePrivilege.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php" />
-        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/OrderController.php" />
-        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php" />
         <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php" />
+        <option value="$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php" />
       </list>
     </option>
   </component>
@@ -170,6 +238,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="course" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -502,7 +580,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -585,13 +663,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4199">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/frontend/Login/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="41667">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -679,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/frontend/Login/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10147601" vertical-offset="3726" max-vertical-offset="41895">
-          <caret line="199" column="34" selection-start-line="199" selection-start-column="34" selection-end-line="199" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/CourseDYW.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.7859778" vertical-offset="2052" max-vertical-offset="4484">
@@ -701,24 +765,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/index/addDirection.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="14.928572" vertical-offset="1653" max-vertical-offset="2508">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55495495" vertical-offset="756" max-vertical-offset="1710">
-          <caret line="58" column="44" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -747,13 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.5" vertical-offset="57" max-vertical-offset="2527">
           <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30810812" vertical-offset="0" max-vertical-offset="555">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -807,20 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="760">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24448529" vertical-offset="0" max-vertical-offset="646">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/Managemen/blog.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30508474" vertical-offset="712" max-vertical-offset="2489">
@@ -869,7 +898,7 @@
         <state vertical-scroll-proportion="0.48897058" vertical-offset="0" max-vertical-offset="544">
           <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
-            <element signature="e#22#56#0#PHP" expanded="true" />
+            <element signature="e#22#56#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -878,55 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1567566" vertical-offset="1197" max-vertical-offset="1919">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37657657" vertical-offset="0" max-vertical-offset="555">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#98#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2054054" vertical-offset="0" max-vertical-offset="2071">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
-          <folding>
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1512271434858" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8387716" vertical-offset="1227" max-vertical-offset="2438">
-          <caret line="95" column="7" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -947,61 +927,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php">
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2750455" vertical-offset="900" max-vertical-offset="2600">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state vertical-scroll-proportion="-3.392857" vertical-offset="437" max-vertical-offset="1197">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#63#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/resources/views/backend/layouts/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.357143" vertical-offset="66" max-vertical-offset="2398">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-52.785713" vertical-offset="403" max-vertical-offset="4028">
+          <caret line="99" column="75" selection-start-line="99" selection-start-column="75" selection-end-line="99" selection-end-column="75" />
+          <folding>
+            <element signature="e#47#65#0#PHP" expanded="true" />
+            <marker date="1512291552380" expanded="true" signature="636:657" placeholder="select * fro..ci_user..." />
+            <marker date="1512291552380" expanded="true" signature="906:927" placeholder="select * fro..ci_roel..." />
+            <marker date="1512291552380" expanded="true" signature="1470:1511" placeholder="select * fro..ci_user..." />
+            <marker date="1512291552380" expanded="true" signature="1670:1691" placeholder="select * fro..ci_user..." />
+            <marker date="1512291552380" expanded="true" signature="1733:1754" placeholder="select * fro..ci_roel..." />
+            <marker date="1512291552380" expanded="true" signature="2158:2218" placeholder="select * fro..ci_u_r..." />
+            <marker date="1512291552380" expanded="true" signature="2293:2356" placeholder="insert into ..." />
+            <marker date="1512291552380" expanded="true" signature="2707:2762" placeholder="select uid f..ci_user..." />
+            <marker date="1512291552380" expanded="true" signature="3130:3193" placeholder="insert into ..." />
+            <marker date="1512291552380" expanded="true" signature="3300:3345" placeholder="select uid f..ci_user..." />
+            <marker date="1512291552380" expanded="true" signature="4493:4616" placeholder="insert into ..." />
+            <marker date="1512291552380" expanded="true" signature="5216:5278" placeholder="insert into ..." />
+            <marker date="1512291552380" expanded="true" signature="5878:5932" placeholder="select * fro..ci_r_p..." />
+            <marker date="1512291552380" expanded="true" signature="6500:6528" placeholder="select * fro..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30810812" vertical-offset="0" max-vertical-offset="555">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39809525" vertical-offset="0" max-vertical-offset="525">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#46#98#0#PHP" expanded="true" />
-            <marker date="1512267781875" expanded="true" signature="-1:-1" placeholder="select * fro..ci_u_r..." />
-            <marker date="1512267781875" expanded="true" signature="-1:-1" placeholder="select * fro..ci_r_p..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Frontend/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.75" vertical-offset="461" max-vertical-offset="1881">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding>
+            <element signature="e#48#100#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034234233" vertical-offset="0" max-vertical-offset="4332">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
+        <state vertical-scroll-proportion="-0.6785714" vertical-offset="228" max-vertical-offset="4332">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.928572" vertical-offset="171" max-vertical-offset="1767">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/routes-backend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.967742" vertical-offset="1486" max-vertical-offset="2332">
+          <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/ManagementController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6576577" vertical-offset="205" max-vertical-offset="760">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        <state vertical-scroll-proportion="-6.551724" vertical-offset="0" max-vertical-offset="741">
+          <caret line="20" column="97" selection-start-line="20" selection-start-column="97" selection-end-line="20" selection-end-column="97" />
           <folding>
             <element signature="e#47#65#0#PHP" expanded="true" />
-            <marker date="1512220674372" expanded="true" signature="-1:-1" placeholder="select * fro..ci_user..." />
+            <marker date="1512296007334" expanded="true" signature="516:579" placeholder="select * fro..ci_user..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/PaticeController.php">
+    <entry file="file://$PROJECT_DIR$/laravel-v5.2.0/app/Http/Controllers/Backend/CommonController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.06476191" vertical-offset="1402" max-vertical-offset="4028">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+        <state vertical-scroll-proportion="2.9729729" vertical-offset="66" max-vertical-offset="2090">
+          <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
           <folding>
-            <element signature="e#47#65#0#PHP" expanded="true" />
-            <marker date="1512282470116" expanded="true" signature="637:658" placeholder="select * fro..ci_user..." />
-            <marker date="1512282470116" expanded="true" signature="907:928" placeholder="select * fro..ci_roel..." />
-            <marker date="1512282470116" expanded="true" signature="1471:1512" placeholder="select * fro..ci_user..." />
-            <marker date="1512282470116" expanded="true" signature="1671:1692" placeholder="select * fro..ci_user..." />
-            <marker date="1512282470116" expanded="true" signature="1734:1755" placeholder="select * fro..ci_roel..." />
-            <marker date="1512282470116" expanded="true" signature="2159:2208" placeholder="select * fro..ci_u_r..." />
-            <marker date="1512282470116" expanded="true" signature="2159:2218" placeholder="select * fro..ci_u_r..." />
-            <marker date="1512282470116" expanded="true" signature="2159:2219" placeholder="select * fro..ci_u_r..." />
-            <marker date="1512282470116" expanded="true" signature="2294:2357" placeholder="insert into ..." />
-            <marker date="1512282470116" expanded="true" signature="2709:2764" placeholder="select uid f..ci_user..." />
-            <marker date="1512282470116" expanded="true" signature="3132:3195" placeholder="insert into ..." />
-            <marker date="1512282470116" expanded="true" signature="3302:3347" placeholder="select uid f..ci_user..." />
-            <marker date="1512282470116" expanded="true" signature="3529:3576" placeholder="insert into ..." />
-            <marker date="1512282470116" expanded="true" signature="4496:4619" placeholder="insert into ..." />
-            <marker date="1512282470116" expanded="true" signature="5219:5281" placeholder="insert into ..." />
-            <marker date="1512282470116" expanded="true" signature="5881:5918" placeholder="select * fro..ci_r_p..." />
-            <marker date="1512282470116" expanded="true" signature="5881:5935" placeholder="select * fro..ci_r_p..." />
-            <marker date="1512282470116" expanded="true" signature="6503:6531" placeholder="select * fro..." />
+            <element signature="e#46#98#0#PHP" expanded="true" />
+            <marker date="1512296433834" expanded="true" signature="1121:1164" placeholder="select * fro..ci_u_r..." />
+            <marker date="1512296433834" expanded="true" signature="1340:1383" placeholder="select * fro..ci_r_p..." />
           </folding>
         </state>
       </provider>
