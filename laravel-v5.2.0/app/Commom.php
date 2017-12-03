@@ -178,4 +178,44 @@ class Commom extends Model
             return json_encode(['code'=>5,'content'=>$e->getMessage()]);
         }
     }
+
+    /**
+     * 无限极分类
+     */
+    public function  typesList($info,$parent_id=0,$leve=0){
+       // echo "afsfasdf";die;
+            static $result = array();
+            foreach($info as $key=>$val){
+                if($parent_id == $val->parent_id){
+                    $val->leve = $leve;
+                    $result[] = $val;
+                    $this->typesList($info,$val->pid,$leve+1);
+                }
+            }
+            return $result;
+    }
+    /*
+     * 递归
+     */
+    //递归查询
+    public function asArray($data){
+        $arr = array();
+        foreach($data as $key=>$val){
+            $arr[] = (array)$val;
+        }
+        return $arr;
+    }
+
+    public  function showSon($data,$parentId=0){
+       // print_r($data);die;
+        $arr =array();
+        foreach($data as $key=>$val)
+        {
+            if($val['parent_id']==$parentId){
+                $arr[$key]=$val;
+                $arr[$key]["son"]=$this->showSon($data,$val['pid']);
+            }
+        }
+        return $arr;
+    }
 }

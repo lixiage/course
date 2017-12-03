@@ -12,6 +12,8 @@ class Password extends Commom
     protected $content;
     protected $subject;
     protected $email_l;
+    protected  $cliendName;
+
     /**
      * @param $name
      * @return \Illuminate\Http\JsonResponse
@@ -23,6 +25,7 @@ class Password extends Commom
             return response()->json(['code' => '1', 'content' => '邮箱不存在']);
         }
         $this->email_l = $name;
+        $this->cliendName = $name;
         $time = time();
         $arr = array($name,$this->yanzhi,$time);
         $str = base64_encode(json_encode($arr));
