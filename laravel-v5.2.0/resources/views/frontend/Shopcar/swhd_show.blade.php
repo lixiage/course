@@ -94,7 +94,7 @@
                         <div class="myOrder-course clearfix cart">
                             <dl class="course-del l">
                                 <dd class="clearfix">
-                                    <a href="" class="l">
+                                    <a href="{{ url('owhd_shop',['cour_id'=>$val->goods_id]) }}" class="l">
                                         <input type="hidden" name="cour_image[]" value="{{ $val->cour_image }}"/>
                                         <img class="l" src="{{ asset($val->cour_image) }}" width="160" height="90"/>
                                     </a>
@@ -222,7 +222,7 @@
             //如果全选  获取到每个商品的价钱   相加
             $('.input-checkbox').next().val('true');
             var new_price = $('.goods_price').val();
-            alert(new_price)
+            //alert(new_price)
         }
         else {
             $(":checkbox").removeAttr("checked");
