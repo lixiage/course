@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>方向列表</title>
+    <title>小节列表</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./backend/css/bootstrap.css" rel="stylesheet">
@@ -48,18 +48,20 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper">
-            <h3><i class="fa fa-angle-right"></i> 方向展示列表 </h3>
+            <h3><i class="fa fa-angle-right"></i> 小节展示列表 </h3>
 
             <div class="row mt">
                 <div class="col-md-12">
                     <div class="content-panel">
                         <table class="table table-striped table-advance table-hover">
-                            <h4><i class="fa fa-angle-right"></i> 方向列表 </h4>
+                            <h4><i class="fa fa-angle-right"></i> 小节列表 </h4>
                             <hr>
                             <thead>
                             <tr>
-                                <th><i class="fa fa-bullhorn"></i>方向ID</th>
-                                <th class="hidden-phone"><i class="fa fa-bookmark"></i> 方向名称</th>
+                                <th><i class="fa fa-bullhorn"></i>小节ID</th>
+                                <th><i class="fa fa-bookmark"></i> 小节名称</th>
+                                <th><i class="fa fa-bookmark"></i> 所属课程</th>
+                                <th><i class="fa fa-bookmark"></i> 所属章节</th>
                                 <th><i class="fa fa-bookmark"></i> 添加时间</th>
                                 <th><i class="fa fa-bookmark"></i> 修改时间</th>
                                 <th><i class=" fa fa-edit"></i> Status</th>
@@ -67,30 +69,29 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($directionData as $k=>$v)
+                                <?php foreach($data as $v){?>
                                 <tr>
-                                    <td id="dir_id">{{ $v->dir_id }}</td>
+                                    <td><?= $v['small_id']?></td>
+                                    <td><?= $v['small_name']?></td>
+                                    <td><?= $v['cour_name']?></td>
+                                    <td><?= $v['chap_name']?></td>
+                                    <td><?= $v['small_addtime']?></td>
+                                    <td><?= $v['small_updatetime']?></td>
                                     <td>
-                                        <span class="edit-span">{{ $v->dir_name }}</span>
-                                        <input type="hidden" class="edit-input" aa='{{ $v->dir_id }}'>
-                                    </td>
-                                    <td>{{ $v->dir_addtime }}</td>
-                                    <td>{{ $v->dir_updatetime }}</td>
-                                    <td>
-                                        @if($v->dir_status == 0)
-                                        <span class="label label-success label-mini status_display" dir_status="{{ $v->dir_status }}" id="{{ $v->dir_id }}">显示</span>
+                                        @if($v['small_status'] == 0)
+                                            <span class="label label-success label-mini">显示</span>
                                         @else
-                                        <span class="label label-warning label-mini status_hide" dir_status="{{ $v->dir_status }}" id="{{ $v->dir_id }}">隐藏</span>
+                                            <span class="label label-warning label-mini">隐藏</span>
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="{{ url('delDirection',['dir_id'=>$v->dir_id]) }}"><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button></a>
+                                        <a href="{{ url('delSmallMatter',['small_id'=>$v['small_id']]) }}"><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button></a>
                                     </td>
                                 </tr>
-                            @endforeach
+                            <?php }?>
                             </tbody>
                         </table>
-                        {!! $directionData->render() !!}
+                        {{--{!! $classifyData->render() !!}--}}
                     </div><!-- /content-panel -->
                 </div><!-- /col-md-12 -->
             </div><!-- /row -->
@@ -119,92 +120,8 @@
 
 <script>
     $(function(){
-        $('.edit-span').click(function(){
-            var dir_name = $(this).text();
 
-            $(this).hide();
-            $(this).next().attr('type','text').focus().val(dir_name);
-        });
-
-        $('.edit-input').blur(function(){
-            var _this=$(this);
-            var dir_id = $(this).attr('aa');
-            var dir_name = $(this).val();
-
-            //获取上一级的值
-            var nextName = $(this).prev().text();
-
-            //判断文本框值是否与上级值相同
-            if(dir_name == nextName){
-                //隐藏当前文本框
-                $(this).attr('type','hidden').val('');
-                //显示上级
-                $(this).prev().show();
-                return false;
-            }
-
-            $.ajax({
-                type: "post",
-                url: "{{ url('editDirection') }}",
-                data: "dir_id="+dir_id+"&dir_name="+dir_name,
-                dataType: "json",
-                success:function(msg){
-                    if(msg.code == 0){
-                        alert('修改失败');
-                        return false;
-                    }
-                    if(msg.code == 1){
-                        _this.prop("type","hidden").val('');
-                        _this.prev().show().text(dir_name);
-                    }
-                }
-            });
-        });
-
-        //修改为隐藏状态
-        $('.status_display').click(function(){
-            var dir_id = $(this).prop('id');
-            var dir_status = $(this).attr('dir_status');
-            var dir_text = $(this).text();
-
-            $.ajax({
-                type:"post",
-                url:"{{ url('editDirectionStatus') }}",
-                data: "dir_id="+dir_id+"&dir_status="+dir_status,
-                dataType:"json",
-                success:function(msg){
-                    if(msg.code == 0){
-                        alert('修改失败');
-                        return false;
-                    }else{
-                        location.href='';
-                    }
-                }
-            });
-        });
-
-        //修改为显示状态
-        $('.status_hide').click(function(){
-            var dir_id = $(this).prop('id');
-            var dir_status = $(this).attr('dir_status');
-            var dir_text = $(this).text();
-
-            $.ajax({
-                type:"post",
-                url:"{{ url('editDirectionStatus') }}",
-                data: "dir_id="+dir_id+"&dir_status="+dir_status,
-                dataType:"json",
-                success:function(msg){
-                    if(msg.code == 0){
-                        alert('修改失败');
-                        return false;
-                    }else{
-                        location.href='';
-                    }
-                }
-            });
-        });
- });
+    });
 </script>
 
 </body>

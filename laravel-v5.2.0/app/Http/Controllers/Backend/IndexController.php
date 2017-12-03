@@ -6,22 +6,21 @@ use Illuminate\Support\Facades\DB;
 use App\CourseDYW;
 header("content-type:text/html;charset=utf-8");
 
-class IndexController extends CommonController
+class IndexController extends BaseController
 {
     //后台Index首页
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      *
      */
-//    public function index(){
-//        return view('backend.index.index');
-//    }
+    public function index(){
+        return view('backend.index.index');
+    }
 
     //direction--------------------start
     //添加方向页面
     public function addDirection(){
-        $infoooo = $_SESSION['userInfo'];
-        return view('backend.index.addDirection',['infoo'=>$infoooo]);
+        return view('backend.index.addDirection');
     }
     //接收方向数据并添加
     public function addDirectionDo(Request $request){
@@ -31,13 +30,11 @@ class IndexController extends CommonController
     }
     //方向列表展示页面
     public function directionList(){
-        $infoooo = $_SESSION['userInfo'];
         $directionData = (new CourseDYW)->directionList();
-        return view('backend.index.directionList',['directionData'=>$directionData,'infoo'=>$infoooo]);
+        return view('backend.index.directionList',['directionData'=>$directionData]);
     }
     //方向删除
     public function delDirection($dir_id=0){
-
         $res = (new CourseDYW)->delDirection($dir_id);
         if($res) return redirect('directionList');
     }
@@ -74,22 +71,19 @@ class IndexController extends CommonController
     //classify--------------------start
     //添加分类页面
     public function addClassify(){
-        $infoooo = $_SESSION['userInfo'];
-        $data = (new CourseDYW)->addClassify();
-        return view('backend.index.addClassify',['data'=>$data,'infoo'=>$infoooo]);
+        $data = (new CourseDYW)->addDirection();
+        return view('backend.index.addClassify',['data'=>$data]);
     }
     //接收分类数据并添加
     public function addClassifyDo(Request $request){
-
         $data = $request->input();
         $res = (new CourseDYW)->addClassifyDo($data);
         if($res) return redirect('index');
     }
     //分类列表展示页面
     public function classifyList(){
-        $infoooo = $_SESSION['userInfo'];
         $classifyData = (new CourseDYW)->classifyList();
-        return view('backend.index.classifyList',['classifyData'=>$classifyData,'infoo'=>$infoooo]);
+        return view('backend.index.classifyList',['classifyData'=>$classifyData]);
     }
     //分类删除
     public function delClassify($class_id=0){
@@ -129,10 +123,9 @@ class IndexController extends CommonController
     //type--------------------start
     //添加类型页面
     public function addType(){
-        $infoooo = $_SESSION['userInfo'];
         $dir_data = (new CourseDYW)->addDirection();
         $class_data = (new CourseDYW)->addClassify();
-        return view('backend.index.addType',['dir_data'=>$dir_data,'class_data'=>$class_data,'infoo'=>$infoooo]);
+        return view('backend.index.addType',['dir_data'=>$dir_data,'class_data'=>$class_data]);
     }
     //接收类型数据并添加
     public function addTypeDo(Request $request){
@@ -142,9 +135,8 @@ class IndexController extends CommonController
     }
     //类型列表展示页面(如何查找类型的父类)
     public function typeList(){
-        $infoooo = $_SESSION['userInfo'];
         $typeData = (new CourseDYW)->typeList();
-        return view('backend.index.typeList',['typeData'=>$typeData,'infoo'=>$infoooo]);
+        return view('backend.index.typeList',['typeData'=>$typeData]);
     }
     //类型删除
     public function delType($type_id=0){
@@ -182,11 +174,10 @@ class IndexController extends CommonController
     //courses-----------------start
     //添加课程页面
     public function addCourse(){
-        $infoooo = $_SESSION['userInfo'];
         $dirData = (new CourseDYW)->addDirection();
         $classData = (new CourseDYW)->addClassify();
         $typeData = (new CourseDYW)->addType();
-        return view('backend.course.addCourse',['dirData'=>$dirData,'classData'=>$classData,'typeData'=>$typeData,'infoo'=>$infoooo]);
+        return view('backend.course.addCourse',['dirData'=>$dirData,'classData'=>$classData,'typeData'=>$typeData]);
     }
 
     //添加课程
@@ -199,9 +190,8 @@ class IndexController extends CommonController
 
     //课程展示页面
     public function courseList(){
-        $infoooo = $_SESSION['userInfo'];
         $data = (new CourseDYW)->courseList();
-        return view('backend.course.courseList',['data'=>$data,'infoo'=>$infoooo]);
+        return view('backend.course.courseList',['data'=>$data]);
     }
 
     //课程删除
@@ -221,6 +211,78 @@ class IndexController extends CommonController
     //chapter-----------------start
     //添加章节页面
     public function addChapter(){
-        return view('');
+        $courseData = (new CourseDYW)->addCourse();
+        return view('backend.chapter.addChapter',['courseData'=>$courseData]);
+    }
+    //接收章节数据并添加
+    public function addChapterDo(Request $request){
+        $data = $request->input();
+        $res = (new CourseDYW)->addChapterDo($data);
+        if($res) return redirect('chapterList');
+    }
+
+    //章节展示页面
+    public function chapterList(){
+        $data = (new CourseDYW)->chapterList();
+        return view('backend.chapter.chapterList',['data'=>$data]);
+    }
+
+    //删除章节
+    public function delChapter($chap_id){
+        $res = (new CourseDYW)->delChapter($chap_id);
+        if($res) return redirect('chapterList');
+    }
+    //chapter-----------------end
+
+
+    //smallMatter-----------------start
+    //添加小节页面
+    public function addSmallMatter(){
+        $courseData = (new CourseDYW)->addCourse();
+        $smallMatterData = (new CourseDYW)->addChapter();
+        return view('backend.smallMatter.addSmallMatter',['courseData'=>$courseData,'smallMatterData'=>$smallMatterData]);
+    }
+    //接收小节数据并添加
+    public function addSmallMatterDo(Request $request){
+        $data = $request->input();
+        $res = (new CourseDYW)->smallMatterList($data);
+        if($res) return redirect('smallMatterList');
+    }
+
+    //小节展示
+    public function smallMatterList(){
+        $data = (new CourseDYW)->smallMatterList();
+        return view('backend.smallMatter.smallMatterList',['data'=>$data]);
+    }
+
+    //小节删除
+    public function delSmallMatter($small_id){
+        $res = (new CourseDYW)->delSmallMatter($small_id);
+        if($res) return redirect('smallMatterList');
+    }
+    //smallMatter--------------end
+
+    //video--------------------start
+    //视频添加
+    public function addVideo(){
+        $data = (new CourseDYW)->addSmallMatter();
+        return view('backend.video.addVideo',['data'=>$data]);
+    }
+    //接收视频并添加
+    public function addVideoDo(Request $request){
+        $small_id = $request->input('small_id');
+        $video = $_FILES['video'];
+        $res = (new CourseDYW)->addVideoDo($small_id,$video);
+        if($res) return redirect('videoList');
+    }
+    //视频展示页面
+    public function videoList(){
+        $data = (new CourseDYW())->videoList();
+        return view('backend.video.videoList',['data'=>$data]);
+    }
+    //视频删除
+    public function delVideo($video_id){
+        $res = (new CourseDYW())->delVideo($video_id);
+        if($res) return redirect('videoList');
     }
 }

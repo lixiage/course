@@ -90,6 +90,7 @@
                             <a href="/user/feedback" target="_blank" class="r"></a>
                         </p>
                     <div id="whd">
+                        @if(!empty($data))
                         @foreach($data as $key => $val)
                         <div class="myOrder-course clearfix cart">
                             <dl class="course-del l">
@@ -129,7 +130,12 @@
                                 </font>
                             </div>
                         </div>
-                            @endforeach
+                        @endforeach
+                        @elseif(empty($data))
+                            <div class="myOrder-course clearfix cart">
+                                <font size="5px"><strong>购物车内空空如也</strong></font>
+                            </div>
+                        @endif
                     </div>
                     </li>
                 </ul>

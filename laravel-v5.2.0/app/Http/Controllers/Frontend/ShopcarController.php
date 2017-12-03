@@ -14,9 +14,9 @@ class ShopcarController extends BaseController
     public function __construct()
     {
         session_start();
-        $_SESSION['user_id'] = 2;
-        $u_id = $_SESSION['user_id'];
-        $this->u_id = '1';
+        if(isset($_SESSION['user_id'])){
+            $this->u_id = $_SESSION['user_id'];
+        }
     }
 
     /**
@@ -39,7 +39,7 @@ class ShopcarController extends BaseController
                 echo 2;die;
             }
             $result = DB::table('shopcar')->insert(
-                ['u_id'=>$this->u_id,'goods_id'=>$cour_id,'type_id'=>$type_id,'goods_price'=>$cour_money,'cour_name'=>$cour_name,'cour_image'=>$cour_image,'price_sum'=>$cour_money,'shopcar_time'=>$date,'shopcar_updatetime'=>$date]
+                ['u_id'=>$this->u_id,'goods_id'=>$cour_id,'type_id'=>$type_id,'goods_price'=>$cour_money,'cour_name'=>$cour_name,'cour_image'=>$cour_image,'shopcar_time'=>$date,'shopcar_updatetime'=>$date]
             );
             echo $result;die;
         }else{
@@ -97,8 +97,12 @@ class ShopcarController extends BaseController
                 $arr[] = $val;
             }
         }
-        foreach($arr as $k => $v){
-            $data[] = json_decode($v);
+        if(empty($arr)){
+            $data = [];
+        }else{
+            foreach($arr as $k => $v){
+                $data[] = json_decode($v);
+            }
         }
         return $data;
     }
@@ -106,6 +110,9 @@ class ShopcarController extends BaseController
     public function swhd_order(Request $request)
     {
         $u_id = $this->u_id;
+        if($u_id == ''){
+            return "<script>alert('请先登录');location.href='index'</script>";
+        }
         $user = DB::select("select * from admin_user where admin_id = '$u_id'");
         $data = $request->input();
         //echo "<pre>";
@@ -168,6 +175,10 @@ class ShopcarController extends BaseController
     //购物车支付
     public function swhd_payment(Request $request,$order_id)
     {
+        $u_id = $this->u_id;
+        if($u_id == ''){
+            return "<script>alert('请先登录');location.href='index'</script>";
+        }
         $data = DB::select("select * from course_order where order_id = '$order_id'");
         return view('frontend.shopcar.swhd_payment',[
             'data'=>$data,

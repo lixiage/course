@@ -5,7 +5,7 @@ Route::get('welcome',function(){
 });
 
 //后台Index首页
- Route::any('index','PaticeController@index');
+ Route::any('index','IndexController@index');
 
 
 //direction--------------------start
@@ -80,6 +80,9 @@ Route::any('editCourseDo','IndexController@editCourseDo');
 //添加章节页面
 Route::any('addChapter','IndexController@addChapter');
 
+//接收章节数据并添加
+Route::any('addChapterDo','IndexController@addChapterDo');
+
 
 Route::any('bandLogin','ManagementController@bandLogin');   //用户登录
 Route::any('bandlist','PaticeController@bandlist');//用户管理
@@ -91,12 +94,42 @@ Route::any('powerList','PaticeController@powerList');  //权限列表
 Route::any('charar','PaticeController@charar');  //权限列表
 Route::any('givePrivilege','PaticeController@givePrivilege');  //为角色赋权
 
+//章节展示页面
+Route::any('chapterList','IndexController@chapterList');
 
-/***
- * 订单列表
- */
-Route::any('orderList','OrderController@orderList');  //订单列表
-Route::any('orderCount','OrderController@orderList');  //订单统计
+
+//删除章节
+Route::any('delChapter/{chap_id}','IndexController@delChapter');
+//addChapter------------start
+
+//smallMatter-----------start
+//添加小节页面
+Route::any('addSmallMatter','IndexController@addSmallMatter');
+
+//接收章节数据并添加
+Route::any('addSmallMatterDo','IndexController@addSmallMatterDo');
+
+//小节展示页面
+Route::any('smallMatterList','IndexController@smallMatterList');
+
+//删除小节
+Route::any('delSmallMatter/{small_id}','IndexController@delSmallMatter');
+//smallMatter-----------end
+
+//video-----------------start
+//视频添加页面
+Route::any('addVideo','IndexController@addVideo');
+
+//接收视频数据并添加
+Route::any('addVideoDo','IndexController@addVideoDo');
+
+//视频展示页面
+Route::any('videoList','IndexController@videoList');
+
 
 Route::any('loginOut','PaticeController@loginOut');  //为角色赋权
+
+
+//删除视频
+Route::any('delVideo/{video_id}','IndexController@delVideo');
 
