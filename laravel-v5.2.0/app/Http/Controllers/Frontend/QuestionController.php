@@ -39,9 +39,10 @@ class QuestionController extends CommonController
     public function question(Request $request)
     {
         if ($request->isMethod('post')) {
-            $data = $this->getData($request->input());
+            $data = $request->input();
+//            var_dump($data);die;
             if(empty($data['question_title'])||empty($data['classifyid'])||empty($data['question_content'])){
-                $this->goBack();
+                return $this->goBack('您有数据没有填写');
             }
             $point = $data['point'];
             unset($data['point']);
@@ -49,7 +50,7 @@ class QuestionController extends CommonController
             if($id){
                 return redirect('question_index');
             }else{
-                $this->goBack();
+                return $this->goBack('失败');
             }
         } else {
             $classes = DB::table('course_classify')->get();
@@ -58,19 +59,6 @@ class QuestionController extends CommonController
             }
             return view('frontend/question/insert', ['classes' => $classes]);
         }
-    }
-
-    /**
-     * @param $data
-     * @return mixed
-     * 处理提交数据
-     */
-    public function getData($data){
-        $data['uid'] = isset($_SESSION['user_id'])?$_SESSION['user_id']:1;
-        $data['is_new'] = 1;
-        $data['addtime'] = date('Y-m-d H:i:s',time());
-
-        return $data;
     }
 
     /**
@@ -84,10 +72,49 @@ class QuestionController extends CommonController
         return response()->json($data);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|\think\response\View
+     * 问题详情页面
+     */
     public function answer(Request $request){
         $question_id = $request->input('q_id');
+        $question = new Question();
+        $info = $question->getOneQuestion($question_id);
+        $answers = $question->getBothAnswer($question_id);
+//        print_r($info);die;
+        return view('frontend/question/answer',['info'=>$info,'data'=>$answers]);
+    }
 
-        return view('frontend/question/answer');
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse|\Symfony\Component\HttpFoundation\Response
+     * 采纳回复
+     */
+    public function adopt(Request $request){
+        $uid = $request->session()->get('user_id');
+        $uid = !empty($uid)?$uid:1;
+        $id = $request->input('id');
+        $q_id = $request->input('q_id');
+        $question = new Question();
+        $question->updateData(['question_id'=>$q_id],['useid'=>$id]);
+        $question->addIntegral($uid,2);
+        $question->updateData(['answer_id'=>$id],['is_use'=>1],'answer');
+
+        return response()->json(['code'=>1]);
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse|\Symfony\Component\HttpFoundation\Response
+     * 回答问题
+     */
+    public function q_answer(Request $request){
+        $data = $request->input();
+        $question = new Question();
+        $id = $question->addAnswer($data);
+        !empty($id)?$id:'';
+        return response()->json(['id'=>$id]);
     }
 
 }
