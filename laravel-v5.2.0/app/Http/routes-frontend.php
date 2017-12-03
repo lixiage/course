@@ -10,6 +10,9 @@ Route::any('Elastic','ElasticController@Elaindex');
 Route::any('Elastic/{id}',['uses'=>'ElasticController@Elaindex']);
 //实战的分类和视频
 Route::any('Fight','FightController@Findex');
+Route::any('Fight/{id}',['uses'=>'FightController@Findex']);
+Route::any('Fightc/{id}',['uses'=>'FightController@Findexc']);
+//首页的路由
 
 
 Route::get('index','LoginController@index');
