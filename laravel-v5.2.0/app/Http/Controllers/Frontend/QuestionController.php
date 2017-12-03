@@ -14,6 +14,7 @@ use Illuminate\Routing\Controller as BaseController;
 class QuestionController extends BaseController{
 
     public function index(){
+        echo 111;die;
         return view('frontend/question/index');
     }
 
