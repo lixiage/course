@@ -86,34 +86,13 @@ class LoginController extends BaseController
         if($info){
             $_SESSION['user_id'] = $info->admin_id;
             $_SESSION['username'] = $info->username;
+
+            return json_encode(['code' => '1', 'state' => '成功']);
             $data = $_COOKIE;
-            /*foreach($data as $key => $val){
-                if(is_numeric($key)){  //is_numeric  判断是不是数字
-                    $arr[] = $val;
-                }
-            }
-            if(empty($arr)){
-                $info = [];
-            }else{
-                foreach($arr as $k => $v){
-                    $info[] = json_decode($v);
-                }
-            }
-            foreach($info as $ke => $va){
-                $va->u_id = $_SESSION['user_id'];
-                unset($va->should_price);
-                $list = (array)$va;
-                //print_r($va);
-                $result = DB::table('shopcar')->insert([
-                    $list,
-                ]);
-            }
-            $_COOKIE = '';*/
+
             if(!empty($data)){
                 $this->login_shopcar();
             }
-
-            return json_encode(['code' => '1', 'state' => '成功']);
         }else{
             return json_encode(['code' => '0', 'state' => '失败']);
         }
