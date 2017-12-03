@@ -79,7 +79,7 @@
                 </a>
                 <ul class="sub">
                     <li><a  href="{{ url('addChapter') }}">添加章节</a></li>
-                    <li><a  href="{{ url('editChapter') }}">章节列表</a></li>
+                    <li><a  href="{{ url('chapterList') }}">章节列表</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
@@ -89,7 +89,17 @@
                 </a>
                 <ul class="sub">
                     <li><a  href="{{ url('addSmallMatter') }}">添加小节</a></li>
-                    <li><a  href="{{ url('editSmallMatter') }}">小节列表</a></li>
+                    <li><a  href="{{ url('smallMatterList') }}">小节列表</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-tasks"></i>
+                    <span>视频管理</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="{{ url('addVideo') }}">添加视频</a></li>
+                    <li><a  href="{{ url('videoList') }}">视频列表</a></li>
                 </ul>
             </li>
         </ul>
