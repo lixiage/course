@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Input;
 use App\Login;
-
+use App\Free;
+use App\Prof;
 class LoginController extends BaseController
 {
     /**
@@ -28,8 +29,14 @@ class LoginController extends BaseController
      */
     public function index()
     {
+        $models = new Prof();
+        $model =new Free();
+        $fession = $models->Getfession();
+        $dir = $model->Getdir();
+        $cour = $model->Getimages();
         $url = $this->weiboUrl();
-        return view('frontend/Login/index',['url'=>$url]);
+
+        return view('frontend/Login/index',['url'=>$url,'dir'=>$dir,'zhi'=>$fession,'cour'=>$cour]);
     }
     /**
      * 微博登录
@@ -38,6 +45,7 @@ class LoginController extends BaseController
      */
     public function weiboUrl(){
         $model = new Login();
+
         $url = $model->weiboUrl();
         return $url;
     }
@@ -82,6 +90,5 @@ class LoginController extends BaseController
             return json_encode(['code' => '0', 'state' => '失败']);
         }
     }
-
 
 }
