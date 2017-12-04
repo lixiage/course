@@ -35,7 +35,7 @@ class OrderController extends Controller
     {
         $u_id = $this->u_id;
         if($u_id == ''){
-            return "<script>alert('请先登录');location.href='index'</script>";
+            return "<script>alert('请先登录');location.href='/index'</script>";
         }
 
         if($request->isMethod('post')){
@@ -69,7 +69,7 @@ class OrderController extends Controller
     {
         $u_id = $this->u_id;
         if($u_id == ''){
-            return "<script>alert('请先登录');location.href='index'</script>";
+            return "<script>alert('请先登录');location.href='/index'</script>";
         }
         $order_id = $request->input('order_id');
 
@@ -93,7 +93,7 @@ class OrderController extends Controller
     {
         $u_id = $this->u_id;
         if($u_id == ''){
-            return "<script>alert('请先登录');location.href='index'</script>";
+            return "<script>alert('请先登录');location.href='/index'</script>";
         }
         $u_id = 1;
         //$u_id = $_SESSION['user_id'];
@@ -155,7 +155,7 @@ class OrderController extends Controller
     {
         $u_id = $this->u_id;
         if($u_id == ''){
-            return "<script>alert('请先登录');location.href='index'</script>";
+            return "<script>alert('请先登录');location.href='/index'</script>";
         }
         $data = DB::select("select * from course_order where order_id = '$order_id'");
         return view('frontend.order.owhd_payment',[
