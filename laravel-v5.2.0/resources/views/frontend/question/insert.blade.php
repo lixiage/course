@@ -201,7 +201,7 @@
         </form>
         <div class="saveques-bottom" style="bottom: auto">
           <a href="javascript:void(0);" id="ques-submit-btn" class="btn btn-red link-btn publishbtn">发布</a>
-          <p class="global-errortip js-global-error"></p>
+            <p class="global-errortip js-global-error"></p>
         </div>
       </div>
      </div>
