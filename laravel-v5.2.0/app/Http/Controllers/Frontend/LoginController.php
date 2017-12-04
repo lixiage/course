@@ -16,6 +16,12 @@ class LoginController extends BaseController
 
     public  function  __construct(){
         session_start();
+        if(isset($_SESSION['user_id'])){
+            $data = $_COOKIE;
+            if(!empty($data)){
+                $result = $this->login_shopcar();
+            }
+        }
     }
     /**
      * @用户退出
@@ -89,11 +95,6 @@ class LoginController extends BaseController
             $_SESSION['username'] = $info->username;
 
             return json_encode(['code' => '1', 'state' => '成功']);
-            $data = $_COOKIE;
-
-            if(!empty($data)){
-                $this->login_shopcar();
-            }
         }else{
             return json_encode(['code' => '0', 'state' => '失败']);
         }
@@ -104,7 +105,7 @@ class LoginController extends BaseController
         $data = $_COOKIE;
         foreach($data as $key => $val){
             if(is_numeric($key)){  //is_numeric  判断是不是数字
-                $arr[] = $val;
+                $arr[$key] = $val;
             }
         }
         if(empty($arr)){
@@ -112,6 +113,7 @@ class LoginController extends BaseController
         }else{
             foreach($arr as $k => $v){
                 $info[] = json_decode($v);
+                //setCookie($k,"",time()-60);
             }
         }
         foreach($info as $ke => $va){
@@ -123,8 +125,12 @@ class LoginController extends BaseController
                 $list,
             ]);
         }
-        setcookie('TestCookie','',time() - 3600);
-        echo $result;
+        if(!empty($arr)){
+            foreach($arr as $haha => $lala){
+                setcookie($haha,'',time()-60);
+            }
+        }
+
     }
 
 }
