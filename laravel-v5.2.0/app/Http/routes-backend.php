@@ -4,9 +4,13 @@ Route::get('welcome',function(){
     return '111';
 });
 
-//后台Index首页
- Route::any('index','IndexController@index');
 
+//后台Index首页
+Route::any('index','IndexController@index');
+
+//评论
+Route::any('comment','CommentController@comment');
+Route::any('comment_del/{comment_id}','CommentController@comment_del');
 
 //direction--------------------start
 //添加方向页面

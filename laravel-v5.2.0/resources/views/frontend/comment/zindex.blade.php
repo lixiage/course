@@ -311,7 +311,7 @@ var hasLearn;
     </div>
     <div class="bd">
         <div class="tit">
-            <a href="https://www.imooc.com/u/1047642/courses" target="_blank">{{ isset($val['username'])?$val['username']:'' }}</a>
+            <a href="https://www.imooc.com/u/1047642/courses" target="_blank">#{{ isset($val['admin_id'])?$val['admin_id']:'' }}楼                              {{ isset($val['username'])?$val['username']:'' }}</a>
         </div>
         <p class="cnt">{{ isset($val['content'])?$val['content']:'' }}</p>
         <div class="footer clearfix">
@@ -335,7 +335,7 @@ var hasLearn;
 @if (isset($val['reply']))
      @foreach($val['reply'] as $v)
         <div style="color: #14191e; font-weight:600px;  font-size:16px; padding-left: 100px; line-height: 50px;">{{ $v['admin_id'] }}回复说：</div>
-        <div style="color: #5e5e5e;padding-left: 100px; font-size:10px;">回复内容：{{ $v['content'] }}</div>
+        <div style="color: #5e5e5e;padding-left: 100px; font-size:10px;">：{{ $v['content'] }}</div>
         <div style="color: #5e5e5e;padding-left: 100px; font-size:10px;">回复时间：{{ $v['addtime'] }}</div>
      @endforeach
 @endif
