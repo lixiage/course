@@ -24,6 +24,7 @@ class CommonController extends BaseController
         $str = explode("@",$sub);
         $this->conteoller = $str['1'];
         $res = $this->getAccess();
+       // print_r($res);die;
 //        if(!$res){
 //            echo   "<script>alert('你的权限不足，请先联系管理员');location='bandLogin'</script>";
 //            die;
@@ -54,6 +55,7 @@ class CommonController extends BaseController
                 }
             }
          $res = $this->showSon($arr);
+        // print_r($res);die;
          if(empty($_SESSION['userInfo']) || !isset($_SESSION['userInfo'])){
              $_SESSION['userInfo'] = $res;
          }

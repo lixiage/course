@@ -218,7 +218,7 @@ class CourseDYW extends Model
                 ->join($this->directionTable,$this->courseTable.'.dir_id','=',$this->directionTable.'.dir_id')
                 ->join($this->classifyTable,$this->courseTable.'.class_id','=',$this->classifyTable.'.class_id')
                 ->join($this->typeTable,$this->courseTable.'.type_id','=',$this->typeTable.'.type_id')
-                ->simplePaginate(5);
+                ->Paginate(5);
         return $res;
     }
 
@@ -346,20 +346,8 @@ class CourseDYW extends Model
     }
 
     //接收视频信息并添加
-    public function addVideoDo($small_id,$video){
-        $dir= "backend/video/";
-        $baseDir = $dir.Date("Y_m_d",time());
-        if(!is_dir($baseDir)){
-            mkdir("$baseDir",0777,true);
-        }
-        $tmpFile = $video['tmp_name'];
-
-        $ext = substr($video['name'],strrpos($video['name'],'.'));
-
-        $newFileName = $baseDir."/".md5(time().rand(1,1000)).$ext;
-        move_uploaded_file($tmpFile,$newFileName);
-
-
+    public function addVideoDo($small_id,$fileName){
+        $newFileName = 'backend/upload/'.$fileName;
         $video_addtime = time();
         $res = DB::table($this->courseVideoTable)->insert(
             ['small_id'=>$small_id,'video_path'=>$newFileName,'video_addtime'=>$video_addtime]
