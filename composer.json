@@ -1,0 +1,7 @@
+{
+    "require": {
+        "illuminate/mail": "^5.2",
+        "guzzlehttp/guzzle": "^6.3",
+        "jeremeamia/SuperClosure": "^2.3"
+    }
+}

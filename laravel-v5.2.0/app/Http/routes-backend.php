@@ -4,9 +4,13 @@ Route::get('welcome',function(){
     return '111';
 });
 
-//后台Index首页
- Route::any('index','IndexController@index');
 
+//后台Index首页
+Route::any('index','IndexController@index');
+
+//评论
+Route::any('comment','CommentController@comment');
+Route::any('comment_del/{comment_id}','CommentController@comment_del');
 
 //direction--------------------start
 //添加方向页面
@@ -83,8 +87,20 @@ Route::any('addChapter','IndexController@addChapter');
 //接收章节数据并添加
 Route::any('addChapterDo','IndexController@addChapterDo');
 
+
+Route::any('bandLogin','ManagementController@bandLogin');   //用户登录
+Route::any('bandlist','PaticeController@bandlist');//用户管理
+Route::any('empower','PaticeController@empower');  //用户列表
+Route::any('privilege','PaticeController@privilege');  //节点管理
+Route::any('usePower','PaticeController@usePower');  //为用户赋权
+Route::any('addUser','PaticeController@addUser');  //为用户赋权
+Route::any('powerList','PaticeController@powerList');  //权限列表
+Route::any('charar','PaticeController@charar');  //权限列表
+Route::any('givePrivilege','PaticeController@givePrivilege');  //为角色赋权
+
 //章节展示页面
 Route::any('chapterList','IndexController@chapterList');
+
 
 //删除章节
 Route::any('delChapter/{chap_id}','IndexController@delChapter');
@@ -114,5 +130,10 @@ Route::any('addVideoDo','IndexController@addVideoDo');
 //视频展示页面
 Route::any('videoList','IndexController@videoList');
 
+
+Route::any('loginOut','PaticeController@loginOut');  //为角色赋权
+
+
 //删除视频
 Route::any('delVideo/{video_id}','IndexController@delVideo');
+

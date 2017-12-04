@@ -14,16 +14,15 @@ class ManagementController extends BaseController
     /**
      * 用户登录
      */
-    public function  login(){
+    public function  bandLogin(){
         if($_POST){
             $username = $_POST['uname'];
             $pwd = $_POST['upwd'];
             $res = DB::select("select * from ci_user where uname='$username' and upwd = '$pwd'");
-            $res = (array)$res[0];
             if(!$res){
-                echo "<script>alert('用户名密码错误');window.location.href='password'</script>";
+                echo "<script>alert('用户名密码错误');window.location.href='bandLogin'</script>";
             }else{
-               // echo "asdfasd";die;
+                $res = (array)$res[0];
                 $_SESSION['user_id']= $res['uid'];
                 $_SESSION['username'] = $res['uname'];
                 return redirect("index");

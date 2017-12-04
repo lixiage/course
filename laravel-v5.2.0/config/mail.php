@@ -6,18 +6,18 @@ return [
     'driver' => env('MAIL_DRIVER', 'smtp'),
 
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.163.com'),
 
 
-    'port' => env('MAIL_PORT', 25),
-
-
-
-    'from' => ['address' => '18410178071@163.com', 'name' => "发件人"],
+    'port' => env('MAIL_PORT', 587),
 
 
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'from' => ['address' => '18611511648@163.com', 'name' => "发件人"],
+
+
+
+    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
 
 

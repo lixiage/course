@@ -87,4 +87,5 @@ Route::get('question_answer','QuestionController@q_answer');//回复
 Route::any('note_index','NoteController@index');//手记展示
 Route::get('note_insert','NoteController@insert');//手记添加
 
+Route::get('email','EmailController@email');//手记添加
 

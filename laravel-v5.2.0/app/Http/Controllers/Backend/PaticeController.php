@@ -17,7 +17,7 @@ class PaticeController extends CommonController
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      * 首页展示
      */
-    public function  UserIndex(){
+    public function  bandlist(){
         $infoooo = $_SESSION['userInfo'];
         $info = $_SESSION['userInfo'];
         $res = DB::select("select * from ci_user");
@@ -38,6 +38,10 @@ class PaticeController extends CommonController
     public function  SelectUser(){
         $infoooo = $_SESSION['userInfo'];
         return view("backend/Managemen/gallery",['infoo'=>$infoooo]);
+    }
+    public function  loginOut(){
+        session_destroy();
+        return redirect("bandLogin");
     }
     /**
      * 用户赋权
@@ -72,7 +76,7 @@ class PaticeController extends CommonController
                     $res = DB::insert("insert into ci_u_r(`uid`,`rid`) VALUES('$post[user_id]','$val')");
                 }
             }
-            echo "<script>alert('添加成功');window.location.href='band-list'</script>";
+            echo "<script>alert('添加成功');window.location.href='bandlist'</script>";
         }else{
             if($post['password']!=$post['repassword']){
                 echo "<script>alert('密码不一致,请重新输入');window.location.href='usePower'</script>";
@@ -94,10 +98,11 @@ class PaticeController extends CommonController
                 $res = DB::select("select uid from ci_user where uname = '$code'");
                 $res = (array)$res[0];
                 $uid= $res['uid'];
+                DB::delete("delete from ci_u_r where uid = '$uid'");
                 foreach($post['checkbox'] as $key=>$val){
                     $res = DB::insert("replace into ci_u_r(`uid`,`rid`) VALUES('$uid','$val')");
                 }
-                echo "<script>alert('添加成功');window.location.href='band-list'</script>";
+                echo "<script>alert('添加成功');window.location.href='bandlist'</script>";
             });
         }
     }
@@ -165,14 +170,14 @@ class PaticeController extends CommonController
             DB::transaction(function () {
                 $pid =$_POST['pid'];
                 $rid = $_POST['rid'];
-
+                DB::delete("delete from ci_r_p where rid = '$rid'");
                 foreach($pid as $key=>$val){
                     $ress = DB::select("select * from ci_r_p where pid='$val' and rid = '$rid' ");
                     if(!$ress){
                         $res = DB::insert("replace into ci_r_p(`pid`,`rid`) VALUES('$val','$rid')");
                     }
                 }
-                echo "<script>alert('赋权成功');window.location.href='powerList'</script>";
+                echo "<script>alert('赋权成功,请重新登录');window.location.href='loginOut'</script>";
             });
 
         }else{
