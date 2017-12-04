@@ -167,7 +167,7 @@ var visitlogCountSocket={
 var visitlogCountInit={
 	siteinfo:'',
 	uid:6197642,
-	ip:'222.128.177.81',
+	ip:'221.221.167.70',
 	imooc_guid:'4971B50B-17F7-1493-154F-58836554CF63',
 	//document.ready=function(){
 	init:function(){

@@ -19,42 +19,18 @@
 <link rel="apple-touch-icon" sizes="152x152" href="http://www.imooc.com/static/img/common/touch-icon-ipad-retina.png">
 
 
-<link rel="stylesheet" href="./frontend/note_files/moco.min.css" type="text/css">
+<link rel="stylesheet" href="./frontend/note_info/moco.min.css" type="text/css">
 
 
 
 
-<link rel="stylesheet" href="./frontend/note_files/saved_resource" type="text/css">
-<script charset="utf-8" async="" src="./frontend/note_files/jquery.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/seajs-text.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/common.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/string.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/userinfo.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/cart.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/cookie.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/suggest.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/store.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/moco.min.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/json.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/im.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/details.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/socket.io.min.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/prettify.js.下载"></script>
-    <link charset="utf-8" rel="stylesheet" href="./frontend/note_files/prettify.css">
-    <script charset="utf-8" async="" src="./frontend/note_files/ueditor.parse.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/layer.min.js.下载"></script>
-    <link charset="utf-8" rel="stylesheet" href="./frontend/note_files/layer.css">
-    <link charset="utf-8" rel="stylesheet" href="./frontend/note_files/ueditor.css">
-    <script charset="utf-8" async="" src="./frontend/note_files/addCopy.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/imgPreview.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/praise.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/verify-code.js.下载"></script>
-    <script charset="utf-8" async="" src="./frontend/note_files/mo.min.js.下载"></script>
-    <link href="./frontend/note_files/ueditor(1).css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="./frontend/note_files/share_style0_16.css">
-    <script src="./frontend/note_files/ZeroClipboard.js.下载" type="text/javascript" defer="defer"></script>
-    <link id="syntaxhighlighter_css" rel="stylesheet" type="text/css" href="./frontend/note_files/shCoreDefault.css">
-    <script id="syntaxhighlighter_js" src="./frontend/note_files/shCore.js.下载" type="text/javascript" defer="defer"></script>
+<link rel="stylesheet" href="./frontend/note_info/saved_resource" type="text/css">
+    <link charset="utf-8" rel="stylesheet" href="./frontend/note_info/prettify.css">
+    <link charset="utf-8" rel="stylesheet" href="./frontend/note_info/layer.css">
+    <link charset="utf-8" rel="stylesheet" href="./frontend/note_info/ueditor.css">
+    <link href="./frontend/note_info/ueditor(1).css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="./frontend/note_info/share_style0_16.css">
+    <link id="syntaxhighlighter_css" rel="stylesheet" type="text/css" href="./frontend/note_info/shCoreDefault.css">
 </head>
 <body style="">
 
@@ -71,7 +47,7 @@
         <ul class="nav-item">
             <li class="set-btn visible-xs-block js-header-avator">
                 <a href="http://www.imooc.com/u/6197642" target="_self">
-                    <img width="40" height="40" src="./frontend/note_files/5a1d5c790001797701000100-100-100.jpg">
+                    <img width="40" height="40" src="./frontend/note_info/5a1d5c790001797701000100-100-100.jpg">
                 </a>
             </li>
             <li>
@@ -95,7 +71,7 @@
             <ul class="clearfix logined">
                 <li class="app-load" id="js-app-load">
                     <div class="app-load-box clearfix js-load-box">
-                        <img src="./frontend/note_files/appload.png" class="l">
+                        <img src="./frontend/note_info/appload.png" class="l">
 
                     </div>
                 </li>
@@ -110,14 +86,14 @@
                
                 <li class="set_btn user-card-box" id="header-user-card">
                     <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu" href="http://www.imooc.com/u/6197642" target="_self">
-                        <img width="40" height="40" src="./frontend/note_files/5a1d5c790001797701000100-100-100.jpg">
+                        <img width="40" height="40" src="./frontend/note_info/5a1d5c790001797701000100-100-100.jpg">
                         <i class="myspace_remind" style="display: none;"></i>
                         <span style="display: none;">动态提醒</span>
                     </a>
                     <div class="g-user-card"><div class="card-inner">
                             <div class="card-top clearfix">
                                 <a href="http://www.imooc.com/u/6197642" class="l">
-                                    <img src="./frontend/note_files/5a1d5c790001797701000100-100-100.jpg" alt="qq__11888">
+                                    <img src="./frontend/note_info/5a1d5c790001797701000100-100-100.jpg" alt="qq__11888">
                                 </a>
                                 <div class="card-top-right-box l">
                                     <a href="http://www.imooc.com/u/6197642">
@@ -216,8 +192,8 @@ var isLogin=1
 			            </div>
 			        </div>
 				</div>
-						</div>
-    	<div class="top-bg-right r">
+			</div>
+    <div class="top-bg-right r" style="float:right;margin-right:0px;">
     <div class="detail-right"><!-- 右侧start -->
         <div class="recommend-info">
               <!-- 作者信息 -->
@@ -294,7 +270,9 @@ var isLogin=1
     <div class="detail-content-wrap">
         
         <div class="detail-content ">
-            {!! $data['data']->notes_content !!}
+            <p style="width:735px;">
+                {!! $data['data']->notes_content !!}
+            </p>
         </div>
        
         <!-- 标签 -->
@@ -306,7 +284,7 @@ var isLogin=1
                     <a class="cat l" href="http://www.imooc.com/article/tag/3" target="_blank">{{$val->class_name}}</a>
                 @endforeach
                                 
-                <div class="original-warp r">
+                <div class="original-warp r" style="width:300px;">
                     <span class="line-r"></span>
                     <p class="original">本文原创发布于慕课网 ，转载请注明出处，谢谢合作！</p>
                 </div>
@@ -386,7 +364,7 @@ var isLogin=1
                     <div class="reply-box"></div>
                     <div class="release-reply">
                         <a href="http://www.imooc.com/u/6197642/articles" class="user-head">
-                            <img src="./frontend/note_files/5a1d5c790001797701000100-100-100(2).jpg" alt="qq__11888"></a>
+                            <img src="./frontend/note_info/5a1d5c790001797701000100-100-100(2).jpg" alt="qq__11888"></a>
                         <a href="http://www.imooc.com/u/6197642/articles" class="nick">qq__11888</a>
                         <div class="replay-con">
                             <div class="textarea-wrap">
@@ -462,13 +440,13 @@ var isLogin=1
 
 
 
-<script type="text/javascript" charset="utf-8" src="./frontend/note_files/ueditor.final.min.js.下载"></script>
+<script type="text/javascript" charset="utf-8" src="./frontend/note_info/ueditor.final.min.js.下载"></script>
 
 <!--script-->
-<script type="text/javascript" src="./frontend/note_files/error.js.下载"></script>
-<script src="./frontend/note_files/ssologin.js.下载"></script>
-<script type="text/javascript" src="./frontend/note_files/sea.js.下载"></script>
-<script type="text/javascript" src="./frontend/note_files/sea_config.js.下载"></script>
+<script type="text/javascript" src="./frontend/note_info/error.js.下载"></script>
+<script src="./frontend/note_info/ssologin.js.下载"></script>
+<script type="text/javascript" src="./frontend/note_info/sea.js.下载"></script>
+<script type="text/javascript" src="./frontend/note_info/sea_config.js.下载"></script>
 <script type="text/javascript">seajs.use("/static/page/"+OP_CONFIG.module+"/"+OP_CONFIG.page);</script>
 
 
@@ -507,8 +485,8 @@ var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
 </div>
 
 
-<script type="text/javascript" src="./frontend/note_files/user"></script>
-<script type="text/javascript" src="./frontend/note_files/iplookup.php"></script>
+<script type="text/javascript" src="./frontend/note_info/user"></script>
+<script type="text/javascript" src="./frontend/note_info/iplookup.php"></script>
 <div>
 
 </div>
@@ -534,7 +512,7 @@ var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
 <div id="edui_fixedlayer" class="edui-imooc" style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px;">
     <div id="edui41" class="edui-popup  edui-bubble edui-imooc" onmousedown="return false;" style="display: none;">
         <div id="edui41_body" class="edui-popup-body edui-imooc">
-            <iframe style="position:absolute;z-index:-1;left:0;top:0;background-color: transparent;" frameborder="0" width="100%" height="100%" src="./frontend/note_files/saved_resource(1).html" class="edui-imooc">
+            <iframe style="position:absolute;z-index:-1;left:0;top:0;background-color: transparent;" frameborder="0" width="100%" height="100%" src="./frontend/note_info/saved_resource(1).html" class="edui-imooc">
 
             </iframe>
             <div class="edui-shadow edui-imooc">
@@ -546,7 +524,7 @@ var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
     </div>
 </div>
 <div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 1px; height: 1px; z-index: 999999999;">
-    <object id="global-zeroclipboard-flash-bridge" name="global-zeroclipboard-flash-bridge" width="100%" height="100%" type="application/x-shockwave-flash" data="./frontend/note_files/ZeroClipboard.swf.下载">
+    <object id="global-zeroclipboard-flash-bridge" name="global-zeroclipboard-flash-bridge" width="100%" height="100%" type="application/x-shockwave-flash" data="./frontend/note_info/ZeroClipboard.swf.下载">
         <param name="allowScriptAccess" value="sameDomain">
         <param name="allowNetworking" value="all">
         <param name="menu" value="false">

@@ -23,8 +23,6 @@
 
     <link rel="stylesheet" href="./frontend/note_files/saved_resource" type="text/css">
     <link charset="utf-8" rel="stylesheet" href="./frontend/note_files/webuploader.css">
-    <link charset="utf-8" rel="stylesheet" href="./frontend/note_files/editor.css">
-    <link charset="utf-8" rel="stylesheet" href="./frontend/note_files/prettify.css">
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
