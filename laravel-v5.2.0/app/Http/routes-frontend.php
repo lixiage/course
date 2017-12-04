@@ -57,6 +57,7 @@ Route::any('swhd_index','ShopcarController@swhd_index');
 Route::any('swhd_show','ShopcarController@swhd_show');
 //购物车支付
 Route::any('swhd_order','ShopcarController@swhd_order');
+
 Route::any('swhd_payment/{order_id}','ShopcarController@swhd_payment');
 //查询cookie
 Route::any('owdh_showcookie','ShopcarController@owdh_showcookie');
@@ -64,6 +65,8 @@ Route::any('owdh_showcookie','ShopcarController@owdh_showcookie');
 Route::any('swhd_order','ShopcarController@swhd_order');
 //删除购物车
 Route::any('swhd_del','ShopcarController@swhd_del');
+//用户登录把购物车的商品入库
+//Route::any('login_shopcar','LoginController@login_shopcar');
 //购买页面
 Route::any('owhd_shop/{cour_id}','OrderController@owhd_shop');
 //生成订单页面
@@ -89,4 +92,5 @@ Route::post('note_comment','NoteController@comment');//手记评论
 //个人信息
 Route::any('personal_index','PersonalController@index');//个人首页
 
+Route::get('email','EmailController@email');//手记添加
 

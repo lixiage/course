@@ -29,7 +29,7 @@ class PasswordsController extends BaseController
         $apple =  Input::get("apple_id");
         if(empty($apple)){
             echo "<script>alert('参数不能为空');window.location.href='password'</script>";
-            return;
+            die;
         }
         $model =  new Password();
         $res = $model->SelectDatas($apple);

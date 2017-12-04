@@ -6,13 +6,22 @@ use Illuminate\Support\Facades\Input;
 use App\Login;
 use App\Free;
 use App\Prof;
+use Illuminate\Support\Facades\DB;
+
 class LoginController extends BaseController
 {
     /**
      * 开启session
      */
+
     public  function  __construct(){
         session_start();
+        if(isset($_SESSION['user_id'])){
+            $data = $_COOKIE;
+            if(!empty($data)){
+                $result = $this->login_shopcar();
+            }
+        }
     }
     /**
      * @用户退出
@@ -59,11 +68,11 @@ class LoginController extends BaseController
              $res =$model->WeiboAccessToken($code);
              $res = json_decode($res,true);
              if($res['code']==1){
-                  $info = $model->weiboUserMessage();
-                   $res = json_decode($info,true);
-                    $_SESSION['username']=  $res['name'];
-                    $_SESSION['profile_image_url'] = $res['profile_image_url'];
-                   return redirect("index");
+                 $info = $model->weiboUserMessage();
+                 $res = json_decode($info,true);
+                 $_SESSION['username']=  $res['name'];
+                 $_SESSION['profile_image_url'] = $res['profile_image_url'];
+                 return redirect("index");
              }else{
                  echo "<script>alert('授权失败');location.href='index'</script>";
              }
@@ -84,10 +93,44 @@ class LoginController extends BaseController
         if($info){
             $_SESSION['user_id'] = $info->admin_id;
             $_SESSION['username'] = $info->username;
+
             return json_encode(['code' => '1', 'state' => '成功']);
         }else{
             return json_encode(['code' => '0', 'state' => '失败']);
         }
+    }
+
+    public function login_shopcar()
+    {
+        $data = $_COOKIE;
+        foreach($data as $key => $val){
+            if(is_numeric($key)){  //is_numeric  判断是不是数字
+                $arr[$key] = $val;
+            }
+        }
+        if(empty($arr)){
+            $info = [];
+        }else{
+            foreach($arr as $k => $v){
+                $info[] = json_decode($v);
+                //setCookie($k,"",time()-60);
+            }
+        }
+        foreach($info as $ke => $va){
+            $va->u_id = $_SESSION['user_id'];
+            unset($va->should_price);
+            $list = (array)$va;
+            //print_r($va);
+            $result = DB::table('shopcar')->insert([
+                $list,
+            ]);
+        }
+        if(!empty($arr)){
+            foreach($arr as $haha => $lala){
+                setcookie($haha,'',time()-60);
+            }
+        }
+
     }
 
 }
