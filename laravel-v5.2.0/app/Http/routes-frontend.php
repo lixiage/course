@@ -24,6 +24,9 @@ Route::any('Elastic','ElasticController@Elaindex');
 Route::any('Elastic/{id}',['uses'=>'ElasticController@Elaindex']);
 //实战的分类和视频
 Route::any('Fight','FightController@Findex');
+Route::any('Fight/{id}',['uses'=>'FightController@Findex']);
+Route::any('Fightc/{id}',['uses'=>'FightController@Findexc']);
+//首页的路由
 
 
 Route::any('whdindex','ShopcarController@index');                       //购物车
@@ -42,6 +45,36 @@ Route::any('passwordSuccsee',"PasswordsController@passwordSuccsee");
 
 
 
+//订单
+Route::any('whdorder_list','OrderController@whdorder_list');
+//修改订单状态
+Route::any('owhd_saveorder','OrderController@owhd_saveorder');
+//添加订单
+Route::any('owhd_addorder','OrderController@owhd_addorder');
+//购物车首页
+Route::any('swhd_index','ShopcarController@swhd_index');
+//购物车展示
+Route::any('swhd_show','ShopcarController@swhd_show');
+//购物车支付
+Route::any('swhd_order','ShopcarController@swhd_order');
+
+Route::any('swhd_payment/{order_id}','ShopcarController@swhd_payment');
+//查询cookie
+Route::any('owdh_showcookie','ShopcarController@owdh_showcookie');
+//购物车提交订单
+Route::any('swhd_order','ShopcarController@swhd_order');
+//删除购物车
+Route::any('swhd_del','ShopcarController@swhd_del');
+//用户登录把购物车的商品入库
+//Route::any('login_shopcar','LoginController@login_shopcar');
+//购买页面
+Route::any('owhd_shop/{cour_id}','OrderController@owhd_shop');
+//生成订单页面
+Route::any('owhd_order/{cour_id}','OrderController@owhd_order');
+//支付页面
+Route::any('owhd_payment/{order_id}/{cour_name}','OrderController@owhd_payment');
+
+
 
 //猿问
 Route::any('question_index','QuestionController@show');//猿问展示
@@ -50,5 +83,9 @@ Route::get('question_verify','QuestionController@verify');//验证是否有足�
 Route::get('question_info','QuestionController@answer');//问题详细信息
 Route::get('question_adopt','QuestionController@adopt');//采纳回复
 Route::get('question_answer','QuestionController@q_answer');//回复
+//手记
+Route::any('note_index','NoteController@index');//手记展示
+Route::get('note_insert','NoteController@insert');//手记添加
 
+Route::get('email','EmailController@email');//手记添加
 

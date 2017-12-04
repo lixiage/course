@@ -31,8 +31,8 @@
 <div id="header">
     <div class="page-container" id="nav">
         <div id="logo" class="logo">
-            <a href="https://www.imooc.com/" target="_self" title="首页">
-                <img title="慕课网" src="./frontend/images/index/logo_new.png">
+            <a href="https://www.imooc.com/whdorder_list" target="_self" title="首页" style="background-image: url('./frontend/images/index/logo.jpg')">
+
             </a>
         </div>
         <div class="l">
@@ -45,58 +45,14 @@
             </ul>
         </div>
 
-        <div id="login-area">
-            <ul class="clearfix logined">
-                <li class="app-download" id="js-app-load">
-                    <a href="http://www.imooc.com/mobile/app" target="_blank" style="width:60px;">下载APP</a>
-                    <div style="display: none;" class="app-load-box clearfix js-load-box">
-                        <img src="./frontend/images/order_order center/appload.png" class="l">
-                        <div class="r">
-                            <p>扫描下载慕课网APP</p>
-                            <a href="https://itunes.apple.com/cn/app/mu-ke-wang/id722179140?mt=8"><i class="imv2-ios"></i>App Store下载</a>
-                            <a href="http://www.imooc.com/mobile/mukewang.apk"><i class="imv2-android"></i>Android下载</a>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="shop-cart" id="shop-cart">
-                    <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
-                        <span class="icon-shopping-cart imv2-cart  js-endcart"></span><span>购物车</span><span class="shopping_icon js-cart-num" data-ordernum="0" data-cartnum="0" style="display: none"></span>
-                    </a>
-                    <div class="my-cart" id="js-my-cart"><div class="cart-title-box clearfix">                                        <h2 class="l">我的购物车</h2>                                        <h5 class="r">已加入<span class="js-incart-num">0</span>门课程</h5>                                    </div>                                    <div class="cart-wrap">                                        <div class="clear-cart">                                            <span class="cartIcon imv2-cart"></span>                                            <h3>购物车里空空如也</h3>                                            <div class="text">快去这里选购你中意的课程</div>                                            <p><a class="go-link" href="http://coding.imooc.com/" target="_blank">实战课程</a></p>                                            <p><a class="go-link" href="http://www.imooc.com/course/program" target="_blank">职业路径</a></p>                                        </div>                                    </div>                                    <div class="more-box clearfix">                                        <div class="l show-box">                                            <span class="text"><a href="http://order.imooc.com/myorder" target="_blank">我的订单中心</a></span>                                        </div>                                        <a href="http://order.imooc.com/pay/cart" target="_blank" class="r moco-btn moco-btn-red go-cart">去购物车</a>                                    </div></div>
-                </li>
-                <li class="remind_warp">
-                    <i style="display: inline;" class="msg_remind"></i>
-                    <a target="_blank" href="http://www.imooc.com/u/5767042/notices">
-                        <i class="imv2-notifications"></i>
-                    </a>
-                </li>
-
-                <li class="set_btn user-card-box" id="header-user-card">
-                    <a id="header-avator" class="user-card-item" action-type="my_menu" href="http://www.imooc.com/u/5767042/plans" target="_self">
-                        <img src="./frontend/images/order_order center/59a902890001f04901000100-40-40.jpg" height="40" width="40">
-                        <i class="myspace_remind" style="display: none;"></i>
-                        <span style="display: none;">动态提醒</span>
-                    </a>
-                    <div class="g-user-card"><div class="card-inner">                        <div class="card-top clearfix">                            <a href="http://www.imooc.com/u/5767042" class="l"><img src="images/order_order center/59a902890001f04901000100-100-100.jpg" alt="qq_夜的寂静_0"></a>                            <div class="card-top-right-box l">                                <a href="http://www.imooc.com/u/5767042"><span class="name text-ellipsis">qq_夜的寂静_0</span></a>                                <div class="meta">                                    <a href="http://www.imooc.com/u/5767042/experience">经验<b id="js-user-mp">220</b></a>                                    <a href="http://www.imooc.com/u/5767042/credit">积分<b id="js-user-credit">0</b></a>                                </div>                            </div>                        </div>                        <div class="user-center-box">                            <ul class="clearfix">                                <li class="l"><a href="http://www.imooc.com/u/5767042/courses" target="_blank"><span class="user-center-icon imv2-kecheng"></span>我的课程</a></li>                                <li class="l">                                    <a href="http://order.imooc.com/myorder" target="_blank"><span class="user-center-icon imv2-receipt"></span>订单中心</a>                                                                    </li>                                <li class="l"><a href="http://www.imooc.com/mall/index" target="_blank"><span class="user-center-icon imv2-score_shop"></span>积分商城</a></li>                                <li class="l"><a href="http://www.imooc.com/user/setbindsns" target="_blank"><span class="user-center-icon imv2-set_1"></span>个人设置</a></li>                            </ul>                        </div><div class="card-history">                            <span class="history-item">                                <span class="tit text-ellipsis">轻松学会Laravel-基础篇</span>                                <span class="media-name text-ellipsis">6-3 Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用</span>                                <i class="imv2-history"></i>                                <a href="http://www.imooc.com/video/12507" class="continue" title="轻松学会Laravel-基础篇
-6-3  Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用">继续</a>                            </span>                    </div><div class="card-sets clearfix"><a href="http://order.imooc.com/passport/user/logout?referer=http://www.imooc.com" class="l">安全退出</a></div>                    </div></div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="search-warp clearfix" style="min-width: 32px;">
 
 
-
-        </div>
     </div>
 </div>
 
 <div class="body-main">
 
-
     <div class="order-main clearfix">
-
 
         <div class="slider l">
             <h1>订单服务</h1>
@@ -134,39 +90,28 @@
                     </li>
                 </a>
             </ul>
-        </div><!-- .slider end -->
-
-
+        </div>
         <div class="right-container l">
-            <h1>我的订单<span>共<i>0</i>个订单</span></h1>
+            <h1>我的订单<span>共<i>{{ $num }}</i>个订单</span></h1>
             <div class="myOrder">
-                <div class="no-list">
+                    @foreach($data as $key => $val)
                     <ul class="myOrder-list">
                         <li data-flag="1711291441506746">
                             <p class="myOrder-number">
-                                订单编号：1711291441506746
-                                <span class="date">2017-11-29 14:41:50</span>
-                                <a href="/user/feedback" target="_blank" class="r">我有疑问，需要反馈？</a>
+                                订单编号：{{ $val->order_no }}
+                                <span class="date">{{ $val->add_time }}</span>
+                                <a href="/user/feedback" target="_blank" class="r"></a>
                             </p>
                             <div class="myOrder-course clearfix">
                                 <dl class="course-del l">
                                     <dd class="clearfix">
-                                        <a href="http://coding.imooc.com/class/101.html" class="l">
-                                            <img class="l" src="http://szimg.mukewang.com/5909a1250001197e05400300-160-90.jpg" width="160" height="90"/>
+                                        <a href="{{ url('owhd_shop',['cour_id'=>$val->cour_id]) }}" class="l">
+                                            <img class="l" src="{{ $val->cour_image }}" width="160" height="90"/>
                                         </a>
                                         <div class="del-box l">
-                                            <!-- type为类型 1实战购买 2实战续费 4职业路径购买 5职业路径续费 -->
-
-                                            <!-- cate 订单类型 0无优惠 1组合套餐 2学生优惠 -->
-
-                                            <a href="http://coding.imooc.com/class/101.html"><p class="course-name">BAT大咖助力 全面升级Android面试</p></a>
-
-
-
-
+                                            <a href=""><p class="course-name">{{ $val->cour_name }}</p></a>
                                             <p class="price-btn-box clearfix">
-                                                <!-- 如果有优惠券 -->
-                                                <span class="l course-little-price">￥288.00</span>
+                                                <span class="l course-little-price">￥{{ $val->goods_price }}</span>
                                             </p>
                                         </div>
                                     </dd>
@@ -175,30 +120,34 @@
                                 <div class="course-money l pt64">
                                     <div class="total-box">
                                         <p class="type-price">
-                                            <span class="RMB">&yen;</span>288.00
+                                            <span class="RMB">&yen;</span>{{ $val->should_price }}
                                         </p>
                                     </div>
                                 </div>
-
-
-
                                 <div class="course-action l">
-                                    <a class="pay-now" href="/pay/cashier?trade_number=1711291441506746">立即支付</a>
-                                    <a class="order-cancel" href="javascript:void(0);">取消订单</a>
+                                    @if($val->payment_status  == 0)
+                                        <a href="{{ url('owhd_payment',['order_id'=>$val->order_id,'cour_name'=>$val->cour_name]) }}" class="pay-now">立即支付</a>
+                                    @elseif($val->payment_status  == 1)
+                                        <button class="pay-now" disabled>已支付</button>
+                                    @endif
+
+                                    @if($val->payment_status  == 0)
+                                        <a class="order-cancel update_order" data-id="{{ $val->order_id }}" href="javascript:void(0);">取消订单</a>
+                                    @elseif($val->payment_status  == 1)
+                                        <a class="order-cancel del_order" data-id="{{ $val->order_id }}" href="javascript:void(0);">删除订单</a>
+                                    @endif
                                 </div>
                             </div>
                         </li>
 
                     </ul>
-
+                @endforeach
                 </div>
             </div>
 
         </div>
     </div>
 
-
-</div>
 
 
 <div style="position: static;" id="footer">
@@ -262,50 +211,6 @@
 <script src="./frontend/js/order_order_center/jquery_002.js"></script>
 <script src="./frontend/js/order_order_center/ssologin.js"></script>
 <script type="text/javascript" src="./frontend/js/order_order_center/common.js"></script>
-<script>
-    requirejs.config({
-        urlArgs: requirejsTimestamp,
-        baseUrl: '/static/module/',
-        skipDataMain: true,
-        waitSeconds: 0,
-        paths: {
-            lib: '/static/lib',
-            socketio: '/static/lib/socket.io/1.3.6/socket.io.min.js',
-            store: '/static/lib/store/store.min.js',
-            ueditor: '/static/lib/ueditor/ueditor.final.min.js',
-            moco: '/static/moco/v1.0/dist/js/moco.min.js',
-            scrollbar: '/static/lib/scrollbar/jquery.scrollbar.js',
-            juicer: '/static/lib/juicer/juicer.min.js',
-            ace: '/static/lib/ace/src-min-noconflict/ace.js',
-            //ace: '/static/lib/ace/src/ace.js',
-            pagination: '/static/lib/pagination/jquery.pagination.js',
-            swfobject: '/static/lib/swfobject/2.2/swfobject.min.js',
-            uploader: '/static/lib/webuploader/0.1.5/webuploader.js',
-
-            jwplayer: '/static/lib/jwplayer/1.0.0/jwplayer.js',
-            ide: '/static/lib/ide/dest/ide.min.js',
-            autocomplete:'/static/lib/util/autocomplete.js',
-            validate:'/static/lib/util/validate.js',
-            placeholder:'/static/lib/util/placeholder.js',
-            modalbutton:'/static/lib/util/modal.button.js',
-            scrollbar: '/static/lib/scrollbar/jquery.scrollbar.js',
-            SyntaxHighlighter:'/static/lib/ueditor/third-party/SyntaxHighlighter/shCore.js',
-            socketio: '/static/lib/socket.io/1.3.6/socket.io.min.js',
-            clipbord: '/static/lib/clipboard/dist/clipboard.min.js',
-            jqueryValidate: '/static/lib/jquery-validate/jquery.validate.min.js'
-        },
-        shim: {
-            'swfobject': {
-                exports: 'swfobject'
-            }
-        }
-    });
-</script>
-
-
-
-
-
 <script>/*RESOURCE_MAP*/</script>
 <script data-entry="pay/myorder/index">
     requirejs(['pay/myorder/index'], function(){});
@@ -326,3 +231,39 @@
 </div>
 
 </body></html>
+<script src="./jquery.min.js"></script>
+<script>
+    $(document).on('click','.del_order',function(){
+        var order_id = $(this).data('id');
+        $.ajax({
+            url:"whdorder_list",
+            type:"post",
+            data:{
+                order_id:order_id
+            },
+            dataType:"json",
+            success:function(msg){
+                if(msg == 1){
+                    location.href = 'whdorder_list';
+                }
+            }
+        })
+    })
+
+    $(document).on('click','.update_order',function(){
+        var order_id = $(this).data('id');
+        $.ajax({
+            url:"owhd_saveorder",
+            type:"post",
+            data:{
+                order_id:order_id
+            },
+            dataType:"json",
+            success:function(msg){
+                if(msg == 1){
+                    location.href = 'whdorder_list';
+                }
+            }
+        })
+    })
+</script>

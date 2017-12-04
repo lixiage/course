@@ -4,12 +4,16 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Input;
 use App\Login;
+use App\Free;
+use App\Prof;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends BaseController
 {
     /**
      * 开启session
      */
+
     public  function  __construct(){
         session_start();
     }
@@ -27,8 +31,14 @@ class LoginController extends BaseController
      */
     public function index()
     {
+        $models = new Prof();
+        $model =new Free();
+        $fession = $models->Getfession();
+        $dir = $model->Getdir();
+        $cour = $model->Getimages();
         $url = $this->weiboUrl();
-        return view('frontend/Login/index',['url'=>$url]);
+
+        return view('frontend/Login/index',['url'=>$url,'dir'=>$dir,'zhi'=>$fession,'cour'=>$cour]);
     }
     /**
      * 微博登录
@@ -37,6 +47,7 @@ class LoginController extends BaseController
      */
     public function weiboUrl(){
         $model = new Login();
+
         $url = $model->weiboUrl();
         return $url;
     }
@@ -51,11 +62,11 @@ class LoginController extends BaseController
              $res =$model->WeiboAccessToken($code);
              $res = json_decode($res,true);
              if($res['code']==1){
-                  $info = $model->weiboUserMessage();
-                   $res = json_decode($info,true);
-                    $_SESSION['username']=  $res['name'];
-                    $_SESSION['profile_image_url'] = $res['profile_image_url'];
-                   return redirect("index");
+                 $info = $model->weiboUserMessage();
+                 $res = json_decode($info,true);
+                 $_SESSION['username']=  $res['name'];
+                 $_SESSION['profile_image_url'] = $res['profile_image_url'];
+                 return redirect("index");
              }else{
                  echo "<script>alert('授权失败');location.href='index'</script>";
              }
@@ -76,11 +87,44 @@ class LoginController extends BaseController
         if($info){
             $_SESSION['user_id'] = $info->admin_id;
             $_SESSION['username'] = $info->username;
+
             return json_encode(['code' => '1', 'state' => '成功']);
+            $data = $_COOKIE;
+
+            if(!empty($data)){
+                $this->login_shopcar();
+            }
         }else{
             return json_encode(['code' => '0', 'state' => '失败']);
         }
     }
 
+    public function login_shopcar()
+    {
+        $data = $_COOKIE;
+        foreach($data as $key => $val){
+            if(is_numeric($key)){  //is_numeric  判断是不是数字
+                $arr[] = $val;
+            }
+        }
+        if(empty($arr)){
+            $info = [];
+        }else{
+            foreach($arr as $k => $v){
+                $info[] = json_decode($v);
+            }
+        }
+        foreach($info as $ke => $va){
+            $va->u_id = $_SESSION['user_id'];
+            unset($va->should_price);
+            $list = (array)$va;
+            //print_r($va);
+            $result = DB::table('shopcar')->insert([
+                $list,
+            ]);
+        }
+        setcookie('TestCookie','',time() - 3600);
+        echo $result;
+    }
 
 }

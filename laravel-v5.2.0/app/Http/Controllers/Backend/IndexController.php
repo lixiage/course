@@ -71,7 +71,7 @@ class IndexController extends BaseController
     //classify--------------------start
     //添加分类页面
     public function addClassify(){
-        $data = (new CourseDYW)->addClassify();
+        $data = (new CourseDYW)->addDirection();
         return view('backend.index.addClassify',['data'=>$data]);
     }
     //接收分类数据并添加
@@ -211,6 +211,78 @@ class IndexController extends BaseController
     //chapter-----------------start
     //添加章节页面
     public function addChapter(){
-        return view('');
+        $courseData = (new CourseDYW)->addCourse();
+        return view('backend.chapter.addChapter',['courseData'=>$courseData]);
+    }
+    //接收章节数据并添加
+    public function addChapterDo(Request $request){
+        $data = $request->input();
+        $res = (new CourseDYW)->addChapterDo($data);
+        if($res) return redirect('chapterList');
+    }
+
+    //章节展示页面
+    public function chapterList(){
+        $data = (new CourseDYW)->chapterList();
+        return view('backend.chapter.chapterList',['data'=>$data]);
+    }
+
+    //删除章节
+    public function delChapter($chap_id){
+        $res = (new CourseDYW)->delChapter($chap_id);
+        if($res) return redirect('chapterList');
+    }
+    //chapter-----------------end
+
+
+    //smallMatter-----------------start
+    //添加小节页面
+    public function addSmallMatter(){
+        $courseData = (new CourseDYW)->addCourse();
+        $smallMatterData = (new CourseDYW)->addChapter();
+        return view('backend.smallMatter.addSmallMatter',['courseData'=>$courseData,'smallMatterData'=>$smallMatterData]);
+    }
+    //接收小节数据并添加
+    public function addSmallMatterDo(Request $request){
+        $data = $request->input();
+        $res = (new CourseDYW)->smallMatterList($data);
+        if($res) return redirect('smallMatterList');
+    }
+
+    //小节展示
+    public function smallMatterList(){
+        $data = (new CourseDYW)->smallMatterList();
+        return view('backend.smallMatter.smallMatterList',['data'=>$data]);
+    }
+
+    //小节删除
+    public function delSmallMatter($small_id){
+        $res = (new CourseDYW)->delSmallMatter($small_id);
+        if($res) return redirect('smallMatterList');
+    }
+    //smallMatter--------------end
+
+    //video--------------------start
+    //视频添加
+    public function addVideo(){
+        $data = (new CourseDYW)->addSmallMatter();
+        return view('backend.video.addVideo',['data'=>$data]);
+    }
+    //接收视频并添加
+    public function addVideoDo(Request $request){
+        $small_id = $request->input('small_id');
+        $video = $_FILES['video'];
+        $res = (new CourseDYW)->addVideoDo($small_id,$video);
+        if($res) return redirect('videoList');
+    }
+    //视频展示页面
+    public function videoList(){
+        $data = (new CourseDYW())->videoList();
+        return view('backend.video.videoList',['data'=>$data]);
+    }
+    //视频删除
+    public function delVideo($video_id){
+        $res = (new CourseDYW())->delVideo($video_id);
+        if($res) return redirect('videoList');
     }
 }
