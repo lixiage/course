@@ -23,6 +23,8 @@
 
     <link rel="stylesheet" href="./frontend/note_files/saved_resource" type="text/css">
     <link charset="utf-8" rel="stylesheet" href="./frontend/note_files/webuploader.css">
+    <link charset="utf-8" rel="stylesheet" href="./frontend/note_files/editor.css">
+    <link charset="utf-8" rel="stylesheet" href="./frontend/note_files/prettify.css">
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
@@ -171,7 +173,7 @@
 
     <div class="article-wrap">
         <h2 class="article-title">发布手记</h2>
-        <form action="note_insert" method="post" enctype="multipart/form-data">
+        <form action="note_insert" method="post">
         <div class="article-form">
             <div class="form-group">
                 <span class="needed">*</span>
@@ -192,6 +194,7 @@
                                 <button class="btn btn-green">上传封面图片</button>
                             </div>
                             <div id="rt_rt_1c0b7l1b21ethkb1f9011gfva11" style="position: absolute; top: 0px; left: 0px; width: 140px; height: 40px; overflow: hidden; bottom: auto; right: auto;">
+
                                 <label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
                             </div>
                         </div>
@@ -285,20 +288,39 @@
         $('.himt-msg').text('');
         $('.himt-msg').text(file);
     });
-    $(function() {
-        $('.form-bottom').click(function () {
+    $(function(){
+        $('.form-bottom').click(function(){
             var point = 0;
             var str = '';
-            for (v in arr) {
-                str += ',' + v;
+            for(v in arr){
+                str += ','+v;
             }
             $('#classifyid').val(str.substr(1));
             //询问框
             var info = confirm('你确定提交问题吗？');
-            if (info) {
-                $('#sub-btn').click();
+            return;
+            if(info){
+                $.ajax({
+                    url:'question_verify',
+                    dataType:'json',
+                    type:'get',
+                    success:function(msg){
+                        console.log(msg);
+                        if(msg.code==1){
+                            alert(msg.msg);
+                            return false;
+                        }else if(msg.code==0){
+                            point = 0;
+                        }else if(msg.code==2){
+                            point = -2;
+                        }
+                        $('#point').val(point);
+                        $('#sub-btn').click();
+                    }
+                });
             }
         });
+
 
         var num=0;
         var arr = [];

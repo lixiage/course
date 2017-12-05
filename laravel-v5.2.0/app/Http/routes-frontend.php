@@ -85,12 +85,7 @@ Route::get('question_adopt','QuestionController@adopt');//采纳回复
 Route::get('question_answer','QuestionController@q_answer');//回复
 //手记
 Route::any('note_index','NoteController@index');//手记展示
-Route::any('note_insert','NoteController@insert');//手记添加
-Route::get('note_info','NoteController@info');//查看详细手记信息
-Route::get('note_hit','NoteController@hit');//点赞
-Route::post('note_comment','NoteController@comment');//手记评论
-//个人信息
-Route::any('personal_index','PersonalController@index');//个人首页
+Route::get('note_insert','NoteController@insert');//手记添加
 
 Route::get('email','EmailController@email');//手记添加
 

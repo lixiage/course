@@ -20,7 +20,7 @@ class Question extends Model{
     protected $class_table = 'course_classify';
     protected $answer_table = 'answer';
     protected $admin_table = 'admin_user';
-    public $limit = 6;
+    protected $limit = 6;
 
     /**
      * @param $data
