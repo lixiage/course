@@ -1,7 +1,7 @@
 <?php
 Route::get('/','Controller@index');
 
-Route::get('index','IndexController@index');//首页
+Route::get('index','LoginController@index');//首页
 
 //评论  回复   点赞
 Route::any('zindex','CommentController@zindex');//评论
