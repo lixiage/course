@@ -94,7 +94,17 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{--{!! $classifyData->render() !!}--}}
+                        <div align="center" class="page">
+                            <a href="<?= $data->Url(1) ?>">首页</a>
+                            <a href="<?= $data->previousPageUrl() ?>">上一页</a>
+                            <?php for ($i = 1; $i <= $data->lastPage(); $i++){ ?>
+                            <a href="<?= $data->Url($i) ?>" class="text-page-tag <?= ($data->CurrentPage() == $i) ? ' active' : '' ?>">
+                                <?= $i ?>
+                            </a>
+                            <?php } ?>
+                            <a href="<?= $data->nextPageUrl() ?>">下一页</a>
+                            <a href="<?= $data->Url($data->lastPage()) ?>">尾页</a>
+                        </div>
                     </div><!-- /content-panel -->
                 </div><!-- /col-md-12 -->
             </div><!-- /row -->

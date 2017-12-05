@@ -69,31 +69,32 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($typeData as $k=>$v)
+                            <?php foreach($typeData as $k=>$v){?>
                                 <tr>
-                                    <td>{{ $v->type_id }}</td>
+                                    <td><?= $v['type_id']?></td>
                                     <td>
-                                        <span class="edit-span">{{ $v->type_name }}</span>
-                                        <input type="hidden" class="edit-input" aa='{{ $v->type_id }}'>
+                                        <span class="edit-span"><?= $v['type_name']?></span>
+                                        <input type="hidden" class="edit-input" aa='<?= $v['type_id']?>'>
                                     </td>
-                                    <td>{{ $v->type_parent_id }}</td>
-                                    <td>{{ $v->type_addtime }}</td>
-                                    <td>{{ $v->type_updatetime }}</td>
+                                    <td><?= $v['dir_name']?></td>
+                                    <td><?= $v['class_name']?></td>
+                                    <td><?= $v['type_addtime']?></td>
+                                    <td><?= $v['type_updatetime']?></td>
                                     <td>
-                                        @if($v->type_status == 0)
-                                            <span class="label label-success label-mini status_display" type_status="{{ $v->type_status }}" id="{{ $v->type_id }}">显示</span>
-                                        @else
-                                            <span class="label label-warning label-mini status_hide" type_status="{{ $v->type_status }}" id="{{ $v->type_id }}">隐藏</span>
-                                        @endif
+                                        <?php if($v['type_status'] == 0){?>
+                                            <span class="label label-success label-mini status_display" type_status="<?php $v['type_status']?>" id="<?php $v['type_id']?>">显示</span>
+                                        <?php }else{?>
+                                            <span class="label label-warning label-mini status_hide" type_status="<?php $v['type_status']?>" id="<?php $v['type_id']?>">隐藏</span>
+                                        <?php }?>
                                     </td>
                                     <td>
-                                        <a href="{{ url('delType',['type_id'=>$v->type_id]) }}"><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button></a>
+                                        <a href="{{ url('delType',['type_id'=>$v['type_id']]) }}"><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button></a>
                                     </td>
                                 </tr>
-                            @endforeach
+                            <?php }?>
                             </tbody>
                         </table>
-                        {!! $typeData->render() !!}
+                        {{--{!! $typeData->render() !!}--}}
                     </div><!-- /content-panel -->
                 </div><!-- /col-md-12 -->
             </div><!-- /row -->
