@@ -5,7 +5,7 @@ Route::get('welcome',function(){
 });
 
 //后台Index首页
- Route::any('index','IndexController@index');
+ Route::any('index','PaticeController@index');
 
 
 //direction--------------------start
