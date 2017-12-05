@@ -11,6 +11,7 @@ class PaticeController extends CommonController
 
     public function index(){
         $infoooo = $_SESSION['userInfo'];
+//        print_r($infoooo);die;
         return view('backend.index.index',['infoo'=>$infoooo]);
     }
     /**
@@ -137,7 +138,7 @@ class PaticeController extends CommonController
         }else{
             $model = new UserMange();
             $info = $model->typeLists();
-            // print_r($info);die;
+//             print_r($info);die;
             $arr = $model->DiGui($info,0,0);
             return view("backend/Managemen/blog",['info'=>$arr,'infoo'=>$infoooo]);
         }

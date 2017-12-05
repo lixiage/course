@@ -25,6 +25,12 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!--引入webuploader插件-->
+    <link rel="stylesheet" type="text/css" href="./backend/css/webuploader.css">
+    <link rel="stylesheet" href="./backend/css/webuploadstyle.css">
+    <!--引入JS-->
+    <script type="text/javascript" src="./backend/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./backend/js/webuploader.js"></script>
 </head>
 
 <body>
@@ -68,9 +74,13 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">请选择视频</label>
-                                <div class="col-sm-10">
-                                    <input type="file" name="video"/>
+                                <label class="col-sm-2 col-sm-2 control-label">请选择添加的视频</label>
+                                <div id="uploader" style="width: 800px;margin: auto">
+                                    <div id="thelist" class="uploader-list"></div>
+                                    <div class="btns">
+                                        <div id="picker" style="float:left">选择文件</div>
+                                        <input type="text" name="fileName" id="fileName"/>
+                                    </div>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-theme">添加视频</button>
@@ -126,7 +136,79 @@
     //custom select box
 
     $(function(){
-        $('select.styled').customSelect();
+        var $list=$("#thelist");   //这几个初始化全局的百度文档上没说明，好蛋疼。
+        var $btn =$("#ctlBtn");   //开始上传
+
+        var uploader = WebUploader.create({
+            // 选完文件后，是否自动上传。
+            auto: true,
+
+            // swf文件路径
+            swf: './webuploader-0.1.5/Uploader.swf',
+
+            // 文件接收服务端。
+            server: '{{ url('section') }}',
+
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: '#picker',
+
+            chunked: true,//开启分片上传
+            threads: 1,//上传并发数
+
+            method:'POST',
+        });
+        // 当有文件添加进来的时候
+        uploader.on( 'fileQueued', function( file ) {
+//            console.log(file);return ;
+            var name = file.name;
+            $('#fileName').val(name);
+            server: '{{ url('section') }}',
+            // webuploader事件.当选择文件后，文件被加载到文件队列中，触发该事件。等效于 uploader.onFileueued = function(file){...} ，类似js的事件定义。
+            $list.append( '<div id="' + file.id + '" class="item">' +
+            '<h4 class="info">' + file.name + '</h4>' +
+            '<p class="state">等待上传...</p>' +
+            '</div>' );
+        });
+        // 文件上传过程中创建进度条实时显示。
+        uploader.on( 'uploadProgress', function( file, percentage ) {
+            var $li = $( '#'+file.id ),
+                    $percent = $li.find('.progress .progress-bar');
+
+            // 避免重复创建
+            if ( !$percent.length ) {
+                $percent = $('<div class="progress progress-striped active">' +
+                '<div class="progress-bar" role="progressbar" style="width: 0%">' +
+                '</div>' +
+                '</div>').appendTo( $li ).find('.progress-bar');
+            }
+
+            $li.find('p.state').text('上传中');
+
+            $percent.css( 'width', percentage * 100 + '%' );
+        });
+
+        // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+        uploader.on( 'uploadSuccess', function( file ) {
+            $( '#'+file.id ).addClass('upload-state-done');
+        });
+
+        // 文件上传失败，显示上传出错。
+        uploader.on( 'uploadError', function( file ) {
+            $( '#'+file.id ).find('p.state').text('上传出错');
+        });
+
+        // 完成上传完了，成功或者失败，先删除进度条。
+        uploader.on( 'uploadComplete', function( file ) {
+            $( '#'+file.id ).find('.progress').remove();
+            $( '#'+file.id ).find('p.state').text('已上传');
+        });
+        $btn.on( 'click', function() {
+            if ($(this).hasClass('disabled')) {
+                return false;
+            }
+            uploader.upload();
+        });
     });
 
 </script>

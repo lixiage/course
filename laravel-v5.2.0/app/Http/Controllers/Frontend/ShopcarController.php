@@ -111,7 +111,7 @@ class ShopcarController extends BaseController
     {
         $u_id = $this->u_id;
         if($u_id == ''){
-            return "<script>alert('请先登录');location.href='index'</script>";
+            return "<script>alert('请先登录');location.href='/index'</script>";
         }
         $user = DB::select("select * from admin_user where admin_id = '$u_id'");
         $data = $request->input();
@@ -177,7 +177,7 @@ class ShopcarController extends BaseController
     {
         $u_id = $this->u_id;
         if($u_id == ''){
-            return "<script>alert('请先登录');location.href='index'</script>";
+            return "<script>alert('请先登录');location.href='/index'</script>";
         }
         $data = DB::select("select * from course_order where order_id = '$order_id'");
         return view('frontend.shopcar.swhd_payment',[

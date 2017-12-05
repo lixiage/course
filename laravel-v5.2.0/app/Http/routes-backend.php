@@ -4,9 +4,13 @@ Route::get('welcome',function(){
     return '111';
 });
 
+
 //后台Index首页
  Route::any('index','PaticeController@index');
 
+//评论
+Route::any('comment','CommentController@comment');
+Route::any('comment_del/{comment_id}','CommentController@comment_del');
 
 //direction--------------------start
 //添加方向页面
@@ -120,6 +124,9 @@ Route::any('delSmallMatter/{small_id}','IndexController@delSmallMatter');
 //视频添加页面
 Route::any('addVideo','IndexController@addVideo');
 
+//视频切片
+Route::any('section','IndexController@section');
+
 //接收视频数据并添加
 Route::any('addVideoDo','IndexController@addVideoDo');
 
@@ -128,7 +135,6 @@ Route::any('videoList','IndexController@videoList');
 
 
 Route::any('loginOut','PaticeController@loginOut');  //为角色赋权
-
 
 //删除视频
 Route::any('delVideo/{video_id}','IndexController@delVideo');

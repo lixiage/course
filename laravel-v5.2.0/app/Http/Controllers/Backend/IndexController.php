@@ -3,10 +3,11 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+//use App\Http\Controllers\Backend\CommonController;
 use App\CourseDYW;
 header("content-type:text/html;charset=utf-8");
 
-class IndexController extends BaseController
+class IndexController extends CommonController
 {
     //后台Index首页
     /**
@@ -14,14 +15,16 @@ class IndexController extends BaseController
      *
      */
     public function index(){
+        $infoooo = $_SESSION['userInfo'];
+        return view('backend.index.index',['infoo'=>$infoooo]);
 
-        return view('backend.index.index');
     }
 
     //direction--------------------start
     //添加方向页面
     public function addDirection(){
-        return view('backend.index.addDirection');
+        $infoooo = $_SESSION['userInfo'];
+        return view('backend.index.addDirection',['infoo'=>$infoooo]);
     }
     //接收方向数据并添加
     public function addDirectionDo(Request $request){
@@ -31,8 +34,9 @@ class IndexController extends BaseController
     }
     //方向列表展示页面
     public function directionList(){
+        $infoooo = $_SESSION['userInfo'];
         $directionData = (new CourseDYW)->directionList();
-        return view('backend.index.directionList',['directionData'=>$directionData]);
+        return view('backend.index.directionList',['directionData'=>$directionData,'infoo'=>$infoooo]);
     }
     //方向删除
     public function delDirection($dir_id=0){
@@ -72,8 +76,9 @@ class IndexController extends BaseController
     //classify--------------------start
     //添加分类页面
     public function addClassify(){
+        $infoooo = $_SESSION['userInfo'];
         $data = (new CourseDYW)->addDirection();
-        return view('backend.index.addClassify',['data'=>$data]);
+        return view('backend.index.addClassify',['data'=>$data,'infoo'=>$infoooo]);
     }
     //接收分类数据并添加
     public function addClassifyDo(Request $request){
@@ -83,8 +88,9 @@ class IndexController extends BaseController
     }
     //分类列表展示页面
     public function classifyList(){
+        $infoooo = $_SESSION['userInfo'];
         $classifyData = (new CourseDYW)->classifyList();
-        return view('backend.index.classifyList',['classifyData'=>$classifyData]);
+        return view('backend.index.classifyList',['classifyData'=>$classifyData,'infoo'=>$infoooo]);
     }
     //分类删除
     public function delClassify($class_id=0){
@@ -124,9 +130,10 @@ class IndexController extends BaseController
     //type--------------------start
     //添加类型页面
     public function addType(){
+        $infoooo = $_SESSION['userInfo'];
         $dir_data = (new CourseDYW)->addDirection();
         $class_data = (new CourseDYW)->addClassify();
-        return view('backend.index.addType',['dir_data'=>$dir_data,'class_data'=>$class_data]);
+        return view('backend.index.addType',['dir_data'=>$dir_data,'class_data'=>$class_data,'infoo'=>$infoooo]);
     }
     //接收类型数据并添加
     public function addTypeDo(Request $request){
@@ -136,8 +143,9 @@ class IndexController extends BaseController
     }
     //类型列表展示页面(如何查找类型的父类)
     public function typeList(){
+        $infoooo = $_SESSION['userInfo'];
         $typeData = (new CourseDYW)->typeList();
-        return view('backend.index.typeList',['typeData'=>$typeData]);
+        return view('backend.index.typeList',['typeData'=>$typeData,'infoo'=>$infoooo]);
     }
     //类型删除
     public function delType($type_id=0){
@@ -175,10 +183,11 @@ class IndexController extends BaseController
     //courses-----------------start
     //添加课程页面
     public function addCourse(){
+        $infoooo = $_SESSION['userInfo'];
         $dirData = (new CourseDYW)->addDirection();
         $classData = (new CourseDYW)->addClassify();
         $typeData = (new CourseDYW)->addType();
-        return view('backend.course.addCourse',['dirData'=>$dirData,'classData'=>$classData,'typeData'=>$typeData]);
+        return view('backend.course.addCourse',['dirData'=>$dirData,'classData'=>$classData,'typeData'=>$typeData,'infoo'=>$infoooo]);
     }
 
     //添加课程
@@ -191,8 +200,9 @@ class IndexController extends BaseController
 
     //课程展示页面
     public function courseList(){
+        $infoooo = $_SESSION['userInfo'];
         $data = (new CourseDYW)->courseList();
-        return view('backend.course.courseList',['data'=>$data]);
+        return view('backend.course.courseList',['data'=>$data,'infoo'=>$infoooo]);
     }
 
     //课程删除
@@ -212,8 +222,9 @@ class IndexController extends BaseController
     //chapter-----------------start
     //添加章节页面
     public function addChapter(){
+        $infoooo = $_SESSION['userInfo'];
         $courseData = (new CourseDYW)->addCourse();
-        return view('backend.chapter.addChapter',['courseData'=>$courseData]);
+        return view('backend.chapter.addChapter',['courseData'=>$courseData,'infoo'=>$infoooo]);
     }
     //接收章节数据并添加
     public function addChapterDo(Request $request){
@@ -224,8 +235,9 @@ class IndexController extends BaseController
 
     //章节展示页面
     public function chapterList(){
+        $infoooo = $_SESSION['userInfo'];
         $data = (new CourseDYW)->chapterList();
-        return view('backend.chapter.chapterList',['data'=>$data]);
+        return view('backend.chapter.chapterList',['data'=>$data,'infoo'=>$infoooo]);
     }
 
     //删除章节
@@ -239,9 +251,10 @@ class IndexController extends BaseController
     //smallMatter-----------------start
     //添加小节页面
     public function addSmallMatter(){
+        $infoooo = $_SESSION['userInfo'];
         $courseData = (new CourseDYW)->addCourse();
         $smallMatterData = (new CourseDYW)->addChapter();
-        return view('backend.smallMatter.addSmallMatter',['courseData'=>$courseData,'smallMatterData'=>$smallMatterData]);
+        return view('backend.smallMatter.addSmallMatter',['courseData'=>$courseData,'smallMatterData'=>$smallMatterData,'infoo'=>$infoooo]);
     }
     //接收小节数据并添加
     public function addSmallMatterDo(Request $request){
@@ -252,8 +265,9 @@ class IndexController extends BaseController
 
     //小节展示
     public function smallMatterList(){
+        $infoooo = $_SESSION['userInfo'];
         $data = (new CourseDYW)->smallMatterList();
-        return view('backend.smallMatter.smallMatterList',['data'=>$data]);
+        return view('backend.smallMatter.smallMatterList',['data'=>$data,'infoo'=>$infoooo]);
     }
 
     //小节删除
@@ -266,20 +280,176 @@ class IndexController extends BaseController
     //video--------------------start
     //视频添加
     public function addVideo(){
+        $infoooo = $_SESSION['userInfo'];
         $data = (new CourseDYW)->addSmallMatter();
-        return view('backend.video.addVideo',['data'=>$data]);
+        return view('backend.video.addVideo',['data'=>$data,'infoo'=>$infoooo]);
     }
+    //保存视频切片并合并成完整的视频
+    public function section(){
+        header("Access-Control-Allow-origin:*");
+        //header("Access-Control-Allow-Credentials:true");
+        //header('Access-Control-Allow-Headers:x-requested-with,content-type');
+        header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+        header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+        header("Cache-Control: no-store, no-cache, must-revalidate");
+        header("Cache-Control: post-check=0, pre-check=0", false);
+        header("Pragma: no-cache");
+
+        // Support CORS
+        // header("Access-Control-Allow-Origin: *");
+        // other CORS headers if any...
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+            exit; // finish preflight CORS requests here
+        }
+
+        if ( !empty($_REQUEST[ 'debug' ]) ) {
+            $random = rand(0, intval($_REQUEST[ 'debug' ]) );
+            if ( $random === 0 ) {
+                header("HTTP/1.0 500 Internal Server Error");
+                exit;
+            }
+        }
+        //var_dump($_REQUEST);
+        // header("HTTP/1.0 500 Internal Server Error");
+        // exit;
+
+
+        // 5 minutes execution time
+        @set_time_limit(5 * 60);
+
+        $targetDir = 'backend/upload_tmp';
+        $uploadDir = 'backend/upload';
+
+        $cleanupTargetDir = true; // Remove old files
+        $maxFileAge = 5 * 3600; // Temp file age in seconds
+
+
+        // Create target dir
+        if (!file_exists($targetDir)) {
+            @mkdir($targetDir);
+        }
+
+        // Create target dir
+        if (!file_exists($uploadDir)) {
+            @mkdir($uploadDir);
+        }
+
+        // Get a file name
+        if (isset($_REQUEST["name"])) {
+            $fileName = $_REQUEST["name"];
+        } elseif (!empty($_FILES)) {
+            $fileName = $_FILES["file"]["name"];
+        } else {
+            $fileName = uniqid("file_");
+        }
+
+        $filePath = $targetDir . DIRECTORY_SEPARATOR . $fileName;
+        $uploadPath = $uploadDir . DIRECTORY_SEPARATOR . $fileName;
+
+        // Chunking might be enabled
+        $chunk = isset($_REQUEST["chunk"]) ? intval($_REQUEST["chunk"]) : 0;
+        $chunks = isset($_REQUEST["chunks"]) ? intval($_REQUEST["chunks"]) : 1;
+
+
+        // Remove old temp files
+        if ($cleanupTargetDir) {
+            if (!is_dir($targetDir) || !$dir = opendir($targetDir)) {
+                die('{"jsonrpc" : "2.0", "error" : {"code": 100, "message": "Failed to open temp directory."}, "id" : "id"}');
+            }
+
+            while (($file = readdir($dir)) !== false) {
+                $tmpfilePath = $targetDir . DIRECTORY_SEPARATOR . $file;
+
+                // If temp file is current file proceed to the next
+                if ($tmpfilePath == "{$filePath}_{$chunk}.part" || $tmpfilePath == "{$filePath}_{$chunk}.parttmp") {
+                    continue;
+                }
+
+                // Remove temp file if it is older than the max age and is not the current file
+                if (preg_match('/\.(part|parttmp)$/', $file) && (@filemtime($tmpfilePath) < time() - $maxFileAge)) {
+                    @unlink($tmpfilePath);
+                }
+            }
+            closedir($dir);
+        }
+
+        // Open temp file
+        if (!$out = @fopen("{$filePath}_{$chunk}.parttmp", "wb")) {
+            die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');
+        }
+
+        if (!empty($_FILES)) {
+            if ($_FILES["file"]["error"] || !is_uploaded_file($_FILES["file"]["tmp_name"])) {
+                die('{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to move uploaded file."}, "id" : "id"}');
+            }
+
+            // Read binary input stream and append it to temp file
+            if (!$in = @fopen($_FILES["file"]["tmp_name"], "rb")) {
+                die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}');
+            }
+        } else {
+            if (!$in = @fopen("php://input", "rb")) {
+                die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}');
+            }
+        }
+
+        while ($buff = fread($in, 4096)) {
+            fwrite($out, $buff);
+        }
+
+        @fclose($out);
+        @fclose($in);
+
+        rename("{$filePath}_{$chunk}.parttmp", "{$filePath}_{$chunk}.part");
+
+        $index = 0;
+        $done = true;
+        for( $index = 0; $index < $chunks; $index++ ) {
+            if ( !file_exists("{$filePath}_{$index}.part") ) {
+                $done = false;
+                break;
+            }
+        }
+        if ( $done ) {
+            if (!$out = @fopen($uploadPath, "wb")) {
+                die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');
+            }
+
+            if ( flock($out, LOCK_EX) ) {
+                for( $index = 0; $index < $chunks; $index++ ) {
+                    if (!$in = @fopen("{$filePath}_{$index}.part", "rb")) {
+                        break;
+                    }
+
+                    while ($buff = fread($in, 4096)) {
+                        fwrite($out, $buff);
+                    }
+
+                    @fclose($in);
+                    @unlink("{$filePath}_{$index}.part");
+                }
+
+                flock($out, LOCK_UN);
+            }
+            @fclose($out);
+        }
+
+        // Return Success JSON-RPC response
+        die('{"jsonrpc" : "2.0", "result" : null, "id" : "id"}');
+    }
+
     //接收视频并添加
     public function addVideoDo(Request $request){
         $small_id = $request->input('small_id');
-        $video = $_FILES['video'];
-        $res = (new CourseDYW)->addVideoDo($small_id,$video);
+        $fileName = $request->input('fileName');
+        $res = (new CourseDYW)->addVideoDo($small_id,$fileName);
         if($res) return redirect('videoList');
     }
     //视频展示页面
     public function videoList(){
+        $infoooo = $_SESSION['userInfo'];
         $data = (new CourseDYW())->videoList();
-        return view('backend.video.videoList',['data'=>$data]);
+        return view('backend.video.videoList',['data'=>$data,'infoo'=>$infoooo]);
     }
     //视频删除
     public function delVideo($video_id){

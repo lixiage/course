@@ -24,6 +24,7 @@ class CommonController extends BaseController
         $str = explode("@",$sub);
         $this->conteoller = $str['1'];
         $res = $this->getAccess();
+       // print_r($res);die;
 //        if(!$res){
 //            echo   "<script>alert('你的权限不足，请先联系管理员');location='bandLogin'</script>";
 //            die;
@@ -45,15 +46,19 @@ class CommonController extends BaseController
             $arr[] =  $info=   DB::table("ci_privilege")->where(['pid'=>$val])->first();
          }
          $arr = $this->asArray($arr);
+       //  print_r($arr);die;
          //数组去重
             foreach($arr as $key=>$val){
                 foreach($arr as $k=>$v){
-                    if($key != $k && $val['pid'] == $v['pid']){
-                        unset($arr[$key]);
+                    if($v){
+                        if($key != $k && $val['pid'] == $v['pid']){
+                            unset($arr[$key]);
+                        }
                     }
                 }
             }
          $res = $this->showSon($arr);
+        // print_r($res);die;
          if(empty($_SESSION['userInfo']) || !isset($_SESSION['userInfo'])){
              $_SESSION['userInfo'] = $res;
          }
