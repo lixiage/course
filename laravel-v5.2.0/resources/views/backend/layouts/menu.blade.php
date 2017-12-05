@@ -4,7 +4,7 @@
         <ul class="sidebar-menu" id="nav-accordion">
 
             <p class="centered"><a href="#"><img src="./backend/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-            <h5 class="centered"><?php echo $_SESSION['username']?></h5>
+            <h5 class="centered"><?php echo isset($_SESSION['username'])?$_SESSION['username']:""?></h5>
             <?php
                 foreach($infoo as $key=>$val){
             ?>

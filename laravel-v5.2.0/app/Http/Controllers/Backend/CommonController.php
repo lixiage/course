@@ -46,11 +46,14 @@ class CommonController extends BaseController
             $arr[] =  $info=   DB::table("ci_privilege")->where(['pid'=>$val])->first();
          }
          $arr = $this->asArray($arr);
+       //  print_r($arr);die;
          //数组去重
             foreach($arr as $key=>$val){
                 foreach($arr as $k=>$v){
-                    if($key != $k && $val['pid'] == $v['pid']){
-                        unset($arr[$key]);
+                    if($v){
+                        if($key != $k && $val['pid'] == $v['pid']){
+                            unset($arr[$key]);
+                        }
                     }
                 }
             }

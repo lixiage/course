@@ -17,6 +17,7 @@ class IndexController extends CommonController
     public function index(){
         $infoooo = $_SESSION['userInfo'];
         return view('backend.index.index',['infoo'=>$infoooo]);
+
     }
 
     //direction--------------------start
