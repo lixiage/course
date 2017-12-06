@@ -9,7 +9,7 @@ return [
     'host' => env('MAIL_HOST', 'smtp.163.com'),
 
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT', 465),
 
 
 

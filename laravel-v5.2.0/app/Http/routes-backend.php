@@ -8,8 +8,6 @@ Route::get('welcome',function(){
 //后台Index首页
 Route::any('index','PaticeController@index');
 
-Route::any('index','IndexController@index');
-
 //评论
 Route::any('comment','CommentController@comment');
 Route::any('comment_del/{comment_id}','CommentController@comment_del');

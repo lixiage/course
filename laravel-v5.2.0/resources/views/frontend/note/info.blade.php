@@ -227,7 +227,7 @@ var isLogin=1
                         @foreach($data['notes'] as $key=>$val)
                                 <li class="clearfix show-more">
                                     <a target="_blank" data-track="sztuijian-1-1" href="http://coding.imooc.com/class/71.html?mc_marking=4655172e1a62839eea65105dbf244230&amp;mc_channel=sjkctjpc">
-                                        <div class="r-left l" style="background-image:url({{$val->notes_face}})">
+                                        <div class="r-left l" style="background-image:url('{{$val->notes_face}}')">
                                             <div class="bg-all"></div>
                                         </div>
                                     </a>
