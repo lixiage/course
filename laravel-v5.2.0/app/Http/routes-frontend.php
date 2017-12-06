@@ -95,3 +95,6 @@ Route::any('personal_index','PersonalController@index');//个人首页
 
 Route::get('email','EmailController@email');//发送邮件
 
+
+Route::any('pay','PayController@pay');//点击支付
+Route::any('callReturn','PayController@callReturn');//回调

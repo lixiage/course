@@ -115,14 +115,16 @@
 
     <div class='cart-body'>
         <div class='cart-body-title'>
-
+            <form action="{{ url('pay') }}" method="post">
             <div class='clearfix'>
                 <div class='left trade-title'>
                     <span class='order'>订单：</span><span class='num'>
+                        <input type="hidden" name="order_no" value="{{ $data[0]->order_no }}"/>
                         {{ $data[0]->order_no }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <font color="red">{{ $cour_name }}</font>
+                        <input type="hidden" name="cour_name" value="{{ $cour_name }}"/>
                     </span>
                 </div>
                 <div class='right'>
@@ -157,16 +159,18 @@
 				<span class='price'>
 					<em>￥</em>
 					<span>{{ $data[0]->goods_price }}</span>
+                    <input type="hidden" name="goods_price" value="{{ $data[0]->goods_price }}"/>
 				</span>
                 </div>
 
                 <div class='submit-warp clearfix'>
-                    <span data-ordernum='1711292045337004' class='pay-summary-submit js-pay-submit'>立即支付</span>
+                    <button type="submit" data-ordernum='1711292045337004' class='pay-summary-submit js-pay-submit'>立即支付</button>
                 </div>
 
             </div>
         </div>
     </div>
+    </form>
     <!-- </div> -->
 
     <input type='hidden' id='jsPrice' value='366.00'>

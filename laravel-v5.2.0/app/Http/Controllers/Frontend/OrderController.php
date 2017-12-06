@@ -95,8 +95,6 @@ class OrderController extends Controller
         if($u_id == ''){
             return "<script>alert('请先登录');location.href='/index'</script>";
         }
-        $u_id = 1;
-        //$u_id = $_SESSION['user_id'];
         //查询课程表
         $info = DB::select("select * from courses where cour_id = '$cour_id'");
         //查询订单表  看是否该商品已生成订单
