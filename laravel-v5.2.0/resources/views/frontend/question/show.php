@@ -38,13 +38,13 @@
         </button>
         <ul class="nav-item">
             <li class="set-btn visible-xs-block js-header-avator"><a href="http://www.imooc.com/u/5767042" target="_self"><img src="./frontend/images/yuanwen/59a902890001f04901000100-100-100.jpg" height="40" width="40"></a></li>
-                        
+
             <li>
-                <a href="http://www.imooc.com/course/list" target="_self">免费课程</a>
-            </li>           
-            <li><a href="http://class.imooc.com/" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
+                <a href="Freeindex" target="_self">免费课程</a>
+            </li>
+            <li><a href="Elastic" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
             <li>
-                <a href="http://coding.imooc.com/" target="_self">实战</a>
+                <a href="Fight" target="_self">实战</a>
             </li>
             <li><a href="question_index" class="active" target="_self">猿问</a></li>
             <li><a href="note_index" target="_self">手记</a></li>
@@ -103,7 +103,7 @@
                 </script>
                
                 <li class="set_btn user-card-box" id="header-user-card">
-                    <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu" href="http://www.imooc.com/u/5767042" target="_self">
+                    <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu" href="personal_index" target="_self">
                         <img src="./frontend/images/yuanwen/59a902890001f04901000100-100-100.jpg" height="40" width="40">
                         <i class="myspace_remind" style="display: none;"></i>
                         <span style="display: none;">动态提醒</span>
@@ -112,7 +112,7 @@
                             <div class="card-top clearfix">
                                 <a href="http://www.imooc.com/u/5767042" class="l"><img src="./frontend/images/yuanwen/59a902890001f04901000100-100-100.jpg" alt="qq_夜的寂静_0"></a>
                                 <div class="card-top-right-box l">
-                                    <a href="http://www.imooc.com/u/5767042">
+                                    <a href="personal_index">
                                         <span class="name text-ellipsis">qq_夜的寂静_0</span>
                                     </a>
                                     <div class="meta">

@@ -101,8 +101,8 @@ var hasLearn;
             <li>
                 <a href="http://coding.imooc.com/" target="_self">实战</a>
             </li>
-            <li><a href="https://www.imooc.com/wenda" target="_self">猿问</a></li>
-            <li><a href="https://www.imooc.com/article" target="_self">手记</a></li>
+            <li><a href="question_index" target="_self">猿问</a></li>
+            <li><a href="note_index" target="_self">手记</a></li>
                                             <li class="visible-xs-block"><a href="https://www.imooc.com/user/setprofile" target="_self">我的设置</a></li>
                 <li class="visible-xs-block"><a href="https://www.imooc.com/passport/user/logout?referer=//www.imooc.com" target="_self">退出</a></li>
             

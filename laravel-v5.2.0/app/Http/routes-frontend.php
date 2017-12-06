@@ -86,8 +86,11 @@ Route::get('question_answer','QuestionController@q_answer');//回复
 //手记
 Route::any('note_index','NoteController@index');//手记展示
 Route::get('note_insert','NoteController@insert');//手记添加
+//用户
+Route::any('personal_index','PersonalController@index');//用户信息
 
-Route::get('email','EmailController@email');//手记添加
+
+Route::get('email','EmailController@email');//发送邮件
 
 
 Route::any('pay','PayController@pay');//点击支付

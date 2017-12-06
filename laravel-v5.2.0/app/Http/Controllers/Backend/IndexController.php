@@ -3,7 +3,7 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-//use App\Http\Controllers\Backend\CommonController;
+use App\Http\Controllers\Backend\CommonController;
 use App\CourseDYW;
 header("content-type:text/html;charset=utf-8");
 
@@ -35,7 +35,9 @@ class IndexController extends CommonController
     //方向列表展示页面
     public function directionList(){
         $infoooo = $_SESSION['userInfo'];
-        $directionData = (new CourseDYW)->directionList();
+        $model = new CourseDYW();
+        $directionData = $model->cacheData('directionList','directionList');
+        $directionData ? $directionData : [];
         return view('backend.index.directionList',['directionData'=>$directionData,'infoo'=>$infoooo]);
     }
     //方向删除
@@ -89,7 +91,10 @@ class IndexController extends CommonController
     //分类列表展示页面
     public function classifyList(){
         $infoooo = $_SESSION['userInfo'];
-        $classifyData = (new CourseDYW)->classifyList();
+        $model = new CourseDYW();
+        $classifyData = $model->cacheData('classifyList','classifyList');
+        $classifyData ? $classifyData : [];
+//        $classifyData = (new CourseDYW)->classifyList();
         return view('backend.index.classifyList',['classifyData'=>$classifyData,'infoo'=>$infoooo]);
     }
     //分类删除
@@ -144,7 +149,10 @@ class IndexController extends CommonController
     //类型列表展示页面(如何查找类型的父类)
     public function typeList(){
         $infoooo = $_SESSION['userInfo'];
-        $typeData = (new CourseDYW)->typeList();
+        $model = new CourseDYW();
+        $typeData = $model->cacheData('typeList','typeList');
+        $typeData ? $typeData : [];
+//        $typeData = (new CourseDYW)->typeList();
         return view('backend.index.typeList',['typeData'=>$typeData,'infoo'=>$infoooo]);
     }
     //类型删除
@@ -201,7 +209,10 @@ class IndexController extends CommonController
     //课程展示页面
     public function courseList(){
         $infoooo = $_SESSION['userInfo'];
-        $data = (new CourseDYW)->courseList();
+        $model = new CourseDYW();
+        $data = $model->cacheData('courseList','courseList');
+        $data ? $data : [];
+//        $data = (new CourseDYW)->courseList();
         return view('backend.course.courseList',['data'=>$data,'infoo'=>$infoooo]);
     }
 
@@ -236,7 +247,10 @@ class IndexController extends CommonController
     //章节展示页面
     public function chapterList(){
         $infoooo = $_SESSION['userInfo'];
-        $data = (new CourseDYW)->chapterList();
+        $model = new CourseDYW();
+        $data = $model->cacheData('chapterList','chapterList');
+        $data ? $data : [];
+//        $data = (new CourseDYW)->chapterList();
         return view('backend.chapter.chapterList',['data'=>$data,'infoo'=>$infoooo]);
     }
 

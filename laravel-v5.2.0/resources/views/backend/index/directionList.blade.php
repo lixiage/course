@@ -90,7 +90,17 @@
                             @endforeach
                             </tbody>
                         </table>
-                        {!! $directionData->render() !!}
+                        <div align="center" class="page">
+                            <a href="<?= $directionData->Url(1) ?>">首页</a>
+                            <a href="<?= $directionData->previousPageUrl() ?>">上一页</a>
+                            <?php for ($i = 1; $i <= $directionData->lastPage(); $i++){ ?>
+                            <a href="<?= $directionData->Url($i) ?>" class="text-page-tag <?= ($directionData->CurrentPage() == $i) ? ' active' : '' ?>">
+                                <?= $i ?>
+                            </a>
+                            <?php } ?>
+                            <a href="<?= $directionData->nextPageUrl() ?>">下一页</a>
+                            <a href="<?= $directionData->Url($directionData->lastPage()) ?>">尾页</a>
+                        </div>
                     </div><!-- /content-panel -->
                 </div><!-- /col-md-12 -->
             </div><!-- /row -->

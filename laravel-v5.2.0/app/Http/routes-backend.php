@@ -6,7 +6,7 @@ Route::get('welcome',function(){
 
 
 //后台Index首页
- Route::any('index','PaticeController@index');
+Route::any('index','PaticeController@index');
 
 //评论
 Route::any('comment','CommentController@comment');

@@ -2,6 +2,7 @@
 namespace app;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Cache;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,6 +23,16 @@ class CourseDYW extends Model
     protected $relationChapterSmallTable='relation_chapter_small';//章节小节关联表
     protected $relationCourseSmallTable='relation_course_small';//课程小节关联表
 
+    //缓存数据
+    public function cacheData($key,$value){
+        if(Cache::get($key)){
+            $data = Cache::get($key);
+        }else{
+            $data = $this->$value();
+            Cache::put($key, $data, 10);
+        }
+        return $data;
+    }
 
     //接收方向数据并添加
     public function addDirectionDo($data){
@@ -34,8 +45,8 @@ class CourseDYW extends Model
 
     //方向数据查询
     public function directionList(){
-        $res = DB::table($this->directionTable)->simplePaginate(2);
-        return $res;
+        $data = DB::table($this->directionTable)->Paginate(2);
+        return $data;
     }
 
     //方向删除
@@ -83,7 +94,7 @@ class CourseDYW extends Model
     public function classifyList(){
         $res = DB::table($this->classifyTable)
             ->leftJoin('course_direction','course_classify.class_parent_id','=','course_direction.dir_id')
-            ->simplePaginate(5);
+            ->Paginate(5);
         return $res;
     }
 
@@ -138,30 +149,31 @@ class CourseDYW extends Model
     public function addTypeDo($data){
         $type_addtime = date("Y-m-d H:i:s",time());
         $res = DB::table($this->typeTable)->insert(
-            ['type_name'=>$data['type_name'],'type_parent_id'=>$data['dir_id'],'type_addtime'=>$type_addtime]
+            ['type_name'=>$data['type_name'],'type_parent_id'=>$data['class_id'],'dir_id'=>$data['dir_id'],'type_addtime'=>$type_addtime]
         );
         return $res;
     }
 
     //类型列表展示页面(如何查找类型的父类)
     public function typeList(){
-        $res = DB::table($this->typeTable)->simplePaginate(5);
-        //        $arr = [];
-//        foreach($typeData as $v){
-//            $arr[] = (array)$v;
-//        }
-//
-//        foreach($arr as $k=>$v){
-//            $data = DB::table("course_classify")->where('class_id='.$v['type_parent_id'])->get();
-//            foreach($data as $key=>$val){
-//                $v['type_parent_id'] =
-//            }
-//        }
-//        print_r($arr);die;
-//            ->leftJoin('course_classify','course_type.type_parent_id','=','course_classify.class_parent_id')
-//            ->leftJoin('course_direction','course_type.type_parent_id','=','course_direction.dir_id')
-//            ->get();
-        return $res;
+        $typeClassifyData = DB::table($this->typeTable)
+                ->leftJoin($this->classifyTable,$this->typeTable.'.type_parent_id','=',$this->classifyTable.'.class_parent_id')
+                ->Paginate(5);
+        $typeDirectionData = DB::table($this->typeTable)
+                           ->leftJoin($this->directionTable,$this->typeTable.'.dir_id','=',$this->directionTable.'.dir_id')
+                           ->Paginate(5);
+        $one = [];
+        foreach($typeClassifyData as $k=>$v){
+            $one[] = (array)$v;
+        }
+        $two = [];
+        foreach($typeDirectionData as $k=>$v){
+            $two[] = (array)$v;
+        }
+        for($i=0;$i<count($typeClassifyData);$i++){
+            $arr[] = array_merge($one[$i],$two[$i]);
+        }
+        return $arr;
     }
 
     //类型删除
@@ -359,7 +371,7 @@ class CourseDYW extends Model
     public function videoList(){
         $res = DB::table($this->courseVideoTable)
                ->join($this->smallMatterTable,$this->courseVideoTable.'.small_id','=',$this->smallMatterTable.'.small_id')
-               ->get();
+               ->Paginate(5);
         foreach($res as $k=>$v){
             $v->video_addtime = date("Y-m-d H:i:s",$v->video_addtime);
         }
