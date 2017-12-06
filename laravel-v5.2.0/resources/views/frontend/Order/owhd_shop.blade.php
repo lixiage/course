@@ -60,8 +60,8 @@
                 <li><a href="http://class.imooc.com" target="_self" class="program-nav">职业路径<i class="icn-new"></i></a></li>
                 <li><a href="/" class="active" target="_self">实战</a></li>
                 <!--<li><a href="http://www.imooc.com/corp/index"   target="_self">分享</a></li>-->
-                <li><a href="//www.imooc.com/wenda" target="_self">猿问</a></li>
-                <li><a href="//www.imooc.com/article" target="_self">手记</a></li>
+                <li><a href="{{url('question_index')}}" target="_self">猿问</a></li>
+                <li><a href="{{url('note_index')}}" target="_self">手记</a></li>
                 <!--<li><a href="http://www.imooc.com/wiki" target="_self">WIKI</a></li>-->
 
             </ul>

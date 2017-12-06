@@ -51,14 +51,14 @@
                 </a>
             </li>
             <li>
-                <a href="http://www.imooc.com/course/list" target="_self">免费课程</a>
-            </li>           
-            <li><a href="http://class.imooc.com/" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
-            <li>
-                <a href="http://coding.imooc.com/" target="_self">实战</a>
+                <a href="Freeindex" target="_self">免费课程</a>
             </li>
-            <li><a href="question_index" target="_self">猿问</a></li>
-            <li><a href="note_index" class="active" target="_self">手记</a></li>
+            <li><a href="Elastic" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
+            <li>
+                <a href="Fight" target="_self">实战</a>
+            </li>
+            <li><a href="{{url('question_index')}}" target="_self">猿问</a></li>
+            <li><a href="{{url('note_index')}}" class="active" target="_self">手记</a></li>
             <li class="visible-xs-block">
                 <a href="http://www.imooc.com/user/setprofile" target="_self">我的设置</a>
             </li>
@@ -115,8 +115,7 @@
                                     </li>
                                     <li class="l">
                                         <a href="http://order.imooc.com/myorder" target="_blank">
-                                            <span class="user-center-icon icon-receipt"></span>
-                                            订单中心
+                                            <span class="user-center-icon icon-receipt"></span>订单中心
                                         </a>
                                     </li>
                                     <li class="l">
@@ -551,7 +550,6 @@ var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
     });
 </script>
 <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
-{{--<link rel="stylesheet" href="./bootstrap/"/>--}}
 <script src="./bootstrap/js/bootstrap.min.js"></script>
 <script>
     $('.hit').click(function(){

@@ -50,16 +50,16 @@
         </button>
         <ul class="nav-item">
             <li class="set-btn visible-xs-block js-header-avator"><a href="http://www.imooc.com/u/6197642" target="_self"><img width="40" height="40" src="./frontend/question_files/5a1d5c790001797701000100-100-100.jpg"></a></li>
-                        
+
             <li>
-                <a href="http://www.imooc.com/course/list" target="_self">免费课程</a>
-            </li>           
-            <li><a href="http://class.imooc.com/" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
-            <li>
-                <a href="http://coding.imooc.com/" target="_self">实战</a>
+                <a href="Freeindex" target="_self">免费课程</a>
             </li>
-            <li><a href="question_index" class="active" target="_self">猿问</a></li>
-            <li><a href="note_index" target="_self">手记</a></li>
+            <li><a href="Elastic" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
+            <li>
+                <a href="Fight" target="_self">实战</a>
+            </li>
+            <li><a href="{{url('question_index')}}" class="active" target="_self">猿问</a></li>
+            <li><a href="{{url('note_index')}}" target="_self">手记</a></li>
             <li class="visible-xs-block">
                 <a href="http://www.imooc.com/user/setprofile" target="_self">我的设置</a>
             </li>

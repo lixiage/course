@@ -92,5 +92,7 @@ Route::post('note_comment','NoteController@comment');//手记评论
 //个人信息
 Route::any('personal_index','PersonalController@index');//个人首页
 
-Route::get('email','EmailController@email');//手记添加
+
+
+Route::get('email','EmailController@email');//发送邮件
 

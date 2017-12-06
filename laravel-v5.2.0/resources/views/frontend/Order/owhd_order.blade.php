@@ -50,8 +50,8 @@
                 <li><a href="http://www.imooc.com/course/list" target="_self">课程</a></li>
                 <li><a class='program-nav' href="http://class.imooc.com" target="_self">职业路径<i class="icn-new"></i></a></li>
                 <li><a href="http://coding.imooc.com" target="_self">实战</a></li>
-                <li><a href="http://www.imooc.com/wenda" target="_self">猿问</a></li>
-                <li><a href="http://www.imooc.com/article" target="_self">手记</a></li>
+                <li><a href="{{url('question_index')}}" target="_self">猿问</a></li>
+                <li><a href="{{url('note_index')}}" target="_self">手记</a></li>
 
             </ul>
         </div>
