@@ -9,6 +9,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Routing\Controller;
+use Storage;
+use Illuminate\Http\Request;
 
 header("content-type:text/html;charset=utf-8");
 class CommonController extends Controller{
@@ -72,5 +74,31 @@ class CommonController extends Controller{
     public function hasSession($request,$key){
         return $request->session()->has($key);
     }
+
+    /**
+     * @param $fileObj
+     * @return string
+     * 上传
+     */
+    public function upload($fileObj){
+        if($fileObj->isValid()){
+            //获取文件相关信息
+            $originalName = $fileObj->getClientOriginalName();//文件原名
+            $ext = $fileObj->getClientOriginalExtension();//扩展名（后缀）
+            $realPath = $fileObj->getRealPath();//获取文件临时存储路径
+            $type = $fileObj->getClientMimeType();//上传文件类型
+
+            //上传文件
+            $newFileName = date('YmdHis').'-'.uniqid().'.'.$ext;//重命名文件名
+            //使用我们新建的uploads本地存储空间（目录）
+            $res = Storage::disk('uploads')->put($newFileName,file_get_contents($realPath));
+            if(!$res){
+                return $this->goBack('文件上传失败');
+            }
+            return './uploads/'.$newFileName;
+        }
+        return $this->goBack('上传文件不符合');
+    }
+
 
 }

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <!-- saved from url=(0031)https://www.imooc.com/u/6197642 -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title></title>
+<title>用户个人信息</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="renderer" content="webkit">
 <meta property="qc:admins" content="77103107776157736375">

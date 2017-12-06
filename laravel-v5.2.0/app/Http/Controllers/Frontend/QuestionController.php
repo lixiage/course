@@ -25,10 +25,13 @@ class QuestionController extends CommonController
     {
         $param = $request->input('type');
         $type = !empty($param)?$param:'recommend';
-        $data = (new Question())->getClassify($type);
-
+        $question = new Question();
+        $data = $question->getClassify($type);
+        $uid = $this->getSession($request,'user_id');
+        $uid = !empty($uid)?$uid:1;
+        $userInfo = $question->getOneUser($uid);
 //        print_r($data);die;
-        return view('frontend/question/show',['data'=>$data]);
+        return view('frontend/question/show',['data'=>$data,'userInfo'=>$userInfo]);
     }
 
     /**

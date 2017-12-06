@@ -52,13 +52,13 @@
             </li>
             <li>
                 <a href="Freeindex" target="_self">免费课程</a>
-            </li>
+            </li>           
             <li><a href="Elastic" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
             <li>
                 <a href="Fight" target="_self">实战</a>
             </li>
-            <li><a href="{{url('question_index')}}" target="_self">猿问</a></li>
-            <li><a href="{{url('note_index')}}" class="active" target="_self">手记</a></li>
+            <li><a href="question_index" target="_self">猿问</a></li>
+            <li><a href="note_index" class="active" target="_self">手记</a></li>
             <li class="visible-xs-block">
                 <a href="http://www.imooc.com/user/setprofile" target="_self">我的设置</a>
             </li>
@@ -115,7 +115,8 @@
                                     </li>
                                     <li class="l">
                                         <a href="http://order.imooc.com/myorder" target="_blank">
-                                            <span class="user-center-icon icon-receipt"></span>订单中心
+                                            <span class="user-center-icon icon-receipt"></span>
+                                            订单中心
                                         </a>
                                     </li>
                                     <li class="l">
@@ -179,7 +180,7 @@ var isLogin=1
 			            <div class="dc-profile clearfix">
 			                <span class="spacer l">{{$data['data']->addtime}}</span>
 			                {{--<span class="spacer l spacer-2">995浏览</span>--}}
-			                <a class="spacer l" href="http://www.imooc.com/article/21649#comment">2评论</a>
+			                <a class="spacer l" href="javascript:void(0)">{{$data['comment_num']}}评论</a>
 
 							<div class="r rinfo">
 
@@ -198,12 +199,12 @@ var isLogin=1
               <!-- 作者信息 -->
             <div class="aside-author">
                     <div class="p clearfix">
-                        <a href="http://www.imooc.com/u/6208006/articles" class="l" title="fengzhizi715" target="_blank">
+                        <a href="{{url('personal_index')}}" class="l" title="{{$data['userInfo']->username}}" target="_blank">
                             <img src="{{$data['userInfo']->head_ico}}">
                         </a>
                     </div>
                     <p class="u-nick-warp">
-                     <a class="nick" href="http://www.imooc.com/u/6208006/articles" target="_blank">
+                     <a class="nick" href="{{url('personal_index')}}" target="_blank">
                         {{$data['userInfo']->username}}
                         </a>
                     </p>
@@ -227,7 +228,7 @@ var isLogin=1
                         @foreach($data['notes'] as $key=>$val)
                                 <li class="clearfix show-more">
                                     <a target="_blank" data-track="sztuijian-1-1" href="http://coding.imooc.com/class/71.html?mc_marking=4655172e1a62839eea65105dbf244230&amp;mc_channel=sjkctjpc">
-                                        <div class="r-left l" style="background-image:url('{{$val->notes_face}}')">
+                                        <div class="r-left l" style="background-image:url({{$val->notes_face}})">
                                             <div class="bg-all"></div>
                                         </div>
                                     </a>
@@ -336,10 +337,10 @@ var isLogin=1
                 <div class="comment-box">
                     <div class="comment clearfix">
                         <div class="feed-author l">
-                            <a href="http://www.imooc.com/u/6207827/articles">
+                            <a href="{{url('personal_index')}}">
                                 <img src="{{$comment->head_ico}}" width="48">
                             </a>
-                            <a class="nick" href="" target="_blank">
+                            <a class="nick" href="{{url('personal_index')}}" target="_blank">
                                 {{$comment->username}}
                             </a>
                             <span class="com-floor r">{{$comment->n_c_id}}F</span>
@@ -362,9 +363,9 @@ var isLogin=1
                     </div>
                     <div class="reply-box"></div>
                     <div class="release-reply">
-                        <a href="http://www.imooc.com/u/6197642/articles" class="user-head">
+                        <a href="{{url('personal_index')}}" class="user-head">
                             <img src="./frontend/note_info/5a1d5c790001797701000100-100-100(2).jpg" alt="qq__11888"></a>
-                        <a href="http://www.imooc.com/u/6197642/articles" class="nick">qq__11888</a>
+                        <a href="{{url('personal_index')}}" class="nick">qq__11888</a>
                         <div class="replay-con">
                             <div class="textarea-wrap">
                                 <textarea placeholder="写下你的回复..."></textarea>
@@ -550,6 +551,7 @@ var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
     });
 </script>
 <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
+{{--<link rel="stylesheet" href="./bootstrap/"/>--}}
 <script src="./bootstrap/js/bootstrap.min.js"></script>
 <script>
     $('.hit').click(function(){

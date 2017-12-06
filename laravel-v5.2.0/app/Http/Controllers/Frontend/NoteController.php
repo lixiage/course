@@ -51,7 +51,7 @@ class NoteController extends CommonController{
             $data['uid'] = isset($uid)?$uid:1;
             $id = (new Notes())->addData($data);
             if($id){
-                return redirect('note_index');
+               return redirect('note_index');
             }else{
                 return $this->goBack('手记添加失败');
             }
@@ -102,7 +102,7 @@ class NoteController extends CommonController{
         if($request->isMethod('post')){
             $data = $request->input();
             if(empty($data['comment_content'])||empty($data['uid'])||empty($data['n_id'])){
-                return $this->goBack('评论内容不能为空');
+               return $this->goBack('评论内容不能为空');
             }
             $note = new Notes();
             $id = $note->addComment($data);
@@ -112,7 +112,7 @@ class NoteController extends CommonController{
                 return $this->goBack('评论失败');
             }
         }
-        return $this->goBack('请先提交数据');
+       return $this->goBack('请先提交数据');
     }
 
 }

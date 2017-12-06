@@ -290,22 +290,24 @@
 <div class="user-about">
     <div class="user-info">
         <div class="user-pic">
-            <a href="http://www.imooc.com/u/5767042/bbs">
-                <img src="./frontend/images/yuanwen/59a902890001f04901000100-100-100_002.jpg" alt="qq_夜的寂静_0">
+            <a href="personal_index">
+                <img src="<?= $userInfo->head_ico ?>" alt="<?= $userInfo->username ?>">
             </a>
         </div>
         <div class="user-name">
-            <a href="http://www.imooc.com/u/5767042/bbs">qq_夜的寂静_0</a>
-                                </div>
+            <a href="personal_index"><?= $userInfo->username ?></a>
+        </div>
         <div class="integral-info clearifx">
-            <a href="http://www.imooc.com/u/5767042/credit" class="integral">积分：0</a>
-            <a href="http://www.imooc.com/mall/index" class="integral-mall">积分商城</a>
+            <a href="javascript:void(0)" class="integral">积分：<?= $userInfo->integral ?></a>
+<!--            <a href="http://www.imooc.com/mall/index" class="integral-mall">积分商城</a>-->
         </div>
     </div><!--.user-info end-->
     <div class="user-action">
-        <span class="ques"><a href="http://www.imooc.com/u/5767042/bbs">提问</a><!-- <i></i>--></span>
-        <span class="reply"><a href="http://www.imooc.com/u/5767042/bbs?sort=reply">回答</a></span>
-        <span class="follow"><a href="http://www.imooc.com/u/5767042/bbs?sort=follow">关注</a></span>
+        <span class="ques">
+            <a href="question_insert">提问</a>
+        </span>
+<!--        <span class="reply"><a href="http://www.imooc.com/u/5767042/bbs?sort=reply">回答</a></span>-->
+<!--        <span class="follow"><a href="http://www.imooc.com/u/5767042/bbs?sort=follow">关注</a></span>-->
     </div><!--.user-action end-->
 </div><!--.user-about end-->
 
