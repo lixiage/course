@@ -89,3 +89,6 @@ Route::get('note_insert','NoteController@insert');//手记添加
 
 Route::get('email','EmailController@email');//手记添加
 
+
+Route::any('pay','PayController@pay');//点击支付
+Route::any('callReturn','PayController@callReturn');//回调

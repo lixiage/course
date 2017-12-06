@@ -812,7 +812,7 @@ var _cart_num = 0;
             <div class="clearfix types-content">
                 @foreach($cour as $k=>$v)
                 <div class="index-card-container course-card-container container">
-			<a target="_blank" class="course-card" href="http://coding.imooc.com/class/136.html?mc_marking=b587280c0c1c0e76c1092aa21406565a&amp;mc_channel=syb6" data-track="sztj-1-1">
+			<a target="_blank" class="course-card" href="{{url('owhd_shop',['cour_id'=>$v->cour_id])}}">
 							
 								
 											<div class="course-card-top hashadow">
