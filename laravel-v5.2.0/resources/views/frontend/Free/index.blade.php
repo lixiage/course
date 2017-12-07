@@ -71,11 +71,11 @@
             <li class="set-btn visible-xs-block js-header-avator"><a href="https://www.imooc.com/u/5767042" target="_self"><img src="images/mf/59a902890001f04901000100-100-100.jpg" height="40" width="40"></a></li>
 
             <li>
-                <a href="https://www.imooc.com/course/list" class="active" target="_self">免费课程</a>
+                <a href="{{url('Freeindex')}}" target="_self">免费课程</a>
             </li>
-            <li><a href="http://class.imooc.com/" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
+            <li><a href="{{url('Elastic')}}/" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
             <li>
-                <a href="http://coding.imooc.com/" target="_self">实战</a>
+                <a href="{{url('Fight')}}" target="_self">实战</a>
             </li>
             <li><a href="{{url('question_index')}}" target="_self">猿问</a></li>
             <li><a href="{{url('note_index')}}" target="_self">手记</a></li>
@@ -124,17 +124,9 @@
             </ul>
         </div>
         <div class="search-warp clearfix" style="min-width: 32px; height: 72px;">
-            <div class="pa searchTags">
-                <a href="http://class.imooc.com/sc/20" target="_blank">前端入门</a>
-                <a href="http://class.imooc.com/sc/18" target="_blank">Java入门</a>
-            </div>
 
-            <div class="search-area" data-search="top-banner">
-                <input class="search-input" data-suggest-trigger="suggest-trigger" autocomplete="off" type="text">
-                <input class="btn_search" data-search-btn="search-btn" type="hidden">
-                <ul class="search-area-result" data-suggest-result="suggest-result">
-                </ul>
-            </div>
+
+
             <div class="showhide-search" data-show="no"><i class="icon-search"></i></div>
         </div>
     </div>
@@ -335,31 +327,7 @@
 </div>
 
 
-<div id="J_GotoTop" class="elevator">
 
-    <a href="https://www.imooc.com/user/feedback" class="elevator-msg" target="_blank">
-        <i class="icon-feedback"></i>
-        <span class="">意见反馈</span>
-    </a>
-    <a href="https://www.imooc.com/about/faq" class="elevator-faq" target="_blank">
-        <i class="icon-ques"></i>
-        <span class="">常见问题</span>
-    </a>
-    <a href="https://www.imooc.com/mobile/app" target="_blank" class="elevator-app">
-        <i class="icon-appdownload"></i>
-        <span class="">APP下载</span>
-        <div class="elevator-app-box"></div>
-    </a>
-    <a href="javascript:void(0)" class="elevator-weixin no-goto" id="js-elevator-weixin">
-        <i class="icon-wxgzh"></i>
-        <span class="">官方微信</span>
-        <div class="elevator-weixin-box"></div>
-    </a>
-    <a href="javascript:void(0)" class="elevator-top no-goto" style="display:none" id="backTop">
-        <i class="icon-up2"></i>
-        <span class="">返回顶部</span>
-    </a>
-</div>
 
 
 

@@ -37,9 +37,13 @@
 
 	<div class="l">
 		<ul class="nav-item l">
-			<li><a href="http://www.imooc.com/course/list" target="_self">免费课程</a></li>
-			<li><a class="program-nav active" href="http://class.imooc.com/" target="_self">职业路径<i class="icn-new"></i></a></li>
-			<li><a href="http://coding.imooc.com/" target="_self">实战</a></li>
+            <li>
+                <a href="{{url('Freeindex')}}" target="_self">免费课程</a>
+            </li>
+            <li><a href="{{url('Elastic')}}/" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
+            <li>
+                <a href="{{url('Fight')}}" target="_self">实战</a>
+            </li>
             <li><a href="{{url('question_index')}}" target="_self">猿问</a></li>
             <li><a href="{{url('note_index')}}" target="_self">手记</a></li>
 
@@ -86,14 +90,6 @@
 	</div>
 		
 	<div class="search-warp clearfix" style="min-width: 32px;">
-		<div style="display: block;" class="pa searchTags js-searchtags"><a href="http://class.imooc.com/sc/20" target="_blank">前端入门</a><a href="http://class.imooc.com/sc/18" target="_blank">Java入门</a></div>
-
-		<div class="search-area" data-search="top-banner">
-			<input class="search-input" data-suggest-trigger="suggest-trigger" placeholder="" autocomplete="off" type="text">
-			<input class="btn_search" data-search-btn="search-btn" type="hidden">
-			<ul class="search-area-result" data-suggest-result="suggest-result"></ul>
-		</div>
-		<div class="showhide-search" data-show="no"><i class="imv2-search"></i></div>
 	</div>
 </div>
 </div>
@@ -226,30 +222,7 @@
 </div>
 </div>
 
-<div id="J_GotoTop" class="elevator">
-    <a href="http://class.imooc.com/user/feedback" class="elevator-msg" target="_blank">
-        <i class="imv2-feedback"></i>
-        <span class="">意见反馈</span>
-    </a>
-    <a href="http://class.imooc.com/user/faq" class="elevator-faq" target="_blank">
-        <i class="imv2-help_outline"></i>
-        <span class="">常见问题</span>
-    </a>
-    <a href="http://www.imooc.com/mobile/app" target="_blank" class="elevator-app">
-        <i class="imv2-appdownload"></i>
-        <span class="">APP下载</span>
-        <div class="elevator-app-box"></div>
-    </a>
-    <a href="javascript:void(0)" class="elevator-weixin no-goto" id="js-elevator-weixin">
-        <i class="imv2-weixigzh"></i>
-        <span class="">官方微信</span>
-        <div class="elevator-weixin-box"></div>
-    </a>
-    <a href="javascript:void(0)" class="elevator-top no-goto" style="display:none" id="backTop">
-        <i class="imv2-arrow2_u"></i>
-        <span class="">返回顶部</span>
-    </a>
-</div>
+
 
 
 
