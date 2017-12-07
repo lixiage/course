@@ -10,6 +10,12 @@ class Free extends Commom
         protected $ctable = "course_classify";
         protected $ttable = "course_type";
         protected $imgtable = "courses";
+    protected $htable = 'header';
+    //获取所有头部信息
+    public function GetHea()
+    {
+        return $data = DB::table($this->htable)->get();
+    }
         //获取方向的全部信息
         public function Getdir(){
                return $data = DB::table($this->dtable)->get();
