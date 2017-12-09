@@ -31,8 +31,7 @@ class ControllerDispatcher
      * @param  \Illuminate\Container\Container  $container
      * @return void
      */
-    public function __construct(Router $router,
-                                Container $container = null)
+    public function __construct(Router $router, Container $container = null)
     {
         $this->router = $router;
         $this->container = $container;
@@ -86,6 +85,7 @@ class ControllerDispatcher
         // Here we will make a stack onion instance to execute this request in, which gives
         // us the ability to define middlewares on controllers. We will return the given
         // response back out so that "after" filters can be run after the middlewares.
+
         return (new Pipeline($this->container))
                     ->send($request)
                     ->through($middleware)

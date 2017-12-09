@@ -496,6 +496,7 @@ class Router implements RegistrarContract
      */
     protected function addRoute($methods, $uri, $action)
     {
+
         return $this->routes->add($this->createRoute($methods, $uri, $action));
     }
 

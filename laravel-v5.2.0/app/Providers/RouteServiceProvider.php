@@ -53,9 +53,11 @@ class RouteServiceProvider extends ServiceProvider
         $backendUrl = config('route.backend_url');
         $frontendUrl = config('route.frontend_url');
         $apiUrl = config('route.api_url');
-        //var_dump($apiUrl);
+//        var_dump($frontendUrl);
+//        var_dump($this->currentDomain);
 
         switch ($this->currentDomain) {
+
             case $apiUrl:
                 // API路由
                 $router->group([

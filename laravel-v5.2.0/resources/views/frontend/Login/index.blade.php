@@ -23,7 +23,10 @@
 
 <link rel="stylesheet" href="{{asset('frontend/css/index/moco.css')}}" type="text/css">
 
-<script src="{{asset('frontend/js/index/push.js')}}"></script><script src="{{asset('frontend/js/index/rt.js')}}" async="" type="text/javascript"></script><script src="{{asset('frontend/js/index/hm.js')}}"></script><script type="text/javascript">
+<script src="{{asset('frontend/js/index/push.js')}}"></script>
+    <script src="{{asset('frontend/js/index/rt.js')}}" async="" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/index/hm.js')}}"></script>
+    <script type="text/javascript">
 
 // eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('!4(){3 a={};3 c=0;3 5=[{d:\'//o.q.g/o/p/K/J.r\',6:0},{d:\'//p.q.g/I/L-O.r\',6:0}];3 w=4(){3 j,s=e N("(^| )"+"k=([^;]*)(;|$)");8(j=u.l.M(s)){m H(j[2])}E{m z}};3 y=4(t){3 n=w();3 b=e F();b.G(b.D()+13*v*v*10);u.l="k="+t+";14="+b.R()+";S=/;P=Q.g";8(t&&t!=n){X.U.V()}};3 C=4(i){3 7=e W();7.T=4(){12(a[i]);a[i]=z;9(i,0)};7.Z=4(){9(i,1)};a[i]=11(4(){7.B="";9(i,1)},Y);7.B=5[i].d};3 9=4(x,6){c++;5[x].6=6;8(c==5.f){3 h=0;A(3 i=0;i<5.f;i++){8(5[i].6==1){h=1}}y(h)}};A(3 i=0;i<5.f;i++){C(i)}}()',62,67,'|||var|function|urls|flag|imgobj|if|callback|timer|exp|count|url|new|length|com|error||arr|IMCDNS|cookie|return|_0|static|img|mukewang|png|reg||document|60|getcookie|index|setcookie|null|for|src|checkCdn|getTime|else|Date|setTime|unescape|images|logo|common|unknow|match|RegExp|80|domain|imooc|toGMTString|path|onload|location|reload|Image|window|3000|onerror|1000|setTimeout|clearTimeout|24|expires'.split('|'),0,{}))
 
@@ -36,12 +39,28 @@ var OP_CONFIG={"module":"index","page":"index","userout":0,"usercaution":null,"u
 var isLogin = 1;
 var is_choice = "";
 var seajsTimestamp="v=201711281133";
-var _msg_unread = 0; 
-var _not_unread = 0; 
+var _msg_unread = 0;
+var _not_unread = 0;
 var _cart_num = 0;
 </script>
 <script>var _hmt = _hmt || [];	OP_CONFIG.page = 'index';</script>
-<script src="{{asset('frontend/js/index/jquery.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/seajs-text.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/common.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/string.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/userinfo.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/cart.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/cookie.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/suggest.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/store.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/moco.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/json.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/im.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/index.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/socket.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/stackblur.js')}}" async="" charset="utf-8"></script><script src="{{asset('frontend/js/index/mouse-move-angle.js')}}" async="" charset="utf-8"></script></head>
+<script src="{{asset('frontend/js/index/jquery.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/seajs-text.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/common.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/string.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/userinfo.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/cart.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/cookie.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/suggest.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/store.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/moco.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/json.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/im.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/index.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/socket.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/stackblur.js')}}" async="" charset="utf-8"></script>
+    <script src="{{asset('frontend/js/index/mouse-move-angle.js')}}" async="" charset="utf-8"></script>
+</head>
 <body id="index">
 <div id="header">
     <div class="page-container addZ-index divdiv" id="nav" style="background-color: #fff !important;">
@@ -124,8 +143,48 @@ var _cart_num = 0;
                     </a>
                     <div class="g-user-card"><div class="card-inner">
                             <div class="card-top clearfix">
-                                <a href="https://www.imooc.com/u/5767042" class="l"><img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" alt="qq_夜的寂静_0"></a>                            <div class="card-top-right-box l">                                <a href="https://www.imooc.com/u/5767042"><span class="name text-ellipsis">qq_夜的寂静_0</span></a>                                <div class="meta">                                    <a href="https://www.imooc.com/u/5767042/experience">经验<b id="js-user-mp">220</b></a>                                    <a href="https://www.imooc.com/u/5767042/credit">积分<b id="js-user-credit">0</b></a>                                </div>                            </div>                        </div>                        <div class="user-center-box">                            <ul class="clearfix">                                <li class="l"><a href="https://www.imooc.com/u/5767042/courses" target="_blank"><span class="user-center-icon icon-tick"></span>我的课程</a></li>                                <li class="l">                                    <a href="http://order.imooc.com/myorder" target="_blank"><span class="user-center-icon icon-receipt"></span>订单中心</a>                                                                    </li>                                <li class="l"><a href="https://www.imooc.com/mall/index" target="_blank"><span class="user-center-icon icon-score_shop"></span>积分商城</a></li>                                <li class="l"><a href="https://www.imooc.com/user/setbindsns" target="_blank"><span class="user-center-icon icon-set"></span>个人设置</a></li>                            </ul>                        </div><div class="card-history">                            <span class="history-item">                                <span class="tit text-ellipsis">轻松学会Laravel-基础篇</span>                                <span class="media-name text-ellipsis">6-3 Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用</span>                                <i class="icon-clock"></i>                                <a href="https://www.imooc.com/video/12507" class="continue" title="轻松学会Laravel-基础篇
-6-3  Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用">继续</a>
+                                <a href="https://www.imooc.com/u/5767042" class="l">
+                                    <img src="./frontend/images/index/59a902890001f04901000100-100-100.jpg" alt="qq_夜的寂静_0"></a>
+                                <div class="card-top-right-box l">
+                                    <a href="https://www.imooc.com/u/5767042">
+                                        <span class="name text-ellipsis">qq_夜的寂静_0</span>
+                                    </a>
+                                    <div class="meta">
+                                        <a href="https://www.imooc.com/u/5767042/experience">经验<b id="js-user-mp">220</b></a>
+                                        <a href="https://www.imooc.com/u/5767042/credit">积分<b id="js-user-credit">0</b></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-center-box">
+                                <ul class="clearfix">
+                                    <li class="l">
+                                        <a href="https://www.imooc.com/u/5767042/courses" target="_blank">
+                                            <span class="user-center-icon icon-tick"></span>我的课程
+                                        </a>
+                                    </li>
+                                    <li class="l">
+                                        <a href="http://order.imooc.com/myorder" target="_blank">
+                                            <span class="user-center-icon icon-receipt"></span>订单中心
+                                        </a>
+                                    </li>
+                                    <li class="l">
+                                        <a href="https://www.imooc.com/mall/index" target="_blank">
+                                            <span class="user-center-icon icon-score_shop"></span>积分商城
+                                        </a>
+                                    </li>
+                                    <li class="l">
+                                        <a href="https://www.imooc.com/user/setbindsns" target="_blank">
+                                            <span class="user-center-icon icon-set"></span>个人设置
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-history">
+                                <span class="history-item">
+                                    <span class="tit text-ellipsis">轻松学会Laravel-基础篇</span>
+                                    <span class="media-name text-ellipsis">6-3 Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用</span>
+                                    <i class="icon-clock"></i>
+                                    <a href="https://www.imooc.com/video/12507" class="continue" title="轻松学会Laravel-基础篇6-3  Eloquent ORM中新增数据、自定义时间戳及批量赋值的使用">继续</a>
                                 </span>
                             </div><div class="card-sets clearfix"><a href="https://www.imooc.com/passport/user/logout?referer=//www.imooc.com" class="l">安全退出</a></div>                    </div></div>
                 </li>

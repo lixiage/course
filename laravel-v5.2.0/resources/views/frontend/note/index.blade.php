@@ -26,7 +26,7 @@
 <div id="header">
     <div class="page-container" id="nav">
          <div id="logo" class="logo">
-             <a href="https://www.imooc.com/" target="_self" class="hide-text" title="首页" style="background-image: url('./frontend/images/index/logo.jpg')">慕课网</a>
+             <a href="index" target="_self" class="hide-text" title="首页" style="background-image: url('./frontend/images/index/logo.jpg')">慕课网</a>
          </div>
       
 
@@ -35,8 +35,9 @@
         </button>
         <ul class="nav-item">
             <li class="set-btn visible-xs-block">
-                <a href="https://www.imooc.com/user/newlogin" target="_self">登录</a> / <a href="https://www.imooc.com/user/newsignup" target="_self">注册</a></li>
-                        
+                <a href="http://www.imooc.com/u/6197642" target="_self">
+                    <img width="40" height="40" src="./frontend/note_info/5a1d5c790001797701000100-100-100.jpg">
+                </a>
             <li>
                 <a href="Freeindex" target="_self">免费课程</a>
             </li>           

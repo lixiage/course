@@ -41,7 +41,7 @@
 <div id="header">
     <div class="page-container" id="nav">
          <div id="logo" class="logo">
-             <a href="http://www.imooc.com/" target="_self" class="hide-text" title="首页" style="background-image: url('./frontend/images/index/logo.jpg')">慕课网</a>
+             <a href="index" target="_self" class="hide-text" title="首页" style="background-image: url('./frontend/images/index/logo.jpg')">慕课网</a>
          </div>
       
 

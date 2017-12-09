@@ -170,6 +170,8 @@ class Route
     {
         list($class, $method) = explode('@', $this->action['uses']);
 
+
+
         return (new ControllerDispatcher($this->router, $this->container))
                     ->dispatch($this, $request, $class, $method);
     }

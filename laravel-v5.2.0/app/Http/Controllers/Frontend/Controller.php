@@ -5,8 +5,9 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    // public function index()
-    // {
-    //     return view('index.index');
-    // }
+     public function index()
+     {
+         echo 1;die;
+         return view('index.index');
+     }
 }
